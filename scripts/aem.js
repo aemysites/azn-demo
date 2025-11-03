@@ -452,7 +452,10 @@ function decorateIcon(span, prefix = '', alt = '') {
     .substring(5);
   const img = document.createElement('img');
   img.dataset.iconName = iconName;
-  img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.svg`;
+  
+  // Try PNG first for logo, fallback to SVG
+  const iconExtension = iconName === 'logo' ? 'png' : 'svg';
+  img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.${iconExtension}`;
   img.alt = alt;
   img.loading = 'lazy';
   img.width = 16;
