@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White circle border -->
+  <circle cx="50" cy="50" r="45" stroke="white" stroke-width="6" fill="none"/>
+
+  <!-- Yellow K+ made with paths instead of text -->
+  <!-- K letter -->
+  <path d="M 32 35 L 32 65 L 37 65 L 37 52 L 48 65 L 55 65 L 42 50 L 54 35 L 47 35 L 37 47 L 37 35 Z" fill="#FDB515"/>
+
+  <!-- + symbol -->
+  <path d="M 65 45 L 65 40 L 72 40 L 72 45 L 77 45 L 77 52 L 72 52 L 72 57 L 65 57 L 65 52 L 60 52 L 60 45 Z" fill="white"/>
+</svg>

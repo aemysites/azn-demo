@@ -28,7 +28,10 @@
 /* Icon area with teal gradient background */
 .card-resource-icon {
   height: 222px;
-  background: linear-gradient(135deg, rgba(0, 146, 124, 0.8) 0%, rgba(115, 195, 183, 0.8) 100%);
+  background: url('/content/images/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

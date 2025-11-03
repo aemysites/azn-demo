@@ -1,0 +1,23 @@
+<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Yellow circle border -->
+  <circle cx="65" cy="65" r="62" fill="white" stroke="#F0AB00" stroke-width="6"/>
+
+  <!-- Teal wave pattern -->
+  <path d="M35 65 Q 42 50, 50 65 T 65 65 Q 72 80, 80 65 T 95 65"
+        stroke="#00927C"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <path d="M35 75 Q 42 60, 50 75 T 65 75 Q 72 90, 80 75 T 95 75"
+        stroke="#00927C"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+
+  <path d="M35 55 Q 42 40, 50 55 T 65 55 Q 72 70, 80 55 T 95 55"
+        stroke="#00927C"
+        stroke-width="4"
+        fill="none"
+        stroke-linecap="round"/>
+</svg>

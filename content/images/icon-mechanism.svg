@@ -1,0 +1,13 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gear/cog icon with white outline and yellow center -->
+
+  <!-- Outer gear teeth (simplified) -->
+  <path d="M 50 10 L 55 20 L 60 10 L 63 22 L 70 15 L 72 28 L 80 25 L 78 35 L 88 35 L 82 43 L 90 48 L 82 53 L 88 61 L 78 61 L 80 71 L 72 68 L 70 81 L 63 74 L 60 86 L 55 76 L 50 86 L 45 76 L 40 86 L 37 74 L 30 81 L 28 68 L 20 71 L 22 61 L 12 61 L 18 53 L 10 48 L 18 43 L 12 35 L 22 35 L 20 25 L 28 28 L 30 15 L 37 22 L 40 10 L 45 20 Z"
+        fill="white" stroke="white" stroke-width="2"/>
+
+  <!-- Yellow center circle -->
+  <circle cx="50" cy="50" r="18" fill="#FDB515"/>
+
+  <!-- Inner circle cutout -->
+  <circle cx="50" cy="50" r="10" fill="none" stroke="white" stroke-width="2"/>
+</svg>

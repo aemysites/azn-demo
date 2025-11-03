@@ -1,0 +1,326 @@
+{
+  "metadata": {
+    "crawl_date": "2025-10-30",
+    "crawler": "Claude Code - Playwright Browser Automation",
+    "site": "MeinMEDCAMPUS",
+    "base_url": "https://www.mein-medcampus.de",
+    "login_status": "Authenticated as respi@santis.de",
+    "total_articles_captured": 4,
+    "sections_completed": 0,
+    "sections_total": 5
+  },
+  "sections": {
+    "hyperkaliaemie": {
+      "section_name": "Hyperkaliämie",
+      "section_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "priority": 1,
+      "total_articles": 13,
+      "articles_captured": 4,
+      "articles": [
+        {
+          "id": "hk-001",
+          "title": "RAASi und Hyperkaliämie – das Dilemma",
+          "subtitle": "RAASi-Therapie erhalten trotz Hyperkaliämie? Erkenntnisse zum Langzeitmanagement bei CKD",
+          "url": "https://www.mein-medcampus.de/Hyperkaliaemie/langfristiges-hyperkaliaemie-management-bei-eingeschraenkter-nierenfunktion-ist-moeglich-dank-szc",
+          "screenshot": "indikationen-hyperkaliaemie-raasi-dilemma.png",
+          "screenshot_path": "/Users/hmehta/Documents/GitRepos/hmehta-test-da-1/content/original/pages/indikationen-hyperkaliaemie-raasi-dilemma.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": true,
+          "capture_date": "2025-10-30T16:11:00Z",
+          "key_topics": [
+            "RAASi-Therapie",
+            "Hyperkaliämie-Management",
+            "CKD",
+            "SZC (Natriumzirconiumcyclosilikat)",
+            "GALVANIZE-Studie",
+            "DIALIZE-Outcomes"
+          ]
+        },
+        {
+          "id": "hk-002",
+          "title": "WATCH-K zeigt Versorgungsrealität bei Hyperkaliämie und chronischen Erkrankungen wie HF und CKD",
+          "subtitle": "Neue Erkenntnisse zu Häufigkeit, Management und Prognose der Hyperkaliämie in Hausarztpraxen",
+          "url": "https://www.mein-medcampus.de/Hyperkaliaemie/watch-k-zeigt-potenzial-fuer-bessere-hyperkaliaemie-therapie-bei-herzinsuffizienz-und-ckd",
+          "screenshot": "indikationen-hyperkaliaemie-watch-k-versorgungsrealitaet.png",
+          "screenshot_path": "/Users/hmehta/Documents/GitRepos/hmehta-test-da-1/content/original/pages/indikationen-hyperkaliaemie-watch-k-versorgungsrealitaet.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": true,
+          "capture_date": "2025-10-30T16:11:30Z",
+          "key_topics": [
+            "WATCH-K-Studie",
+            "Versorgungsrealität",
+            "Hausarztpraxen",
+            "HF (Herzinsuffizienz)",
+            "CKD",
+            "Hyperkaliämie-Monitoring",
+            "Kaliumbinder"
+          ]
+        },
+        {
+          "id": "hk-003",
+          "title": "Optimierung der MRA-Therapie bei HFrEF Patient:innen mit Hyperkaliämie",
+          "subtitle": "REALIZE-K Studie: Unter SZC Optimierung der MRA-Therapie bei HFrEF Patient:innen mit HK möglich",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/scz-konnte-normokaliaemie-bei-hfref-patient-innen-mit-Hyperkaliaemie-unter-mra-therapie-aufrechterhalten",
+          "screenshot": "indikationen-hyperkaliaemie-mra-therapie-hfref.png",
+          "screenshot_path": "/Users/hmehta/Documents/GitRepos/hmehta-test-da-1/content/original/pages/indikationen-hyperkaliaemie-mra-therapie-hfref.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": true,
+          "capture_date": "2025-10-30T16:12:00Z",
+          "key_topics": [
+            "REALIZE-K-Studie",
+            "MRA-Therapie",
+            "HFrEF",
+            "Spironolacton",
+            "SZC",
+            "Normokaliämie",
+            "Klinische Outcomes"
+          ]
+        },
+        {
+          "id": "hk-004",
+          "title": "Expert:innen rufen bei der Umsetzung von Leitlinienempfehlungen zur Handlung auf",
+          "subtitle": "Leitliniengerechte CKD-Therapie: Expert:innen rufen bei der Umsetzung zur Handlung auf",
+          "url": "https://www.mein-medcampus.de/Hyperkaliaemie/handlungsaufruf-zur-leitliniengerechten-ckd-therapie",
+          "screenshot": "indikationen-hyperkaliaemie-expertinnen-leitlinien.png",
+          "screenshot_path": "/Users/hmehta/Documents/GitRepos/hmehta-test-da-1/content/original/pages/indikationen-hyperkaliaemie-expertinnen-leitlinien.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": true,
+          "capture_date": "2025-10-30T16:15:00Z",
+          "key_topics": [
+            "KDIGO-Leitlinien 2024",
+            "CKD-Therapie",
+            "SGLT-2-Inhibitoren",
+            "RAASi",
+            "Leitlinienimplementierung",
+            "Früherkennung",
+            "Forxiga",
+            "Lokelma"
+          ]
+        },
+        {
+          "id": "hk-005",
+          "title": "ZORA und WATCH-K",
+          "subtitle": "Versorgungslücken bei Hyperkaliämie-Risikopatienten: Management überdenken. Erfahren Sie mehr.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-zora-watch-k.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "ZORA-Studie",
+            "WATCH-K-Studie",
+            "Versorgungslücken"
+          ]
+        },
+        {
+          "id": "hk-006",
+          "title": "KaliumKompakt: Das Plus für kardiorenales Management bei Hyperkaliämie & Co",
+          "subtitle": "Optimierung des Hyperkaliämie-Managements: Highlights der Veranstaltung für Hausärzt:innen „KaliumKompakt"",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-kaliumkompakt.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "KaliumKompakt",
+            "Kardiorenales Management",
+            "Hausärzte"
+          ]
+        },
+        {
+          "id": "hk-007",
+          "title": "Kardiorenale Fälle, neue Real World Daten & interdisziplinärer Austausch",
+          "subtitle": "Netzwerk K+alium: Expert:innen liefern HK-Therapie-Empfehlungen auf einen Blick.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-kardiorenale-faelle.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Netzwerk Kalium",
+            "Real World Daten",
+            "Interdisziplinär",
+            "Therapieempfehlungen"
+          ]
+        },
+        {
+          "id": "hk-008",
+          "title": "HK-Therapie-Empfehlungen – von Ärzt:innen für Ärzt:innen aus Ihrer Region",
+          "subtitle": "Netzwerk K+alium: Expert:innen liefern HK-Therapie-Empfehlungen auf einen Blick",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-hk-therapie-empfehlungen.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Netzwerk Kalium",
+            "Regionale Empfehlungen",
+            "Peer-to-Peer"
+          ]
+        },
+        {
+          "id": "hk-009",
+          "title": "Hyperkaliämie-Therapie – leitliniengerecht UND wirtschaftlich",
+          "subtitle": "Rabattverträge und durchschnittliche Tagestherapiekosten zum Download finden Sie hier.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-therapie-wirtschaftlich.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Wirtschaftlichkeit",
+            "Rabattverträge",
+            "Tagestherapiekosten"
+          ]
+        },
+        {
+          "id": "hk-010",
+          "title": "Warum Hyperkaliämie oft wiederkehrend ist",
+          "subtitle": "Lesen Sie hier, welche Ursachen ein Rezidiv begünstigen können.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-wiederkehrend.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Rezidivierende Hyperkaliämie",
+            "Ursachen",
+            "Risikofaktoren"
+          ]
+        },
+        {
+          "id": "hk-011",
+          "title": "Erste Real-World-Daten aus Deutschland",
+          "subtitle": "Real-World-Evidenzprogramm liefert Erkenntnisse über Behandlungsentscheidungen beim Eintreten einer Hyperkaliämie und deren Folgen",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-real-world-daten.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Real-World-Daten",
+            "Deutschland",
+            "Behandlungsentscheidungen"
+          ]
+        },
+        {
+          "id": "hk-012",
+          "title": "Neue KDIGO CKD-Leitlinie 2024",
+          "subtitle": "Die KDIGO hat zum ersten Mal in 12 Jahren neue Leitlinien zur CKD Therapie veröffentlicht.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-kdigo-leitlinie.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "KDIGO",
+            "CKD-Leitlinie",
+            "2024",
+            "Therapieempfehlungen"
+          ]
+        },
+        {
+          "id": "hk-013",
+          "title": "Hyperfocus - der Vodcast zur Hyperkaliämie",
+          "subtitle": "„Hyperfocus" bringt die Fakten rund um Ihre Behandlungsoptionen mit Natriumzirconiumcyclosilikat direkt in die Praxis.",
+          "url": "https://www.mein-medcampus.de/hyperkaliaemie/[TO_BE_CAPTURED]",
+          "screenshot": "indikationen-hyperkaliaemie-hyperfocus-vodcast.png",
+          "page_type": "article_detail",
+          "section": "indikationen",
+          "subsection": "hyperkaliaemie",
+          "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+          "captured": false,
+          "key_topics": [
+            "Hyperfocus",
+            "Vodcast",
+            "SZC",
+            "Multimedia"
+          ]
+        }
+      ]
+    },
+    "chronische_niereninsuffizienz": {
+      "section_name": "Chronische Niereninsuffizienz (CKD)",
+      "section_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "priority": 2,
+      "total_articles": "TBD",
+      "articles_captured": 0,
+      "status": "not_started",
+      "articles": []
+    },
+    "herzinsuffizienz": {
+      "section_name": "Herzinsuffizienz",
+      "section_url": "https://www.mein-medcampus.de/herzinsuffizienz",
+      "priority": 3,
+      "total_articles": "TBD",
+      "articles_captured": 0,
+      "status": "not_started",
+      "articles": []
+    },
+    "copd": {
+      "section_name": "COPD",
+      "section_url": "https://www.mein-medcampus.de/copd",
+      "priority": 4,
+      "total_articles": "TBD",
+      "articles_captured": 0,
+      "status": "not_started",
+      "articles": []
+    },
+    "asthma": {
+      "section_name": "Asthma",
+      "section_url": "https://www.mein-medcampus.de/asthma",
+      "priority": 5,
+      "total_articles": "TBD",
+      "articles_captured": 0,
+      "status": "not_started",
+      "articles": []
+    }
+  },
+  "summary": {
+    "total_articles_identified": 13,
+    "total_articles_captured": 4,
+    "completion_percentage": 30.8,
+    "sections_completed": 0,
+    "sections_in_progress": 1,
+    "sections_pending": 4,
+    "estimated_remaining_articles": "35-55",
+    "screenshots_saved": 5,
+    "screenshot_directory": "/Users/hmehta/Documents/GitRepos/hmehta-test-da-1/content/original/pages/"
+  },
+  "next_steps": [
+    "Continue capturing remaining 9 Hyperkaliämie articles",
+    "Navigate to Chronische Niereninsuffizienz section and identify all articles",
+    "Capture all CKD article detail pages",
+    "Navigate to Herzinsuffizienz section and capture all articles",
+    "Update JSON mapping with actual URLs for all captured pages",
+    "Optionally capture COPD and Asthma sections if time permits"
+  ]
+}

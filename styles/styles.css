@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
-:root {
+ :root {
   /* colors */
   --background-color: white;
   --light-color: #f8f8f8;
@@ -39,6 +39,155 @@
   /* nav height */
   --nav-height: 64px;
   --header-height: var(--nav-height);
+
+  /* ===== POSITIVUS DESIGN TOKENS ===== */
+
+  /* Primary Brand Colors */
+  --color-primary-green: #B9FF66;
+  --color-primary-black: #191A23;
+  --color-primary-dark: #000000;
+  --color-primary-white: #FFFFFF;
+
+  /* Secondary Colors */
+  --color-secondary-grey: #F3F3F3;
+  --color-secondary-grey-dark: #292A32;
+  --color-secondary-grey-light: #F8F8F8;
+
+  /* Semantic Colors */
+  --color-bg-primary: #FFFFFF;
+  --color-bg-dark: #191A23;
+  --color-bg-light: #F3F3F3;
+  --color-bg-accent: #B9FF66;
+
+  --color-text-primary-dark: #000000;
+  --color-text-secondary-light: #FFFFFF;
+  --color-text-muted: #666666;
+
+  --color-border-light: #E5E5E5;
+  --color-border-dark: #191A23;
+
+  /* Font Families */
+  --font-family-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Spacing Scale */
+  --spacing-xs: 0.5rem;      /* 8px */
+  --spacing-sm: 0.75rem;     /* 12px */
+  --spacing-md: 1rem;        /* 16px */
+  --spacing-lg: 1.5rem;      /* 24px */
+  --spacing-xl: 2rem;        /* 32px */
+  --spacing-2xl: 2.5rem;     /* 40px */
+  --spacing-3xl: 3rem;       /* 48px */
+  --spacing-4xl: 4rem;       /* 64px */
+  --spacing-5xl: 5rem;       /* 80px */
+  --spacing-6xl: 6rem;       /* 96px */
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;   /* 4px */
+  --border-radius-md: 0.5rem;    /* 8px */
+  --border-radius-lg: 0.875rem;  /* 14px */
+  --border-radius-xl: 1.25rem;   /* 20px */
+  --border-radius-2xl: 2rem;     /* 32px */
+  --border-radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 300ms ease-in-out;
+  --transition-slow: 500ms ease-in-out;
+
+  /* Container */
+  --container-max-width: 1240px;
+
+  /* ===== LOKELMA DESIGN TOKENS ===== */
+  /* Source: https://www.figma.com/design/iuXMtneLhmoFLDDNavxfNN/LOKELMA-myAZ-integration_Phase4?node-id=677-7514 */
+  /* Extracted: 2025-10-30 */
+
+  /* AstraZeneca Brand Colors */
+  --az-dark-gray: #1c1c1c;
+  --az-gold: #f0ab00;
+  --az-mulberry: #830051;
+  --az-white: #ffffff;
+
+  /* LOKELMA Brand Colors */
+  --lokelma-blue: #003b45;
+  --lokelma-yellow: #fdb515;
+  --lokelma-green: #00927c;
+  --lokelma-light-green: #75bdb2;
+  --lokelma-pink: #c62263;
+  --lokelma-green-10: #00927c1a;
+
+  /* LOKELMA Semantic Colors */
+  --lokelma-color-primary: var(--lokelma-blue);
+  --lokelma-color-secondary: var(--lokelma-green);
+  --lokelma-color-accent: var(--lokelma-yellow);
+  --lokelma-color-text: var(--az-dark-gray);
+  --lokelma-color-background: var(--az-white);
+
+  /* LOKELMA Typography */
+  --lokelma-font-family-heading: 'Lexia', Georgia, serif;
+  --lokelma-font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* LOKELMA Font Weights */
+  --lokelma-font-weight-light: 300;
+  --lokelma-font-weight-regular: 400;
+  --lokelma-font-weight-medium: 500;
+  --lokelma-font-weight-semibold: 600;
+  --lokelma-font-weight-bold: 700;
+  --lokelma-font-weight-extrabold: 800;
+
+  /* LOKELMA Font Sizes */
+  --lokelma-font-size-xs: 12px;
+  --lokelma-font-size-s: 14px;
+  --lokelma-font-size-base: 16px;
+  --lokelma-font-size-m: 18px;
+  --lokelma-font-size-l: 20px;
+  --lokelma-font-size-xl: 24px;
+  --lokelma-font-size-xxl: 30px;
+  --lokelma-font-size-xxxl: 42px;
+  --lokelma-font-size-display-s: 48px;
+  --lokelma-font-size-display-m: 64px;
+  --lokelma-font-size-display-l: 80px;
+
+  /* LOKELMA Line Heights */
+  --lokelma-line-height-tight: 1.3;
+  --lokelma-line-height-base: 1.5;
+  --lokelma-line-height-relaxed: 1.6;
+  --lokelma-line-height-m: 26px;
+  --lokelma-line-height-l: 30px;
+  --lokelma-line-height-xl: 40px;
+  --lokelma-line-height-xxl: 58px;
+  --lokelma-line-height-xxxl: 74px;
+
+  /* LOKELMA Spacing */
+  --lokelma-spacing-xs: 8px;
+  --lokelma-spacing-s: 16px;
+  --lokelma-spacing-m: 24px;
+  --lokelma-spacing-l: 32px;
+  --lokelma-spacing-xl: 48px;
+  --lokelma-spacing-xxl: 64px;
+  --lokelma-spacing-xxxl: 96px;
+
+  /* LOKELMA Layout */
+  --lokelma-max-width-content: 1242px;
+  --lokelma-max-width-full: 1920px;
+  --lokelma-content-padding-x: 339px;
+
+  /* LOKELMA Borders */
+  --lokelma-border-color: #dddddd;
+  --lokelma-border-width: 1px;
+  --lokelma-border-radius-s: 4px;
+  --lokelma-border-radius-m: 8px;
+  --lokelma-border-radius-l: 16px;
+  --lokelma-border-radius-circle: 50%;
+
+  /* LOKELMA Gradients */
+  --lokelma-gradient-light: #e8f5f3;
+  --lokelma-gradient-white: #ffffff;
 }
 
 /* fallback fonts */

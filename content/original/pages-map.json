@@ -1,0 +1,392 @@
+{
+  "pages": [
+    {
+      "url": "https://www.mein-medcampus.de/",
+      "title": "Home",
+      "screenshot": "crawl-home.png",
+      "section": "home",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/indikationen",
+      "title": "Indikationen Main",
+      "screenshot": "crawl-indikationen-main.png",
+      "section": "indikationen",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/asthma",
+      "title": "Asthma",
+      "screenshot": "crawl-indikationen-asthma.png",
+      "section": "indikationen",
+      "subsection": "asthma",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/attr-amyloidose",
+      "title": "Attr-Amyloidose",
+      "screenshot": "crawl-indikationen-attr-amyloidose.png",
+      "section": "indikationen",
+      "subsection": "attr-amyloidose",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "title": "Chronische Niereninsuffizienz",
+      "screenshot": "crawl-indikationen-chronische-niereninsuffizienz.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/copd",
+      "title": "COPD",
+      "screenshot": "crawl-indikationen-copd.png",
+      "section": "indikationen",
+      "subsection": "copd",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/covid-19",
+      "title": "COVID-19",
+      "screenshot": "crawl-indikationen-covid-19.png",
+      "section": "indikationen",
+      "subsection": "covid-19",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/diabetes-mellitus",
+      "title": "Diabetes Mellitus",
+      "screenshot": "crawl-indikationen-diabetes-mellitus.png",
+      "section": "indikationen",
+      "subsection": "diabetes-mellitus",
+      "page_type": "landing",
+      "note": "Page returned 404 error"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/egpa",
+      "title": "Eosinophile Granulomatose mit Polyangiitis (EGPA)",
+      "screenshot": "crawl-indikationen-egpa.png",
+      "section": "indikationen",
+      "subsection": "egpa",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/herzinsuffizienz",
+      "title": "Herzinsuffizienz",
+      "screenshot": "crawl-indikationen-herzinsuffizienz.png",
+      "section": "indikationen",
+      "subsection": "herzinsuffizienz",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "title": "Hyperkaliämie",
+      "screenshot": "crawl-indikationen-hyperkaliaemie.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/koronare-herzkrankheit",
+      "title": "Koronare Herzkrankheit",
+      "screenshot": "crawl-indikationen-koronare-herzkrankheit.png",
+      "section": "indikationen",
+      "subsection": "koronare-herzkrankheit",
+      "page_type": "landing",
+      "note": "Page returned 404 error"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/onkologie",
+      "title": "Onkologie",
+      "screenshot": "crawl-indikationen-onkologie.png",
+      "section": "indikationen",
+      "subsection": "onkologie",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/systemischer-lupus-erythematodes",
+      "title": "Systemischer Lupus erythematodes",
+      "screenshot": "crawl-indikationen-systemischer-lupus-erythematodes.png",
+      "section": "indikationen",
+      "subsection": "sle",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/fortbildung",
+      "title": "Fortbildung",
+      "screenshot": "crawl-fortbildung.png",
+      "section": "fortbildung",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/wissen",
+      "title": "Wissen",
+      "screenshot": "crawl-wissen.png",
+      "section": "wissen",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/service",
+      "title": "Service",
+      "screenshot": "crawl-service.png",
+      "section": "service",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/produkte",
+      "title": "Produkte",
+      "screenshot": "crawl-produkte.png",
+      "section": "produkte",
+      "page_type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/medizin",
+      "title": "Medizin",
+      "screenshot": "crawl-medizin.png",
+      "section": "medizin",
+      "page_type": "landing",
+      "note": "Page not authorized - restricted access"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/raasi-dilemma",
+      "title": "RAASi und Hyperkaliämie – das Dilemma",
+      "screenshot": "indikationen-hyperkaliaemie-raasi-dilemma.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/watch-k-versorgungsrealitaet",
+      "title": "WATCH-K zeigt Versorgungsrealität bei Hyperkaliämie und chronischen Erkrankungen",
+      "screenshot": "indikationen-hyperkaliaemie-watch-k-versorgungsrealitaet.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/mra-therapie-hfref",
+      "title": "Optimierung der MRA-Therapie bei HFrEF Patient:innen mit Hyperkaliämie",
+      "screenshot": "indikationen-hyperkaliaemie-mra-therapie-hfref.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/expertinnen-leitlinien",
+      "title": "Expert:innen rufen bei der Umsetzung von Leitlinienempfehlungen zur Handlung auf",
+      "screenshot": "indikationen-hyperkaliaemie-expertinnen-leitlinien.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/zora-watch-k",
+      "title": "ZORA und WATCH-K",
+      "screenshot": "indikationen-hyperkaliaemie-zora-watch-k.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/kaliumkompakt",
+      "title": "KaliumKompakt: Das Plus für kardiorenales Management bei Hyperkaliämie",
+      "screenshot": "indikationen-hyperkaliaemie-kaliumkompakt.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/kardiorenale-faelle",
+      "title": "Kardiorenale Fälle, neue Real World Daten & interdisziplinärer Austausch",
+      "screenshot": "indikationen-hyperkaliaemie-kardiorenale-faelle.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/hk-therapie-empfehlungen",
+      "title": "HK-Therapie-Empfehlungen – von Ärzt:innen für Ärzt:innen aus Ihrer Region",
+      "screenshot": "indikationen-hyperkaliaemie-hk-therapie-empfehlungen.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/therapie-wirtschaftlich",
+      "title": "Hyperkaliämie-Therapie – leitliniengerecht UND wirtschaftlich",
+      "screenshot": "indikationen-hyperkaliaemie-therapie-wirtschaftlich.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/wiederkehrend",
+      "title": "Warum Hyperkaliämie oft wiederkehrend ist",
+      "screenshot": "indikationen-hyperkaliaemie-wiederkehrend.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/erste-real-world-daten",
+      "title": "Erste Real-World-Daten aus Deutschland",
+      "screenshot": "indikationen-hyperkaliaemie-erste-real-world-daten.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/kdigo-leitlinie",
+      "title": "Neue KDIGO CKD-Leitlinie 2024",
+      "screenshot": "indikationen-hyperkaliaemie-kdigo-leitlinie.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/hyperfocus",
+      "title": "Hyperfocus - der Vodcast zur Hyperkaliämie",
+      "screenshot": "indikationen-hyperkaliaemie-hyperfocus.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie/watch-k",
+      "title": "WATCH-K Studie",
+      "screenshot": "indikationen-hyperkaliaemie-watch-k.png",
+      "section": "indikationen",
+      "subsection": "hyperkaliaemie",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/kongress-kompakt-dgfn-2025",
+      "title": "Kongress Kompakt DGfN 2025",
+      "screenshot": "indikationen-ckd-kongress-kompakt-dgfn-2025.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/kardiorenales-syndrom-praxis",
+      "title": "Kardiorenales Syndrom in der Praxis",
+      "screenshot": "indikationen-ckd-kardiorenales-syndrom-praxis.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/dapagliflozin-iga-nephropathie",
+      "title": "Dapagliflozin in IgA-Nephropathie",
+      "screenshot": "indikationen-ckd-dapagliflozin-iga-nephropathie.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/leitlinienempfehlungen-handlungsaufruf",
+      "title": "Leitlinienempfehlungen Handlungsaufruf",
+      "screenshot": "indikationen-ckd-leitlinienempfehlungen-handlungsaufruf.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/sglt2i-verschreibungsverhalten",
+      "title": "SGLT2i Verschreibungsverhalten",
+      "screenshot": "indikationen-ckd-sglt2i-verschreibungsverhalten.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/kdigo-leitlinie-2024",
+      "title": "KDIGO CKD-Leitlinie 2024",
+      "screenshot": "indikationen-ckd-kdigo-leitlinie-2024.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz/dapa-ckd-studie",
+      "title": "DAPA-CKD Studie",
+      "screenshot": "indikationen-ckd-dapa-ckd-studie.png",
+      "section": "indikationen",
+      "subsection": "ckd",
+      "page_type": "article_detail",
+      "parent_url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "captured_at": "2025-10-30"
+    }
+  ],
+  "crawled_at": "2025-10-30T16:45:00Z",
+  "total_pages": 40,
+  "summary": {
+    "landing_pages": 19,
+    "article_pages": 21,
+    "by_subsection": {
+      "hyperkaliaemie": {
+        "articles": 14,
+        "status": "complete"
+      },
+      "ckd": {
+        "articles": 7,
+        "status": "partial - 3 more needed for sample of 10"
+      },
+      "herzinsuffizienz": {
+        "articles": 0,
+        "status": "pending - 10 articles needed"
+      }
+    }
+  },
+  "notes": {
+    "404_pages": [
+      "diabetes-mellitus",
+      "koronare-herzkrankheit"
+    ],
+    "restricted_pages": [
+      "medizin"
+    ],
+    "successful_pages": 37
+  }
+}

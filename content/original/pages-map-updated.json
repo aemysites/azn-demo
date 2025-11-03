@@ -1,0 +1,231 @@
+{
+  "pages": [
+    {
+      "url": "https://www.mein-medcampus.de/",
+      "title": "Home",
+      "screenshot": "crawl-home.png",
+      "section": "home",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/indikationen",
+      "title": "Indikationen Main",
+      "screenshot": "crawl-indikationen-main.png",
+      "section": "indikationen",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/asthma",
+      "title": "Asthma",
+      "screenshot": "crawl-indikationen-asthma.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/attr-amyloidose",
+      "title": "Attr-Amyloidose",
+      "screenshot": "crawl-indikationen-attr-amyloidose.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/chronische-niereninsuffizienz",
+      "title": "Chronische Niereninsuffizienz",
+      "screenshot": "crawl-indikationen-chronische-niereninsuffizienz.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/copd",
+      "title": "COPD",
+      "screenshot": "crawl-indikationen-copd.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/covid-19",
+      "title": "COVID-19",
+      "screenshot": "crawl-indikationen-covid-19.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/diabetes-mellitus",
+      "title": "Diabetes Mellitus",
+      "screenshot": "crawl-indikationen-diabetes-mellitus.png",
+      "section": "indikationen",
+      "type": "landing",
+      "status": "404",
+      "note": "Page returned 404 error"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/egpa",
+      "title": "Eosinophile Granulomatose mit Polyangiitis (EGPA)",
+      "screenshot": "crawl-indikationen-egpa.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/herzinsuffizienz",
+      "title": "Herzinsuffizienz",
+      "screenshot": "crawl-indikationen-herzinsuffizienz.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/hyperkaliaemie",
+      "title": "Hyperkaliämie",
+      "screenshot": "crawl-indikationen-hyperkaliaemie.png",
+      "section": "indikationen",
+      "type": "landing",
+      "article_count": 13,
+      "articles_crawled": 4,
+      "note": "Landing page - 4 of 13 article detail pages crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/koronare-herzkrankheit",
+      "title": "Koronare Herzkrankheit",
+      "screenshot": "crawl-indikationen-koronare-herzkrankheit.png",
+      "section": "indikationen",
+      "type": "landing",
+      "status": "404",
+      "note": "Page returned 404 error"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/onkologie",
+      "title": "Onkologie",
+      "screenshot": "crawl-indikationen-onkologie.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/systemischer-lupus-erythematodes",
+      "title": "Systemischer Lupus erythematodes",
+      "screenshot": "crawl-indikationen-systemischer-lupus-erythematodes.png",
+      "section": "indikationen",
+      "type": "landing",
+      "note": "Landing page - article detail pages not yet crawled"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/fortbildung",
+      "title": "Fortbildung",
+      "screenshot": "crawl-fortbildung.png",
+      "section": "fortbildung",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/wissen",
+      "title": "Wissen",
+      "screenshot": "crawl-wissen.png",
+      "section": "wissen",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/service",
+      "title": "Service",
+      "screenshot": "crawl-service.png",
+      "section": "service",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/produkte",
+      "title": "Produkte",
+      "screenshot": "crawl-produkte.png",
+      "section": "produkte",
+      "type": "landing"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/medizin",
+      "title": "Medizin",
+      "screenshot": "crawl-medizin.png",
+      "section": "medizin",
+      "type": "landing",
+      "status": "restricted",
+      "note": "Page not authorized - restricted access"
+    },
+    {
+      "url": "https://www.mein-medcampus.de/Hyperkaliaemie/langfristiges-hyperkaliaemie-management-bei-eingeschraenkter-nierenfunktion-ist-moeglich-dank-szc",
+      "title": "RAASi und Hyperkaliämie – das Dilemma",
+      "screenshot": "hyperkaliaemie-raasi-und-hyperkaliaemie-das-dilemma.png",
+      "section": "hyperkaliaemie",
+      "type": "article",
+      "parent": "/hyperkaliaemie",
+      "content_summary": "Langfristiges Hyperkaliämie-Management bei eingeschränkter Nierenfunktion ist möglich dank SZC. Discusses GALVANIZE and DIALIZE-Outcomes study results."
+    },
+    {
+      "url": "https://www.mein-medcampus.de/Hyperkaliaemie/watch-k-zeigt-potenzial-fuer-bessere-hyperkaliaemie-therapie-bei-herzinsuffizienz-und-ckd",
+      "title": "WATCH-K zeigt Versorgungsrealität bei Hyperkaliämie und chronischen Erkrankungen wie HF und CKD",
+      "screenshot": "hyperkaliaemie-watch-k-versorgungsrealitaet.png",
+      "section": "hyperkaliaemie",
+      "type": "article",
+      "parent": "/hyperkaliaemie",
+      "content_summary": "Verbesserungspotenzial im Hyperkaliämie-Management in deutschen Hausarztpraxen. Real-world data from German primary care practices showing gaps in HK management."
+    },
+    {
+      "url": "https://www.mein-medcampus.de/Hyperkaliaemie/handlungsaufruf-zur-leitliniengerechten-ckd-therapie",
+      "title": "Expert:innen rufen bei der Umsetzung von Leitlinienempfehlungen zur Handlung auf",
+      "screenshot": "hyperkaliaemie-expertinnen-rufen-zur-handlung-auf.png",
+      "section": "hyperkaliaemie",
+      "type": "article",
+      "parent": "/hyperkaliaemie",
+      "content_summary": "Handlungsaufruf zur leitliniengerechten CKD-Therapie. KDIGO 2024 guideline implementation call-to-action with focus on SGLT-2i and RAASi therapy."
+    },
+    {
+      "url": "https://www.mein-medcampus.de/Hyperkaliaemie/neue-real-world-daten-aus-deutschland-bestaetigen-ein-unzureichendes-hyperkaliaemie-management",
+      "title": "ZORA und WATCH-K",
+      "screenshot": "hyperkaliaemie-zora-und-watch-k.png",
+      "section": "hyperkaliaemie",
+      "type": "article",
+      "parent": "/hyperkaliaemie",
+      "content_summary": "Neue deutsche Daten bestätigen ein unzureichendes Hyperkaliämie-Management. German real-world evidence from ZORA and WATCH-K studies showing inadequate HK management and increased hospitalization risk with RAASi reduction."
+    }
+  ],
+  "crawled_at": "2025-10-30T16:30:00Z",
+  "updated_at": "2025-10-30T16:30:00Z",
+  "total_pages": 23,
+  "landing_pages": 19,
+  "article_pages": 4,
+  "authentication": {
+    "required": true,
+    "user": "respi@santis.de",
+    "status": "authenticated"
+  },
+  "crawl_statistics": {
+    "successful_pages": 21,
+    "404_pages": 2,
+    "restricted_pages": 1,
+    "total_screenshots": 53,
+    "indications_with_articles": 1,
+    "total_indications": 10
+  },
+  "notes": {
+    "404_pages": [
+      "diabetes-mellitus",
+      "koronare-herzkrankheit"
+    ],
+    "restricted_pages": [
+      "medizin"
+    ],
+    "indications_pending_deep_crawl": [
+      "asthma",
+      "attr-amyloidose",
+      "chronische-niereninsuffizienz",
+      "copd",
+      "covid-19",
+      "egpa",
+      "herzinsuffizienz",
+      "onkologie",
+      "systemischer-lupus-erythematodes"
+    ],
+    "hyperkaliaemie_remaining_articles": 9,
+    "estimated_total_articles": "100-200+ across all indications"
+  }
+}

@@ -24,7 +24,10 @@
   flex-direction: column;
   align-items: center;
   padding: var(--lokelma-spacing-l);
-  background: var(--lokelma-gradient-light);
+  background: url('/content/images/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
   min-height: 587px;
 }

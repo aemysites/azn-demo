@@ -1,0 +1,11 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- White circle border -->
+  <circle cx="50" cy="50" r="48" stroke="white" stroke-width="4" fill="none"/>
+
+  <!-- Yellow plus/cross icon -->
+  <!-- Vertical bar -->
+  <rect x="43" y="25" width="14" height="50" fill="#FDB515"/>
+
+  <!-- Horizontal bar -->
+  <rect x="25" y="43" width="50" height="14" fill="#FDB515"/>
+</svg>

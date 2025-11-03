@@ -1,0 +1,18 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Folder with documents icon -->
+
+  <!-- Main folder -->
+  <path d="M 15 35 L 15 75 L 75 75 L 75 35 L 50 35 L 45 28 L 15 28 Z"
+        fill="none" stroke="white" stroke-width="3"/>
+
+  <!-- Folder tab accent -->
+  <rect x="15" y="28" width="28" height="7" fill="#FDB515"/>
+
+  <!-- Document pages inside folder -->
+  <rect x="25" y="45" width="20" height="25" fill="white" opacity="0.6"/>
+  <rect x="30" y="48" width="20" height="25" fill="white" opacity="0.8"/>
+
+  <!-- Yellow accent bar on document -->
+  <rect x="33" y="53" width="14" height="3" fill="#FDB515"/>
+  <rect x="33" y="59" width="10" height="2" fill="#FDB515"/>
+</svg>
