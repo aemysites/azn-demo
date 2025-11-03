@@ -1,0 +1,180 @@
+/* card-assistance block - Payment Assistance Card */
+
+.card-assistance {
+  max-width: var(--lokelma-max-width-content, 1262px);
+  margin: var(--lokelma-spacing-xl, 60px) auto;
+}
+
+/* Headline section (top) */
+.card-assistance .card-headline {
+  background: rgba(0, 146, 124, 0.2);
+  padding: var(--lokelma-spacing-l, 30px);
+}
+
+.card-assistance .card-headline h3 {
+  font-family: var(--lokelma-font-family-heading, 'Lexia', sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 34px;
+  color: var(--lokelma-color-text, #003b45);
+  margin: 0 0 20px 0;
+}
+
+.card-assistance .card-headline p {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  color: var(--lokelma-color-text, #003b45);
+  margin: 0;
+}
+
+/* Content section (bottom 2-column) */
+.card-assistance .card-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 400px;
+}
+
+/* Left column - content */
+.card-assistance .content-area {
+  background: var(--lokelma-color-primary-10, rgba(0, 146, 124, 0.1));
+  padding: var(--lokelma-spacing-l, 30px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-assistance .content-area p {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--lokelma-color-text, #003b45);
+  margin: 0;
+}
+
+.card-assistance .content-area strong {
+  font-weight: 700;
+}
+
+.card-assistance .content-area ol {
+  font-family: 'Inter', sans-serif;
+  font-size: 22px;
+  line-height: 1.3;
+  color: var(--lokelma-color-text, #003b45);
+  margin: 0;
+  padding-left: 24px;
+}
+
+.card-assistance .content-area ol li {
+  margin-bottom: 12px;
+}
+
+.card-assistance .content-area a {
+  color: var(--lokelma-color-text, #003b45);
+}
+
+.card-assistance .content-area a:not(.button-link) {
+  text-decoration: underline;
+}
+
+/* Button styling */
+.card-assistance .button-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  background: #fdb515 !important;
+  border: 1px solid #fdb515 !important;
+  color: var(--lokelma-color-text, #003b45) !important;
+  padding: 22px 32px !important;
+  font-family: var(--lokelma-font-family-heading, 'Lexia', sans-serif) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  font-style: italic !important;
+  line-height: 16px !important;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-top: auto;
+}
+
+.card-assistance .button-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Right column - image */
+.card-assistance .image-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card-assistance .image-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .card-assistance {
+    margin: 40px auto;
+  }
+
+  .card-assistance .card-headline h3 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .card-assistance .card-headline p,
+  .card-assistance .content-area p,
+  .card-assistance .content-area ol {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .card-assistance {
+    margin: 24px auto;
+  }
+
+  .card-assistance .card-headline h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .card-assistance .card-headline p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .card-assistance .card-content {
+    grid-template-columns: 1fr;
+  }
+
+  .card-assistance .image-area {
+    min-height: 300px;
+    order: 2;
+  }
+
+  .card-assistance .content-area {
+    order: 1;
+  }
+
+  .card-assistance .content-area p,
+  .card-assistance .content-area ol {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .card-assistance .button-link {
+    padding: 18px 28px !important;
+    font-size: 14px !important;
+  }
+}

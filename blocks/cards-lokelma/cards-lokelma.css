@@ -1,0 +1,143 @@
+/**
+ * Cards Lokelma Block - Efficacy Cards with Icons
+ * Extracted from Figma: node-id=677-6811 (Group 107303)
+ * Page: 1.0 Post-gate HCP Homepage – Slide 1_P3
+ * Design: "Think LOKELMA for its demonstrated efficacy" section
+ */
+
+.cards-lokelma {
+  padding: var(--lokelma-spacing-xl) 0;
+}
+
+.cards-lokelma > .cards-lokelma-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--lokelma-spacing-l);
+  max-width: var(--lokelma-max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--lokelma-spacing-m);
+}
+
+/* Individual card */
+.card-lokelma {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--lokelma-spacing-l);
+  background: var(--lokelma-gradient-light);
+  position: relative;
+  min-height: 587px;
+}
+
+/* Icon wrapper with yellow circle */
+.card-lokelma-icon {
+  width: 130px;
+  height: 130px;
+  border-radius: var(--lokelma-border-radius-circle);
+  background: var(--lokelma-color-background);
+  border: 4px solid var(--lokelma-color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--lokelma-spacing-m);
+  flex-shrink: 0;
+}
+
+.card-lokelma-icon img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+/* Title */
+.card-lokelma-title {
+  text-align: center;
+  margin-bottom: var(--lokelma-spacing-m);
+}
+
+.card-lokelma-title p {
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: var(--lokelma-font-weight-medium);
+  font-size: 26px;
+  line-height: var(--lokelma-line-height-tight);
+  color: var(--lokelma-color-text);
+  margin: 0;
+}
+
+/* Content area with bullet points */
+.card-lokelma-content {
+  flex: 1;
+  width: 100%;
+  margin-bottom: var(--lokelma-spacing-m);
+}
+
+.card-lokelma-content ul,
+.card-lokelma-content ol {
+  list-style-position: outside;
+  padding-left: var(--lokelma-spacing-m);
+  margin: 0;
+}
+
+.card-lokelma-content li {
+  font-family: var(--lokelma-font-family-body);
+  font-weight: var(--lokelma-font-weight-regular);
+  font-size: 22px;
+  line-height: var(--lokelma-line-height-tight);
+  color: var(--lokelma-color-text);
+  margin-bottom: 10px;
+}
+
+.card-lokelma-content li:last-child {
+  margin-bottom: 0;
+}
+
+.card-lokelma-content strong {
+  font-weight: var(--lokelma-font-weight-bold);
+}
+
+/* Citation box at bottom */
+.card-lokelma-citation {
+  width: 100%;
+  border: var(--lokelma-border-width) solid var(--lokelma-color-primary);
+  background: rgba(255, 255, 255, 0.5);
+  padding: 10px var(--lokelma-spacing-s);
+  text-align: center;
+  margin-top: auto;
+}
+
+.card-lokelma-citation p {
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: var(--lokelma-font-weight-medium);
+  font-size: 22px;
+  line-height: var(--lokelma-line-height-tight);
+  color: var(--lokelma-color-primary);
+  margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 900px) {
+  .cards-lokelma > .cards-lokelma-container {
+    grid-template-columns: 1fr;
+    gap: var(--lokelma-spacing-m);
+  }
+
+  .card-lokelma {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-lokelma-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-lokelma-title p {
+    font-size: 22px;
+  }
+
+  .card-lokelma-content li,
+  .card-lokelma-citation p {
+    font-size: var(--lokelma-font-size-m);
+  }
+}

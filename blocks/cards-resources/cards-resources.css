@@ -1,0 +1,123 @@
+/**
+ * Cards Resources Block - Resource Cards with Icons
+ * Extracted from Figma: node-id=677-6868
+ * Design: Resource cards section with teal backgrounds and yellow buttons
+ */
+
+.cards-resources {
+  padding: var(--lokelma-spacing-xl) 0;
+}
+
+.cards-resources > .cards-resources-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--lokelma-spacing-m);
+  max-width: var(--lokelma-max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--lokelma-spacing-m);
+}
+
+/* Individual card */
+.card-resource {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  overflow: hidden;
+}
+
+/* Icon area with teal gradient background */
+.card-resource-icon {
+  height: 222px;
+  background: linear-gradient(135deg, rgba(0, 146, 124, 0.8) 0%, rgba(115, 195, 183, 0.8) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-resource-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+/* Content area */
+.card-resource-body {
+  background: rgba(115, 195, 183, 0.2);
+  padding: var(--lokelma-spacing-l);
+  display: flex;
+  flex-direction: column;
+  gap: var(--lokelma-spacing-m);
+  flex: 1;
+}
+
+/* Title */
+.card-resource-body h3 {
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: var(--lokelma-font-weight-regular);
+  font-size: 24px;
+  line-height: var(--lokelma-line-height-heading);
+  color: var(--lokelma-color-text);
+  margin: 0;
+}
+
+/* Button */
+.card-resource-body .button-container {
+  margin-top: auto;
+}
+
+.card-resource-body a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 10px;
+  background: #fdb515 !important;
+  background-color: #fdb515 !important;
+  border: 1px solid #fdb515 !important;
+  color: var(--lokelma-color-text) !important;
+  padding: 22px 32px;
+  text-decoration: none;
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: var(--lokelma-font-weight-bold);
+  font-style: italic;
+  font-size: 16px;
+  line-height: normal;
+  transition: opacity 0.3s ease;
+}
+
+.card-resource-body a:hover {
+  opacity: 0.9;
+}
+
+.card-resource-body a::after {
+  content: '›';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .cards-resources > .cards-resources-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-resources > .cards-resources-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-resource-icon {
+    height: 180px;
+  }
+
+  .card-resource-icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .card-resource-body h3 {
+    font-size: 20px;
+  }
+}
