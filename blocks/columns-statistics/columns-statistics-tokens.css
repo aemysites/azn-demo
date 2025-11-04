@@ -1,0 +1,37 @@
+.columns-statistics {
+  /* Container layout - exact from Figma */
+  --columns-statistics-gap: 59px;
+  --columns-statistics-padding: 50px 0;
+  --columns-statistics-max-width: 1096px;
+
+  /* Pie chart sizing - exact from Figma */
+  --columns-statistics-chart-size: 326px;
+  --columns-statistics-chart-margin: 0 auto 24px;
+
+  /* Percentage text styling - exact from Figma */
+  --columns-statistics-percentage-color: var(--lokelma-blue);
+  --columns-statistics-percentage-font-family: var(--lokelma-font-family-heading);
+  --columns-statistics-percentage-font-size: 80px;
+  --columns-statistics-percentage-font-weight: 800; /* XBold */
+  --columns-statistics-percentage-line-height: 1.5;
+  --columns-statistics-percentage-letter-spacing: -1.6px;
+
+  /* Label text styling - exact from Figma */
+  --columns-statistics-label-color: var(--lokelma-blue);
+  --columns-statistics-label-font-family: var(--lokelma-font-family-heading);
+  --columns-statistics-label-font-size: 20px;
+  --columns-statistics-label-font-weight: 600; /* SemiBold */
+  --columns-statistics-label-line-height: 24px;
+
+  /* "Up to" small text */
+  --columns-statistics-small-font-size: 20px;
+  --columns-statistics-small-line-height: 30px;
+
+  /* Column layout */
+  --columns-statistics-column-gap: 59px;
+  --columns-statistics-column-align: center;
+  --columns-statistics-text-align: center;
+
+  /* Responsive */
+  --columns-statistics-mobile-gap: 32px;
+}

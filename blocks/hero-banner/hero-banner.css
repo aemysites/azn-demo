@@ -1,0 +1,94 @@
+/* Import component-specific tokens */
+@import './hero-banner-tokens.css';
+
+.hero-banner-container .hero-banner-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-banner {
+  position: relative;
+  padding: var(--hero-banner-mobile-padding-y) var(--hero-banner-mobile-padding-x);
+  min-height: var(--hero-banner-min-height);
+  background-color: var(--hero-banner-bg-color);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Background image container */
+.hero-banner > div:first-child {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner > div:first-child > div {
+  width: 100%;
+  height: 100%;
+}
+
+.hero-banner picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hero-banner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Text content container */
+.hero-banner > div:last-child {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--hero-banner-max-width);
+  margin: 0 auto;
+}
+
+/* Text content */
+.hero-banner > div > div {
+  padding: 0;
+}
+
+.hero-banner h1,
+.hero-banner h2,
+.hero-banner h3,
+.hero-banner h4,
+.hero-banner h5,
+.hero-banner h6,
+.hero-banner p {
+  font-family: var(--hero-banner-font-family);
+  font-size: var(--hero-banner-mobile-font-size);
+  font-weight: var(--hero-banner-font-weight);
+  line-height: var(--hero-banner-line-height);
+  color: var(--hero-banner-text-color);
+  margin: 0;
+}
+
+/* No image variant */
+.hero-banner.no-image * {
+  color: var(--text-color);
+}
+
+@media (width >= 900px) {
+  .hero-banner {
+    padding: var(--hero-banner-padding-y) var(--hero-banner-padding-x);
+  }
+
+  .hero-banner h1,
+  .hero-banner h2,
+  .hero-banner h3,
+  .hero-banner h4,
+  .hero-banner h5,
+  .hero-banner h6,
+  .hero-banner p {
+    font-size: var(--hero-banner-font-size);
+  }
+}

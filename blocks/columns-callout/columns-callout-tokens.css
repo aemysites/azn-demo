@@ -1,0 +1,29 @@
+.columns-callout {
+  /* Container layout - exact from Figma */
+  --columns-callout-max-width: 996px;
+  --columns-callout-height: 138px;
+  --columns-callout-padding-y: 15px;
+  --columns-callout-padding-x: 24px;
+  --columns-callout-margin: 50px auto;
+
+  /* Background styling */
+  --columns-callout-bg-color: var(--lokelma-green);
+  --columns-callout-border-radius: 0;
+
+  /* Text styling - exact from Figma */
+  --columns-callout-text-color: #ffffff;
+  --columns-callout-font-family: 'Inter', sans-serif;
+  --columns-callout-font-size: 28px;
+  --columns-callout-font-weight: 700; /* Bold */
+  --columns-callout-line-height: 1.3;
+
+  /* Arrow decoration - exact from Figma */
+  --columns-callout-arrow-size: 138px;
+  --columns-callout-arrow-color: var(--lokelma-yellow);
+
+  /* Responsive */
+  --columns-callout-mobile-padding-y: 12px;
+  --columns-callout-mobile-padding-x: 16px;
+  --columns-callout-mobile-font-size: 20px;
+  --columns-callout-mobile-height: auto;
+}

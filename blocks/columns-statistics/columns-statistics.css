@@ -1,0 +1,74 @@
+/* Import component-specific tokens */
+@import './columns-statistics-tokens.css';
+
+.columns-statistics {
+  max-width: var(--columns-statistics-max-width);
+  margin: 0 auto;
+  padding: var(--columns-statistics-padding);
+}
+
+.columns-statistics > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--columns-statistics-mobile-gap);
+  align-items: var(--columns-statistics-column-align);
+}
+
+.columns-statistics > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: var(--columns-statistics-column-align);
+  text-align: var(--columns-statistics-text-align);
+}
+
+/* Pie chart images */
+.columns-statistics > div > div picture {
+  width: var(--columns-statistics-chart-size);
+  height: var(--columns-statistics-chart-size);
+  margin: var(--columns-statistics-chart-margin);
+}
+
+.columns-statistics > div > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Percentage values (bold text) */
+.columns-statistics > div > div strong {
+  font-family: var(--columns-statistics-percentage-font-family);
+  font-size: var(--columns-statistics-percentage-font-size);
+  font-weight: var(--columns-statistics-percentage-font-weight);
+  color: var(--columns-statistics-percentage-color);
+  line-height: var(--columns-statistics-percentage-line-height);
+  letter-spacing: var(--columns-statistics-percentage-letter-spacing);
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Label text (e.g., "with HF", "with chronic HF") */
+.columns-statistics > div > div p {
+  font-family: var(--columns-statistics-label-font-family);
+  font-size: var(--columns-statistics-label-font-size);
+  font-weight: var(--columns-statistics-label-font-weight);
+  color: var(--columns-statistics-label-color);
+  line-height: var(--columns-statistics-label-line-height);
+  margin: 0;
+}
+
+/* First paragraph may contain "Up to" prefix */
+.columns-statistics > div > div p:first-of-type {
+  margin-bottom: 4px;
+}
+
+@media (width >= 900px) {
+  .columns-statistics > div {
+    flex-direction: row;
+    gap: var(--columns-statistics-column-gap);
+    justify-content: center;
+  }
+
+  .columns-statistics > div > div {
+    flex: 0 1 auto;
+  }
+}

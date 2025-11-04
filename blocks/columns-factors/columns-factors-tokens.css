@@ -1,0 +1,30 @@
+.columns-factors {
+  /* Container layout */
+  --columns-factors-gap: 59px;
+  --columns-factors-padding: 50px 0;
+  --columns-factors-max-width: 1242px;
+
+  /* Icon circle styling - exact from Figma */
+  --columns-factors-icon-size: 126px;
+  --columns-factors-circle-size: 276px;
+  --columns-factors-circle-bg: #ffffff;
+  --columns-factors-circle-border-width: 8px;
+  --columns-factors-circle-border-color: var(--lokelma-yellow);
+  --columns-factors-circle-border-radius: 50%;
+
+  /* Text styling - exact from Figma */
+  --columns-factors-label-color: var(--lokelma-blue);
+  --columns-factors-label-font-family: var(--lokelma-font-family-heading);
+  --columns-factors-label-font-size: 42px;
+  --columns-factors-label-font-weight: 800; /* XBold */
+  --columns-factors-label-line-height: 1.5;
+  --columns-factors-label-text-align: center;
+  --columns-factors-label-letter-spacing: -0.84px;
+
+  /* Column layout */
+  --columns-factors-column-gap: 59px;
+  --columns-factors-column-align: center;
+
+  /* Responsive */
+  --columns-factors-mobile-gap: 24px;
+}
