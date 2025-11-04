@@ -23,37 +23,37 @@
   width: var(--columns-factors-circle-size);
   height: var(--columns-factors-circle-size);
   border-radius: var(--columns-factors-circle-border-radius);
-  padding: 18px;
+  padding: 25px;
   box-sizing: border-box;
   justify-content: center;
   position: relative;
   background: #FDF6ED;
 }
 
-/* Outer ring gradient variations - lighter to darker yellow */
+/* Outer ring gradient variations - lighter to darker beige/yellow */
 .columns-factors > div > div:nth-child(1) {
-  background: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 68%, #FDF6ED 68%, #FBE8C8 100%);
+  background: #FDF8F0;
 }
 
 .columns-factors > div > div:nth-child(2) {
-  background: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 68%, #F9E1BD 68%, #F7D9A8 100%);
+  background: #FCEFD9;
 }
 
 .columns-factors > div > div:nth-child(3) {
-  background: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 68%, #F5D399 68%, #F3CB8A 100%);
+  background: #FAE4BD;
 }
 
 .columns-factors > div > div:nth-child(4) {
-  background: radial-gradient(circle, #FFFFFF 0%, #FFFFFF 68%, #F1C37B 68%, #EFBB6C 100%);
+  background: #F8D9A2;
 }
 
 /* Inner white circle with yellow border */
 .columns-factors > div > div::before {
   content: '';
   position: absolute;
-  inset: 18px;
+  inset: 25px;
   border-radius: 50%;
-  background-color: transparent;
+  background-color: #FFFFFF;
   border: var(--columns-factors-circle-border-width) solid var(--columns-factors-circle-border-color);
   z-index: 0;
 }
