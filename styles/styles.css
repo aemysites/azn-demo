@@ -410,9 +410,8 @@ main .section.highlight {
   display: none;
 }
 
-/* Intro/lead paragraphs before sections - high specificity to override footnote styles */
-main > div:not(.section) > p,
-main > div:not(.section) .default-content-wrapper > p {
+/* Intro/lead paragraphs - target paragraphs directly under divs (not sections) */
+main > div:not([class]) > p {
   text-align: center !important;
   font-family: var(--lokelma-font-family-heading) !important;
   font-size: 30px !important;
@@ -425,8 +424,7 @@ main > div:not(.section) .default-content-wrapper > p {
 }
 
 @media (width >= 900px) {
-  main > div:not(.section) > p,
-  main > div:not(.section) .default-content-wrapper > p {
+  main > div:not([class]) > p {
     padding: 0 32px;
   }
 }
