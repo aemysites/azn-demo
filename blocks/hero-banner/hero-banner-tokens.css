@@ -1,13 +1,14 @@
 .hero-banner {
   /* Container layout */
   --hero-banner-min-height: 285px;
-  --hero-banner-padding-y: 106px;
-  --hero-banner-padding-x: 339px;
+  --hero-banner-padding-y: 50px;
+  --hero-banner-padding-x: 100px;
   --hero-banner-max-width: 1920px;
 
   /* Background */
   --hero-banner-bg-color: var(--lokelma-green);
   --hero-banner-overlay-opacity: 0;
+  --hero-banner-image-opacity: 0.4;
 
   /* Text styling */
   --hero-banner-text-color: var(--az-white);
@@ -17,7 +18,7 @@
   --hero-banner-line-height: var(--lokelma-line-height-xxxl);
 
   /* Responsive */
-  --hero-banner-mobile-padding-y: var(--lokelma-spacing-xl);
+  --hero-banner-mobile-padding-y: 30px;
   --hero-banner-mobile-padding-x: var(--lokelma-spacing-m);
   --hero-banner-mobile-font-size: var(--lokelma-font-size-display-s);
 }

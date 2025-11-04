@@ -43,6 +43,7 @@
   height: 100%;
   display: block;
   object-position: right center;
+  opacity: var(--hero-banner-image-opacity);
 }
 
 /* Text content container */
