@@ -14,24 +14,60 @@
   align-items: var(--columns-factors-column-align);
 }
 
+/* Each column is a double-ring circle container */
 .columns-factors > div > div {
   display: flex;
   flex-direction: column;
   align-items: var(--columns-factors-column-align);
   text-align: var(--columns-factors-label-text-align);
-}
-
-/* Circular background for icons */
-.columns-factors > div > div picture {
   width: var(--columns-factors-circle-size);
   height: var(--columns-factors-circle-size);
   border-radius: var(--columns-factors-circle-border-radius);
+  padding: 15px;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, #F5E6D3 0%, #F0DCC4 100%);
+}
+
+/* Gradient variations for each circle */
+.columns-factors > div > div:nth-child(1) {
+  background: linear-gradient(135deg, #F5E6D3 0%, #F0DCC4 100%);
+}
+
+.columns-factors > div > div:nth-child(2) {
+  background: linear-gradient(135deg, #F0DCC4 0%, #EBD3B5 100%);
+}
+
+.columns-factors > div > div:nth-child(3) {
+  background: linear-gradient(135deg, #EBD3B5 0%, #E6C9A6 100%);
+}
+
+.columns-factors > div > div:nth-child(4) {
+  background: linear-gradient(135deg, #E6C9A6 0%, #E1C097 100%);
+}
+
+/* Inner white circle with yellow border */
+.columns-factors > div > div::before {
+  content: '';
+  position: absolute;
+  inset: 15px;
+  border-radius: 50%;
   background-color: var(--columns-factors-circle-bg);
   border: var(--columns-factors-circle-border-width) solid var(--columns-factors-circle-border-color);
+  z-index: 0;
+}
+
+/* Icon container */
+.columns-factors > div > div picture {
+  width: var(--columns-factors-icon-size);
+  height: var(--columns-factors-icon-size);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .columns-factors > div > div img {
@@ -40,8 +76,8 @@
   object-fit: contain;
 }
 
-/* Text labels below icons */
-.columns-factors > div > div strong {
+/* Text labels inside circles */
+.columns-factors > div > div p {
   font-family: var(--columns-factors-label-font-family);
   font-size: var(--columns-factors-label-font-size);
   font-weight: var(--columns-factors-label-font-weight);
@@ -49,7 +85,17 @@
   line-height: var(--columns-factors-label-line-height);
   letter-spacing: var(--columns-factors-label-letter-spacing);
   margin: 0;
-  display: block;
+  position: relative;
+  z-index: 1;
+}
+
+.columns-factors > div > div strong {
+  font-family: var(--columns-factors-label-font-family);
+  font-size: var(--columns-factors-label-font-size);
+  font-weight: var(--columns-factors-label-font-weight);
+  color: var(--columns-factors-label-color);
+  line-height: var(--columns-factors-label-line-height);
+  letter-spacing: var(--columns-factors-label-letter-spacing);
 }
 
 @media (width >= 900px) {
