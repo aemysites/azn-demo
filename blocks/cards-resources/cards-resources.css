@@ -51,7 +51,7 @@
 
 /* Content area */
 .card-resource-body {
-  background: white;
+  background: rgba(115, 195, 183, 0.2);
   padding: 20px;
   display: flex;
   flex-direction: column;
