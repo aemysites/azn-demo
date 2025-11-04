@@ -410,8 +410,9 @@ main .section.highlight {
   display: none;
 }
 
-/* Intro/lead paragraphs before sections */
-main .default-content-wrapper > p {
+/* Intro/lead paragraphs before sections - high specificity to override footnote styles */
+main > div:not(.section) .default-content-wrapper > p,
+main .default-content-wrapper > p:first-child {
   text-align: center;
   font-family: var(--lokelma-font-family-heading);
   font-size: 30px;
@@ -424,7 +425,8 @@ main .default-content-wrapper > p {
 }
 
 @media (width >= 900px) {
-  main .default-content-wrapper > p {
+  main > div:not(.section) .default-content-wrapper > p,
+  main .default-content-wrapper > p:first-child {
     padding: 0 32px;
   }
 }
@@ -439,8 +441,9 @@ main .section:not(.columns-callout-container) h2 {
   margin-bottom: 16px;
 }
 
-/* Footnote paragraphs - smaller, regular weight, exclude blocks */
-main .section:not(.columns-callout-container) .default-content-wrapper p {
+/* Footnote paragraphs - smaller, regular weight, exclude blocks and lead paragraphs */
+main .section:not(.columns-callout-container) .default-content-wrapper p:not(:first-child),
+main .section:not(.columns-callout-container) > div > p {
   font-family: var(--lokelma-font-family-body);
   font-size: 14px;
   font-weight: 400;
