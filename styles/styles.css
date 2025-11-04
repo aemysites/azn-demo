@@ -411,7 +411,7 @@ main .section.highlight {
 }
 
 /* Intro/lead paragraphs before sections */
-main > div > p {
+main .default-content-wrapper > p {
   text-align: center;
   font-family: var(--lokelma-font-family-heading);
   font-size: 30px;
@@ -424,7 +424,7 @@ main > div > p {
 }
 
 @media (width >= 900px) {
-  main > div > p {
+  main .default-content-wrapper > p {
     padding: 0 32px;
   }
 }
