@@ -429,8 +429,8 @@ main .default-content-wrapper > p {
   }
 }
 
-/* Footnotes and References sections styling */
-main .section h2 {
+/* Footnotes and References sections styling - exclude blocks */
+main .section:not(.columns-callout-container) h2 {
   font-family: var(--lokelma-font-family-body);
   font-size: 16px;
   font-weight: 700;
@@ -439,8 +439,8 @@ main .section h2 {
   margin-bottom: 16px;
 }
 
-/* Footnote paragraphs - smaller, regular weight */
-main .section p {
+/* Footnote paragraphs - smaller, regular weight, exclude blocks */
+main .section:not(.columns-callout-container) .default-content-wrapper p {
   font-family: var(--lokelma-font-family-body);
   font-size: 14px;
   font-weight: 400;
@@ -450,9 +450,9 @@ main .section p {
   margin: 12px 0;
 }
 
-/* Reference list items */
-main .section ol,
-main .section ul {
+/* Reference list items - exclude blocks */
+main .section:not(.columns-callout-container) ol,
+main .section:not(.columns-callout-container) ul {
   font-family: var(--lokelma-font-family-body);
   font-size: 14px;
   font-weight: 400;
@@ -461,12 +461,12 @@ main .section ul {
   margin-left: 20px;
 }
 
-main .section li {
+main .section:not(.columns-callout-container) li {
   margin-bottom: 12px;
 }
 
 /* Emphasis (italics) in references */
-main .section em {
+main .section:not(.columns-callout-container) em {
   font-style: italic;
   font-weight: 400;
 }
