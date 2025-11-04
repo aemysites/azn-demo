@@ -7,6 +7,12 @@ export default function decorate(block) {
   const container = document.createElement('div');
   container.className = 'cards-resources-container';
 
+  // Check if any row has 4 cells (description variant) - if so, use 2-column layout
+  const hasDescriptions = [...block.children].some((row) => row.children.length > 3);
+  if (hasDescriptions) {
+    block.classList.add('two-columns');
+  }
+
   // Process each row as a card
   [...block.children].forEach((row) => {
     const card = document.createElement('div');
@@ -35,7 +41,7 @@ export default function decorate(block) {
       card.appendChild(iconArea);
     }
 
-    // Remaining cells: Content (title and link)
+    // Remaining cells: Content (title, optional description, and link)
     const body = document.createElement('div');
     body.className = 'card-resource-body';
 
@@ -46,12 +52,24 @@ export default function decorate(block) {
       body.appendChild(title);
     }
 
-    // Third cell: Link/Button
-    if (cells[2]) {
+    // Check if we have 4 cells (icon, title, description, link) or 3 cells (icon, title, link)
+    const hasDescription = cells.length > 3;
+
+    // Third cell: Description (optional) or Link
+    if (hasDescription && cells[2]) {
+      const description = document.createElement('p');
+      description.textContent = cells[2].textContent.trim();
+      description.className = 'card-resource-description';
+      body.appendChild(description);
+    }
+
+    // Link/Button (cell 3 if no description, cell 4 if description present)
+    const linkCell = hasDescription ? cells[3] : cells[2];
+    if (linkCell) {
       const buttonContainer = document.createElement('div');
       buttonContainer.className = 'button-container';
 
-      const link = cells[2].querySelector('a');
+      const link = linkCell.querySelector('a');
       if (link) {
         link.textContent = link.textContent.trim() || 'Learn More';
         buttonContainer.appendChild(link);
