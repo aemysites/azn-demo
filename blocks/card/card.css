@@ -1,0 +1,91 @@
+/* Card Block */
+.card {
+  max-width: var(--lokelma-max-width-content);
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card .card-container {
+  border: 2px solid var(--lokelma-green);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: var(--lokelma-color-background);
+}
+
+.card .card-icon img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.card .card-text {
+  text-align: center;
+}
+
+.card .card-text p {
+  font-family: var(--lokelma-font-family-heading);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  color: var(--lokelma-blue);
+  margin: 0;
+}
+
+.card .card-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 32px;
+  background-color: var(--lokelma-yellow);
+  color: var(--lokelma-blue);
+  border: 1px solid var(--lokelma-yellow);
+  font-family: var(--lokelma-font-family-heading);
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card .card-button a::after {
+  content: '›';
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.card .card-button a:hover {
+  background-color: var(--lokelma-blue);
+  color: var(--lokelma-yellow);
+  border-color: var(--lokelma-blue);
+}
+
+/* CTA Variant */
+.card.cta .card-container {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
+
+.card.cta .card-text {
+  text-align: left;
+  flex: 1;
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .card .card-container,
+  .card.cta .card-container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .card .card-text p {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}

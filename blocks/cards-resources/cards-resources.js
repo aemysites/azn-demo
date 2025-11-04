@@ -1,69 +1,61 @@
-/**
- * Cards Resources Block
- * Creates resource cards with icon, title, and CTA button
- */
-
 export default function decorate(block) {
-  const container = document.createElement('div');
-  container.className = 'cards-resources-container';
+  // Get all rows from the block
+  const rows = [...block.children];
+
+  // Create container for cards
+  const cardsContainer = document.createElement('div');
+  cardsContainer.classList.add('cards-res-container');
 
   // Process each row as a card
-  [...block.children].forEach((row) => {
+  rows.forEach((row) => {
     const card = document.createElement('div');
-    card.className = 'card-resource';
+    card.classList.add('cards-res-card');
 
     const cells = [...row.children];
 
     // First cell: Icon
-    if (cells[0]) {
-      const iconArea = document.createElement('div');
-      iconArea.className = 'card-resource-icon';
+    const iconCell = cells[0];
+    if (iconCell) {
+      const iconSection = document.createElement('div');
+      iconSection.classList.add('cards-res-icon-section');
 
-      const picture = cells[0].querySelector('picture');
-      if (picture) {
-        const img = picture.querySelector('img');
-        if (img) {
-          // Fix Figma URLs to point to local images
-          if (img.src.includes('figma.com')) {
-            const filename = img.src.split('/').pop();
-            img.src = `./images/${filename}`;
-          }
-          iconArea.appendChild(img);
-        }
+      const img = iconCell.querySelector('img');
+      if (img) {
+        iconSection.appendChild(img);
       }
 
-      card.appendChild(iconArea);
+      card.appendChild(iconSection);
     }
 
-    // Remaining cells: Content (title and link)
-    const body = document.createElement('div');
-    body.className = 'card-resource-body';
+    // Second cell: Title and Button
+    const contentCell = cells[1];
+    if (contentCell) {
+      const contentSection = document.createElement('div');
+      contentSection.classList.add('cards-res-content');
 
-    // Second cell: Title
-    if (cells[1]) {
+      // Extract title
+      const titleText = contentCell.textContent.trim().split('\n')[0];
       const title = document.createElement('h3');
-      title.textContent = cells[1].textContent.trim();
-      body.appendChild(title);
-    }
+      title.classList.add('cards-res-title');
+      title.textContent = titleText;
+      contentSection.appendChild(title);
 
-    // Third cell: Link/Button
-    if (cells[2]) {
-      const buttonContainer = document.createElement('div');
-      buttonContainer.className = 'button-container';
-
-      const link = cells[2].querySelector('a');
+      // Extract link/button
+      const link = contentCell.querySelector('a');
       if (link) {
-        link.textContent = link.textContent.trim() || 'Learn More';
-        buttonContainer.appendChild(link);
+        link.classList.add('cards-res-button');
+        contentSection.appendChild(link);
       }
 
-      body.appendChild(buttonContainer);
+      card.appendChild(contentSection);
     }
 
-    card.appendChild(body);
-    container.appendChild(card);
+    cardsContainer.appendChild(card);
   });
 
-  block.textContent = '';
-  block.appendChild(container);
+  // Clear block and append new structure
+  block.innerHTML = '';
+  block.appendChild(cardsContainer);
+
+  block.classList.add('cards-resources');
 }

@@ -1,0 +1,192 @@
+/* LOKELMA Efficacy Comparison Cards Block */
+@import url('./cards-efficacy-tokens.css');
+
+.cards-efficacy {
+  max-width: var(--cards-eff-max-width);
+  margin: 0 auto;
+  padding: var(--cards-eff-padding);
+}
+
+/* Section Heading */
+.cards-efficacy h2,
+.cards-efficacy .cards-eff-heading {
+  font-family: var(--cards-eff-heading-font);
+  font-size: var(--cards-eff-heading-size);
+  font-weight: var(--cards-eff-heading-weight);
+  line-height: var(--cards-eff-heading-line-height);
+  color: var(--cards-eff-heading-color);
+  margin-bottom: var(--cards-eff-heading-margin-bottom);
+  text-align: left;
+}
+
+.cards-efficacy h2 sup {
+  font-size: var(--cards-eff-super-size);
+  vertical-align: var(--cards-eff-super-vertical-align);
+}
+
+/* Cards Container */
+.cards-efficacy .cards-eff-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--cards-eff-gap);
+}
+
+/* Individual Card */
+.cards-efficacy .cards-eff-card {
+  width: 100%;
+  max-width: var(--cards-eff-card-width);
+  background-color: var(--cards-eff-card-bg);
+  background-image: var(--cards-eff-card-bg-image);
+  background-size: var(--cards-eff-card-bg-size);
+  background-position: var(--cards-eff-card-bg-position);
+  background-repeat: no-repeat;
+  padding: var(--cards-eff-card-padding);
+  border-radius: var(--cards-eff-card-radius);
+  min-height: var(--cards-eff-card-height);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Icon */
+.cards-efficacy .cards-eff-icon {
+  width: var(--cards-eff-icon-size);
+  height: var(--cards-eff-icon-size);
+  margin: var(--cards-eff-icon-margin);
+  display: var(--cards-eff-icon-display);
+  border: var(--cards-eff-icon-border-width) solid var(--cards-eff-icon-border-color);
+  border-radius: var(--cards-eff-icon-border-radius);
+  background: var(--cards-eff-icon-bg);
+  padding: 15px;
+}
+
+.cards-efficacy .cards-eff-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Card Content Container */
+.cards-efficacy .cards-eff-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+}
+
+/* Card Heading */
+.cards-efficacy .cards-eff-card h3,
+.cards-efficacy .cards-eff-card-heading {
+  font-family: var(--cards-eff-card-heading-font);
+  font-size: var(--cards-eff-card-heading-size);
+  font-weight: var(--cards-eff-card-heading-weight);
+  line-height: var(--cards-eff-card-heading-line-height);
+  color: var(--cards-eff-card-heading-color);
+  text-align: var(--cards-eff-card-heading-text-align);
+  margin: var(--cards-eff-card-heading-margin);
+}
+
+/* Bullet Points Section */
+.cards-efficacy .cards-eff-bullets {
+  font-family: var(--cards-eff-list-item-font);
+  font-size: var(--cards-eff-list-item-size);
+  font-weight: var(--cards-eff-list-item-weight);
+  line-height: var(--cards-eff-list-item-line-height);
+  color: var(--cards-eff-list-item-color);
+  white-space: pre-line;
+}
+
+.cards-efficacy .cards-eff-card h3 sup {
+  font-size: var(--cards-eff-super-size);
+  vertical-align: var(--cards-eff-super-vertical-align);
+}
+
+/* List */
+.cards-efficacy .cards-eff-card ul {
+  margin: var(--cards-eff-list-margin);
+  padding: var(--cards-eff-list-padding);
+  list-style-position: outside;
+  padding-left: 1.5em;
+}
+
+.cards-efficacy .cards-eff-card li {
+  font-family: var(--cards-eff-list-item-font);
+  font-size: var(--cards-eff-list-item-size);
+  font-weight: var(--cards-eff-list-item-weight);
+  line-height: var(--cards-eff-list-item-line-height);
+  color: var(--cards-eff-list-item-color);
+  margin: var(--cards-eff-list-item-margin);
+  padding-left: var(--cards-eff-list-item-padding-left);
+}
+
+.cards-efficacy .cards-eff-card li:last-child {
+  margin-bottom: 0;
+}
+
+.cards-efficacy .cards-eff-card li strong,
+.cards-efficacy .cards-eff-card li b {
+  font-weight: var(--cards-eff-list-bold-weight);
+}
+
+/* Study Box */
+.cards-efficacy .cards-eff-study-box {
+  width: var(--cards-eff-study-box-width);
+  min-height: var(--cards-eff-study-box-height);
+  background: var(--cards-eff-study-box-bg);
+  border: var(--cards-eff-study-box-border);
+  padding: var(--cards-eff-study-box-padding);
+  margin-top: var(--cards-eff-study-box-margin-top);
+  display: var(--cards-eff-study-box-display);
+  align-items: var(--cards-eff-study-box-align);
+  justify-content: var(--cards-eff-study-box-justify);
+}
+
+.cards-efficacy .cards-eff-study-box p {
+  font-family: var(--cards-eff-study-text-font);
+  font-size: var(--cards-eff-study-text-size);
+  font-weight: var(--cards-eff-study-text-weight);
+  line-height: var(--cards-eff-study-text-line-height);
+  color: var(--cards-eff-study-text-color);
+  text-align: var(--cards-eff-study-text-align);
+  margin: 0;
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .cards-efficacy .cards-eff-container {
+    grid-template-columns: 1fr;
+    gap: var(--cards-eff-mobile-gap);
+  }
+
+  .cards-efficacy h2,
+  .cards-efficacy .cards-eff-heading {
+    font-size: var(--cards-eff-mobile-heading-size);
+    line-height: var(--cards-eff-mobile-heading-line-height);
+  }
+
+  .cards-efficacy .cards-eff-card {
+    width: var(--cards-eff-mobile-card-width);
+    height: var(--cards-eff-mobile-card-height);
+  }
+
+  .cards-efficacy .cards-eff-card h3,
+  .cards-efficacy .cards-eff-card-heading {
+    font-size: var(--cards-eff-mobile-card-heading-size);
+  }
+
+  .cards-efficacy .cards-eff-card li {
+    font-size: var(--cards-eff-mobile-list-item-size);
+  }
+
+  .cards-efficacy .cards-eff-study-box p {
+    font-size: var(--cards-eff-mobile-study-text-size);
+  }
+
+  .cards-efficacy .cards-eff-icon {
+    width: var(--cards-eff-mobile-icon-size);
+    height: var(--cards-eff-mobile-icon-size);
+  }
+
+  .cards-efficacy .cards-eff-study-box {
+    width: 100%;
+  }
+}

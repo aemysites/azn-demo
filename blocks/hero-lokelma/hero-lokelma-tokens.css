@@ -1,0 +1,79 @@
+/* Component-Specific Tokens: LOKELMA Hero Banner */
+/* Source: Figma Node 677:7253 */
+
+.hero-lokelma {
+  /* Container */
+  --hero-lok-width: var(--lokelma-max-width-full);
+  --hero-lok-height: 550px;
+  --hero-lok-position: relative;
+  --hero-lok-overflow: hidden;
+
+  /* Background Image */
+  --hero-lok-image-width: 100%;
+  --hero-lok-image-height: 100%;
+  --hero-lok-image-object-fit: cover;
+  --hero-lok-image-object-position: center center;
+  --hero-lok-image-opacity: 1;
+
+  /* Content Container */
+  --hero-lok-content-width: var(--lokelma-max-width-content);
+  --hero-lok-content-padding-x: var(--lokelma-content-padding-x);
+  --hero-lok-content-padding-y: var(--lokelma-spacing-5xl);
+  --hero-lok-content-position: absolute;
+  --hero-lok-content-top: 92px;
+  --hero-lok-content-left: var(--lokelma-content-padding-x);
+  --hero-lok-content-z-index: 2;
+
+  /* Logo */
+  --hero-lok-logo-width: 299px;
+  --hero-lok-logo-height: 105px;
+  --hero-lok-logo-position: absolute;
+  --hero-lok-logo-right: 0;
+  --hero-lok-logo-top: -20px;
+  --hero-lok-logo-margin-bottom: var(--lokelma-spacing-lg);
+
+  /* Headline */
+  --hero-lok-headline-font: var(--lokelma-font-family-heading);
+  --hero-lok-headline-size: var(--lokelma-font-size-5xl);
+  --hero-lok-headline-weight: var(--lokelma-font-weight-light);
+  --hero-lok-headline-line-height: var(--lokelma-line-height-xxl);
+  --hero-lok-headline-color: var(--lokelma-color-primary);
+  --hero-lok-headline-text-align: right;
+  --hero-lok-headline-max-width: var(--lokelma-max-width-content);
+  --hero-lok-headline-margin-top: 123px;
+
+  /* Superscript */
+  --hero-lok-super-size: 41.28px;
+  --hero-lok-super-vertical-align: super;
+  --hero-lok-super-line-height: 0;
+
+  /* Carousel Indicators */
+  --hero-lok-indicators-position: absolute;
+  --hero-lok-indicators-bottom: 26px;
+  --hero-lok-indicators-left: 50%;
+  --hero-lok-indicators-transform: translateX(-50%);
+  --hero-lok-indicators-gap: 10px;
+  --hero-lok-indicators-z-index: 10;
+
+  /* Indicator Dots */
+  --hero-lok-dot-width: 30px;
+  --hero-lok-dot-height: 6px;
+  --hero-lok-dot-bg-inactive: var(--lokelma-color-background-primary);
+  --hero-lok-dot-bg-active: var(--lokelma-pink);
+  --hero-lok-dot-border-radius: 0;
+  --hero-lok-dot-transition: var(--lokelma-transition-normal);
+
+  /* Overlay (if needed for text readability) */
+  --hero-lok-overlay-bg: rgba(0, 0, 0, 0);
+  --hero-lok-overlay-z-index: 1;
+
+  /* Responsive Breakpoints */
+  --hero-lok-mobile-height: 400px;
+  --hero-lok-mobile-content-padding: var(--lokelma-spacing-lg);
+  --hero-lok-mobile-headline-size: var(--lokelma-font-size-4xl);
+  --hero-lok-mobile-headline-line-height: var(--lokelma-line-height-xl);
+
+  /* Animation */
+  --hero-lok-slide-transition: transform 500ms ease-in-out;
+  --hero-lok-fade-transition: opacity 300ms ease-in-out;
+}

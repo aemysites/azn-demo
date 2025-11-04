@@ -1,0 +1,97 @@
+/* LOKELMA Efficacy Cards - Component Tokens */
+/* Two-column medical data comparison cards */
+.cards-efficacy {
+  /* Container */
+  --cards-eff-max-width: var(--lokelma-max-width-content);
+  --cards-eff-gap: 39px;
+  --cards-eff-padding: var(--lokelma-spacing-xl) 0;
+
+  /* Section Heading */
+  --cards-eff-heading-font: var(--lokelma-font-family-heading);
+  --cards-eff-heading-size: 48px;
+  --cards-eff-heading-weight: 400;
+  --cards-eff-heading-line-height: 58px;
+  --cards-eff-heading-color: var(--lokelma-blue);
+  --cards-eff-heading-margin-bottom: 40px;
+
+  /* Card Container */
+  --cards-eff-card-width: 603px;
+  --cards-eff-card-height: 587px;
+  --cards-eff-card-bg: rgba(0, 146, 124, 0.1);
+  --cards-eff-card-bg-image: url('./card-bg-gradient.png');
+  --cards-eff-card-bg-size: 294.39%;
+  --cards-eff-card-bg-position: -103.16% 0;
+  --cards-eff-card-padding: 30px 29px;
+  --cards-eff-card-radius: 0;
+
+  /* Icon Container */
+  --cards-eff-icon-size: 130px;
+  --cards-eff-icon-margin: 0 auto 26px;
+  --cards-eff-icon-display: block;
+  --cards-eff-icon-border-width: 8px;
+  --cards-eff-icon-border-color: var(--az-gold);
+  --cards-eff-icon-border-radius: 50%;
+  --cards-eff-icon-bg: var(--lokelma-color-background);
+  --cards-eff-icon-inner-size: 96px;
+  --cards-eff-icon-inner-color: var(--lokelma-green);
+
+  /* Card Heading */
+  --cards-eff-card-heading-font: var(--lokelma-font-family-heading);
+  --cards-eff-card-heading-size: 26px;
+  --cards-eff-card-heading-weight: 500;
+  --cards-eff-card-heading-line-height: 1.3;
+  --cards-eff-card-heading-color: var(--lokelma-color-text-primary);
+  --cards-eff-card-heading-text-align: center;
+  --cards-eff-card-heading-margin: 0 0 30px;
+
+  /* List */
+  --cards-eff-list-margin: 0 0 20px;
+  --cards-eff-list-padding: 0;
+  --cards-eff-list-gap: 10px;
+
+  /* List Items */
+  --cards-eff-list-item-font: var(--lokelma-font-family-body);
+  --cards-eff-list-item-size: 22px;
+  --cards-eff-list-item-weight: 400;
+  --cards-eff-list-item-line-height: 1.3;
+  --cards-eff-list-item-color: var(--lokelma-color-text-primary);
+  --cards-eff-list-item-margin: 0 0 10px;
+  --cards-eff-list-item-padding-left: 0;
+
+  /* Bold text in list items */
+  --cards-eff-list-bold-weight: 700;
+
+  /* Superscript */
+  --cards-eff-super-size: 16.77px;
+  --cards-eff-super-vertical-align: super;
+
+  /* Study Box */
+  --cards-eff-study-box-width: 582px;
+  --cards-eff-study-box-height: 82px;
+  --cards-eff-study-box-bg: rgba(255, 255, 255, 0.5);
+  --cards-eff-study-box-border: 1px solid var(--lokelma-blue);
+  --cards-eff-study-box-padding: 10px;
+  --cards-eff-study-box-margin-top: auto;
+  --cards-eff-study-box-display: flex;
+  --cards-eff-study-box-align: center;
+  --cards-eff-study-box-justify: center;
+
+  /* Study Box Text */
+  --cards-eff-study-text-font: var(--lokelma-font-family-heading);
+  --cards-eff-study-text-size: 22px;
+  --cards-eff-study-text-weight: 500;
+  --cards-eff-study-text-line-height: 1.3;
+  --cards-eff-study-text-color: var(--lokelma-blue);
+  --cards-eff-study-text-align: center;
+
+  /* Responsive - Mobile */
+  --cards-eff-mobile-gap: 20px;
+  --cards-eff-mobile-card-width: 100%;
+  --cards-eff-mobile-card-height: auto;
+  --cards-eff-mobile-heading-size: 32px;
+  --cards-eff-mobile-heading-line-height: 40px;
+  --cards-eff-mobile-card-heading-size: 22px;
+  --cards-eff-mobile-list-item-size: 18px;
+  --cards-eff-mobile-study-text-size: 18px;
+  --cards-eff-mobile-icon-size: 100px;
+}

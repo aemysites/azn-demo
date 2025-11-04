@@ -1,0 +1,71 @@
+/* LOKELMA Resource Cards Grid - Component Tokens */
+.cards-resources {
+  /* Container */
+  --cards-res-max-width: var(--lokelma-max-width-content);
+  --cards-res-gap: 21px;
+  --cards-res-columns: 3;
+  --cards-res-padding: var(--lokelma-spacing-xl) 0;
+
+  /* Card Container */
+  --cards-res-card-width: 400px;
+  --cards-res-card-bg: var(--lokelma-color-background);
+  --cards-res-card-border: none;
+  --cards-res-card-radius: 0;
+  --cards-res-card-overflow: hidden;
+
+  /* Icon Section */
+  --cards-res-icon-section-height: 222px;
+  --cards-res-icon-section-bg: var(--lokelma-green);
+  --cards-res-icon-section-bg-image: url('./card-bg.png');
+  --cards-res-icon-section-bg-size: 107.5%;
+  --cards-res-icon-section-bg-position: center;
+  --cards-res-icon-section-display: flex;
+  --cards-res-icon-section-align: center;
+  --cards-res-icon-section-justify: center;
+
+  /* Icon */
+  --cards-res-icon-size: 100px;
+  --cards-res-icon-display: block;
+
+  /* Content Section */
+  --cards-res-content-bg: rgba(115, 195, 183, 0.2);
+  --cards-res-content-padding: 30px;
+  --cards-res-content-gap: 20px;
+  --cards-res-content-display: flex;
+  --cards-res-content-flex-direction: column;
+
+  /* Card Title */
+  --cards-res-title-font: var(--lokelma-font-family-heading);
+  --cards-res-title-size: 24px;
+  --cards-res-title-weight: 400;
+  --cards-res-title-line-height: 34px;
+  --cards-res-title-color: var(--lokelma-blue);
+  --cards-res-title-margin: 0;
+
+  /* Button */
+  --cards-res-button-bg: var(--lokelma-yellow);
+  --cards-res-button-color: var(--lokelma-blue);
+  --cards-res-button-border: 1px solid var(--lokelma-yellow);
+  --cards-res-button-padding: 22px 32px;
+  --cards-res-button-font: var(--lokelma-font-family-heading);
+  --cards-res-button-size: 16px;
+  --cards-res-button-weight: 700;
+  --cards-res-button-style: italic;
+  --cards-res-button-height: 60px;
+  --cards-res-button-gap: 10px;
+  --cards-res-button-display: inline-flex;
+  --cards-res-button-align: center;
+  --cards-res-button-justify: center;
+
+  /* Button Hover */
+  --cards-res-button-hover-bg: var(--lokelma-blue);
+  --cards-res-button-hover-color: var(--lokelma-yellow);
+  --cards-res-button-hover-border: 1px solid var(--lokelma-blue);
+
+  /* Responsive - Mobile */
+  --cards-res-mobile-columns: 1;
+  --cards-res-mobile-card-width: 100%;
+  --cards-res-mobile-gap: 20px;
+  --cards-res-mobile-title-size: 20px;
+  --cards-res-mobile-icon-size: 80px;
+}

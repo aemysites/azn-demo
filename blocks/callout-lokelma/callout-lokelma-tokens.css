@@ -1,0 +1,30 @@
+/* LOKELMA Callout Banner - Component Tokens */
+.callout-lokelma {
+  /* Container */
+  --callout-lok-max-width: var(--lokelma-max-width-content);
+  --callout-lok-height: 138px;
+  --callout-lok-margin: var(--lokelma-spacing-xl) 0;
+  --callout-lok-padding: 15px 96px 50px 24px;
+  --callout-lok-bg: var(--lokelma-green);
+  --callout-lok-bg-image: url('./callout-bg.svg');
+  --callout-lok-bg-size: cover;
+  --callout-lok-bg-position: center;
+  --callout-lok-position: relative;
+  --callout-lok-overflow: hidden;
+
+  /* Text */
+  --callout-lok-text-font: var(--lokelma-font-family-body);
+  --callout-lok-text-size: 28px;
+  --callout-lok-text-weight: 700;
+  --callout-lok-text-line-height: 1.3;
+  --callout-lok-text-color: var(--az-white);
+
+  /* Superscript */
+  --callout-lok-super-size: 18.06px;
+  --callout-lok-super-vertical-align: super;
+
+  /* Responsive - Mobile */
+  --callout-lok-mobile-height: auto;
+  --callout-lok-mobile-padding: 20px;
+  --callout-lok-mobile-text-size: 20px;
+}

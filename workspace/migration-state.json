@@ -1,0 +1,186 @@
+{
+  "figmaUrl": "https://www.figma.com/design/iuXMtneLhmoFLDDNavxfNN/LOKELMA-myAZ-integration_Phase4",
+  "figmaPageName": "1.0 Post-gate HCP Homepage – Slide 3_P3",
+  "figmaPageNodeId": "677:7252",
+  "pageName": "post-gate-hcp-homepage",
+  "totalSections": 11,
+  "sections": [
+    {
+      "id": "section-1",
+      "name": "Navigation",
+      "nodeId": "677:7254",
+      "blockType": "header",
+      "variantName": "header-lokelma",
+      "status": "completed",
+      "componentTokensPath": "blocks/header-lokelma/header-lokelma-tokens.css",
+      "assets": [],
+      "markdownSection": "n/a-header-separate",
+      "figmaScreenshot": "reference/figma-section-1.png",
+      "previewScreenshot": "",
+      "note": "EDS headers are handled separately - tokens created for reference"
+    },
+    {
+      "id": "section-2",
+      "name": "Hero Banner with Logo & Headline",
+      "nodeId": "677:7253",
+      "blockType": "hero",
+      "variantName": "hero-lokelma",
+      "status": "completed",
+      "componentTokensPath": "blocks/hero-lokelma/hero-lokelma-tokens.css",
+      "assets": [
+        {"figmaUrl": "http://localhost:3845/assets/00d096f4c684aa60ed831961c2c805a8be9d846f.png", "localPath": "content/images/post-gate-hcp-homepage/hero-banner-slide3.png", "altText": "Hero Banner", "type": "background"},
+        {"figmaUrl": "http://localhost:3845/assets/8b3bcf2e98635ddced12f022c6602b3ef320d932.svg", "localPath": "content/images/post-gate-hcp-homepage/lokelma-logo.svg", "altText": "LOKELMA Logo", "type": "logo"}
+      ],
+      "markdownSection": "lines 1-9",
+      "figmaScreenshot": "reference/figma-section-2.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-3",
+      "name": "Efficacy Comparison Cards (48hr vs Maintenance)",
+      "nodeId": "677:7336",
+      "blockType": "cards",
+      "variantName": "cards-efficacy",
+      "status": "completed",
+      "componentTokensPath": "blocks/cards-efficacy/cards-efficacy-tokens.css",
+      "assets": [
+        {"figmaUrl": "http://localhost:3845/assets/5d7297dc1dcb9782d1a954732d00d9bc64939883.png", "localPath": "blocks/cards-efficacy/card-bg-gradient.png", "altText": "Card background gradient", "type": "background"},
+        {"figmaUrl": "http://localhost:3845/assets/235636fd1fbd7e546dc563e855dda363f657687e.svg", "localPath": "content/images/post-gate-hcp-homepage/icon-clock.svg", "altText": "Clock icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/bcf1d7c871b5ed8e776e8f69045e1f540d1c94ce.svg", "localPath": "content/images/post-gate-hcp-homepage/icon-waveform-full.svg", "altText": "Waveform icon", "type": "icon"}
+      ],
+      "markdownSection": "lines 11-19",
+      "figmaScreenshot": "reference/figma-section-3.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-4",
+      "name": "CTA Button",
+      "nodeId": "677:7389",
+      "blockType": "buttons",
+      "variantName": "lokelma-primary",
+      "status": "completed",
+      "componentTokensPath": "blocks/buttons/buttons.css",
+      "assets": [
+        {"figmaUrl": "http://localhost:3845/assets/14b44ef5f016b525d867eb429ca0cf4b97d9757f.svg", "localPath": "content/images/post-gate-hcp-homepage/arrow-right.svg", "altText": "Arrow right", "type": "icon"}
+      ],
+      "markdownSection": "lines 21-25",
+      "figmaScreenshot": "reference/figma-section-4.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-5",
+      "name": "Footnotes Section",
+      "nodeId": "677:7390",
+      "blockType": "text",
+      "variantName": "footnotes",
+      "status": "completed",
+      "componentTokensPath": "",
+      "assets": [],
+      "markdownSection": "lines 27-33",
+      "figmaScreenshot": "reference/figma-section-5.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-6",
+      "name": "Callout Banner (Teal)",
+      "nodeId": "677:7391",
+      "blockType": "callout",
+      "variantName": "callout-lokelma",
+      "status": "completed",
+      "componentTokensPath": "blocks/callout-lokelma/callout-lokelma-tokens.css",
+      "assets": [
+        {"figmaUrl": "http://localhost:3845/assets/9903e46cb84047f0261a776b3c8d79de34ceafa6.svg", "localPath": "blocks/callout-lokelma/callout-bg.svg", "altText": "Callout background", "type": "background"}
+      ],
+      "markdownSection": "lines 35-39",
+      "figmaScreenshot": "reference/figma-section-6.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-7",
+      "name": "Learn More Section Heading",
+      "nodeId": "677:7392",
+      "blockType": "text",
+      "variantName": "heading",
+      "status": "completed",
+      "componentTokensPath": "",
+      "assets": [],
+      "markdownSection": "line 41",
+      "figmaScreenshot": "reference/figma-section-7.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-8",
+      "name": "Resource Cards Grid (6 cards)",
+      "nodeId": "677:7393",
+      "blockType": "cards",
+      "variantName": "cards-resources",
+      "status": "completed",
+      "componentTokensPath": "blocks/cards-resources/cards-resources-tokens.css",
+      "assets": [
+        {"figmaUrl": "http://localhost:3845/assets/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png", "localPath": "blocks/cards-resources/card-bg.png", "altText": "Card background", "type": "background"},
+        {"figmaUrl": "http://localhost:3845/assets/62f3d116b9e340cb9dfd8240640684c1438ed64f.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-hyperkalemia.svg", "altText": "Hyperkalemia icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/9509392abf0c0fdbb7927ba1a2d5d79c29332e45.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-efficacy.svg", "altText": "Efficacy icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/10c966afe668579875ab43b7dc1857e48c191760.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-safety.svg", "altText": "Safety icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/762b834b09cad89b3d528635ce879f1e339b076d.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-moa.svg", "altText": "MOA icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/ad18b205cd063d3e0e9e34309c900da37623b043.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-dosing.svg", "altText": "Dosing icon", "type": "icon"},
+        {"figmaUrl": "http://localhost:3845/assets/24e582290e300f3d69f0313daeee7330acf432e1.svg", "localPath": "content/images/post-gate-hcp-homepage/resource-icons/icon-resources.svg", "altText": "Resources icon", "type": "icon"}
+      ],
+      "markdownSection": "lines 45-54",
+      "figmaScreenshot": "reference/figma-section-8.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-9",
+      "name": "Connect with Representative CTA",
+      "nodeId": "677:7501",
+      "blockType": "card",
+      "variantName": "card-cta",
+      "status": "completed",
+      "componentTokensPath": "",
+      "assets": [],
+      "markdownSection": "lines 56-62",
+      "figmaScreenshot": "reference/figma-section-9.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-10",
+      "name": "References & Footnotes",
+      "nodeId": "677:7510",
+      "blockType": "text",
+      "variantName": "references",
+      "status": "completed",
+      "componentTokensPath": "",
+      "assets": [],
+      "markdownSection": "lines 64-70",
+      "figmaScreenshot": "reference/figma-section-10.png",
+      "previewScreenshot": ""
+    },
+    {
+      "id": "section-11",
+      "name": "Footer",
+      "nodeId": "677:7513",
+      "blockType": "footer",
+      "variantName": "footer-lokelma",
+      "status": "completed",
+      "componentTokensPath": "",
+      "assets": [],
+      "markdownSection": "n/a-footer-separate",
+      "figmaScreenshot": "reference/figma-section-11.png",
+      "previewScreenshot": "",
+      "note": "EDS footers are handled separately like headers"
+    }
+  ],
+  "globalTokens": {
+    "path": "styles/styles.css",
+    "extracted": true,
+    "timestamp": "2025-01-15T10:30:00Z",
+    "tokenCount": 100
+  },
+  "completionStatus": {
+    "analysisComplete": true,
+    "globalTokensComplete": true,
+    "sectionsComplete": 11,
+    "sectionsTotal": 11,
+    "migrationComplete": true
+  }
+}

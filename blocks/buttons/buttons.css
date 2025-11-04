@@ -1,0 +1,74 @@
+/* Default Buttons Block */
+.buttons-container {
+  display: flex;
+  gap: var(--lokelma-spacing-md);
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: var(--lokelma-spacing-xl) 0;
+}
+
+.buttons-container a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 22px 32px;
+  font-family: var(--lokelma-font-family-heading);
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  text-decoration: none;
+  border: 1px solid;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* LOKELMA Primary Button (Yellow) */
+.buttons.lokelma-primary a,
+.buttons-lokelma-primary a {
+  background-color: var(--lokelma-yellow);
+  color: var(--lokelma-blue);
+  border-color: var(--lokelma-yellow);
+}
+
+.buttons.lokelma-primary a::after,
+.buttons-lokelma-primary a::after {
+  content: '›';
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.buttons.lokelma-primary a:hover,
+.buttons-lokelma-primary a:hover {
+  background-color: var(--lokelma-blue);
+  color: var(--lokelma-yellow);
+  border-color: var(--lokelma-blue);
+}
+
+/* LOKELMA Secondary Button (Blue) */
+.buttons.lokelma-secondary a,
+.buttons-lokelma-secondary a {
+  background-color: var(--lokelma-blue);
+  color: var(--az-white);
+  border-color: var(--lokelma-blue);
+}
+
+.buttons.lokelma-secondary a:hover,
+.buttons-lokelma-secondary a:hover {
+  background-color: transparent;
+  color: var(--lokelma-blue);
+  border-color: var(--lokelma-blue);
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .buttons-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .buttons-container a {
+    justify-content: center;
+    width: 100%;
+  }
+}

@@ -1,0 +1,43 @@
+/* LOKELMA Callout Banner Block */
+@import url('./callout-lokelma-tokens.css');
+
+.callout-lokelma {
+  position: var(--callout-lok-position);
+  max-width: var(--callout-lok-max-width);
+  height: var(--callout-lok-height);
+  margin: var(--callout-lok-margin);
+  padding: var(--callout-lok-padding);
+  background-color: var(--callout-lok-bg);
+  background-image: var(--callout-lok-bg-image);
+  background-size: var(--callout-lok-bg-size);
+  background-position: var(--callout-lok-bg-position);
+  overflow: var(--callout-lok-overflow);
+  display: flex;
+  align-items: center;
+}
+
+.callout-lokelma p {
+  font-family: var(--callout-lok-text-font);
+  font-size: var(--callout-lok-text-size);
+  font-weight: var(--callout-lok-text-weight);
+  line-height: var(--callout-lok-text-line-height);
+  color: var(--callout-lok-text-color);
+  margin: 0;
+}
+
+.callout-lokelma p sup {
+  font-size: var(--callout-lok-super-size);
+  vertical-align: var(--callout-lok-super-vertical-align);
+}
+
+/* Responsive */
+@media (width <= 768px) {
+  .callout-lokelma {
+    height: var(--callout-lok-mobile-height);
+    padding: var(--callout-lok-mobile-padding);
+  }
+
+  .callout-lokelma p {
+    font-size: var(--callout-lok-mobile-text-size);
+  }
+}

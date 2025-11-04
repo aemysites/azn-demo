@@ -1,0 +1,112 @@
+/* Component-Specific Tokens: LOKELMA Header */
+/* Source: Figma Node 677:7254 */
+
+.header-lokelma {
+  /* Container */
+  --header-lok-width: var(--lokelma-max-width-full);
+  --header-lok-height-top: var(--lokelma-header-height-top);
+  --header-lok-height-main: var(--lokelma-header-height-main);
+  --header-lok-height-submenu: var(--lokelma-header-height-submenu);
+  --header-lok-height-breadcrumb: var(--lokelma-header-height-breadcrumb);
+  --header-lok-height-total: var(--lokelma-header-height-total);
+
+  /* Top Bar */
+  --header-lok-top-bg: var(--lokelma-color-background-secondary);
+  --header-lok-top-padding-x: var(--lokelma-spacing-3xl);
+  --header-lok-top-padding-y: var(--lokelma-spacing-md);
+  --header-lok-top-gap: var(--lokelma-spacing-2xl);
+  --header-lok-top-border-color: var(--lokelma-border-color-default);
+  --header-lok-top-border-width: var(--lokelma-border-width-thin);
+
+  /* Top Bar Text */
+  --header-lok-top-text-color: var(--lokelma-color-text-primary);
+  --header-lok-top-text-font: var(--lokelma-font-family-heading);
+  --header-lok-top-text-size: var(--lokelma-font-size-m);
+  --header-lok-top-text-weight: var(--lokelma-font-weight-light);
+  --header-lok-top-text-line-height: normal;
+
+  /* Language Selector */
+  --header-lok-lang-gap: var(--lokelma-spacing-m);
+  --header-lok-lang-color-active: var(--az-mulberry);
+  --header-lok-lang-color-inactive: var(--az-mulberry);
+  --header-lok-lang-weight-active: var(--lokelma-font-weight-bold);
+  --header-lok-lang-weight-inactive: var(--lokelma-font-weight-light);
+  --header-lok-lang-divider-height: 27px;
+  --header-lok-lang-divider-color: var(--az-mulberry);
+
+  /* Main Nav Bar */
+  --header-lok-nav-bg: var(--lokelma-color-background-primary);
+  --header-lok-nav-padding-x: var(--lokelma-spacing-3xl);
+  --header-lok-nav-padding-y: var(--lokelma-spacing-md);
+  --header-lok-nav-gap: 500px;
+  --header-lok-nav-border-color: var(--lokelma-border-color-default);
+  --header-lok-nav-border-width: var(--lokelma-border-width-thin);
+
+  /* Logo */
+  --header-lok-logo-width: 162.069px;
+  --header-lok-logo-height: 40px;
+  --header-lok-logo-gap: var(--lokelma-spacing-3xl);
+
+  /* Main Menu */
+  --header-lok-menu-gap: 72px;
+  --header-lok-menu-item-gap: var(--lokelma-spacing-xs);
+  --header-lok-menu-text-color: var(--lokelma-color-text-primary);
+  --header-lok-menu-text-font: var(--lokelma-font-family-heading);
+  --header-lok-menu-text-size: var(--lokelma-font-size-m);
+  --header-lok-menu-text-weight: var(--lokelma-font-weight-light);
+  --header-lok-menu-text-transform: uppercase;
+  --header-lok-menu-text-line-height: normal;
+
+  /* Dropdown Indicator */
+  --header-lok-dropdown-size: 8px;
+  --header-lok-dropdown-color: var(--lokelma-color-text-primary);
+
+  /* Breadcrumb Bar */
+  --header-lok-breadcrumb-bg: var(--lokelma-color-background-primary);
+  --header-lok-breadcrumb-height: var(--lokelma-header-height-breadcrumb);
+  --header-lok-breadcrumb-padding-x: var(--lokelma-spacing-3xl);
+  --header-lok-breadcrumb-padding-y: var(--lokelma-spacing-m);
+
+  /* Breadcrumb Items */
+  --header-lok-breadcrumb-icon-size: 24.176px;
+  --header-lok-breadcrumb-gap: var(--lokelma-spacing-sm);
+  --header-lok-breadcrumb-text-color: var(--lokelma-color-text-primary);
+  --header-lok-breadcrumb-text-font: var(--lokelma-font-family-heading);
+  --header-lok-breadcrumb-text-size: var(--lokelma-font-size-m);
+  --header-lok-breadcrumb-text-weight: var(--lokelma-font-weight-light);
+  --header-lok-breadcrumb-text-line-height: normal;
+
+  /* Breadcrumb Separator */
+  --header-lok-breadcrumb-separator-size: 12px;
+  --header-lok-breadcrumb-separator-color: var(--lokelma-color-text-primary);
+
+  /* Submenu Bar */
+  --header-lok-submenu-bg: var(--lokelma-color-background-secondary);
+  --header-lok-submenu-height: var(--lokelma-header-height-submenu);
+  --header-lok-submenu-gap: var(--lokelma-spacing-xxs);
+  --header-lok-submenu-padding: var(--lokelma-spacing-md);
+
+  /* Submenu Items */
+  --header-lok-submenu-item-gap: var(--lokelma-spacing-s);
+  --header-lok-submenu-item-padding: var(--lokelma-spacing-md);
+  --header-lok-submenu-text-color: var(--lokelma-color-text-primary);
+  --header-lok-submenu-text-font: var(--lokelma-font-family-heading);
+  --header-lok-submenu-text-size: var(--lokelma-font-size-m);
+  --header-lok-submenu-text-weight: var(--lokelma-font-weight-light);
+  --header-lok-submenu-text-line-height: var(--lokelma-line-height-m);
+
+  /* Submenu Active Indicator */
+  --header-lok-submenu-indicator-height: var(--lokelma-border-width-thick);
+  --header-lok-submenu-indicator-color: var(--az-gold);
+  --header-lok-submenu-indicator-inactive-opacity: 0;
+  --header-lok-submenu-indicator-active-opacity: 1;
+
+  /* Hover & Active States */
+  --header-lok-hover-transition: var(--lokelma-transition-fast);
+  --header-lok-menu-hover-opacity: 0.8;
+  --header-lok-link-hover-underline: none;
+
+  /* Z-Index */
+  --header-lok-z-index: 1000;
+  --header-lok-submenu-z-index: 999;
+}
