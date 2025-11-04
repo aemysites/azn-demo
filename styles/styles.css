@@ -411,22 +411,22 @@ main .section.highlight {
 }
 
 /* Intro/lead paragraphs before sections - high specificity to override footnote styles */
-main > div:not(.section) .default-content-wrapper > p,
-main .default-content-wrapper > p:first-child {
-  text-align: center;
-  font-family: var(--lokelma-font-family-heading);
-  font-size: 30px;
-  font-weight: 900;
-  line-height: 40px;
-  color: #000;
-  margin: 50px auto;
+main > div:not(.section) > p,
+main > div:not(.section) .default-content-wrapper > p {
+  text-align: center !important;
+  font-family: var(--lokelma-font-family-heading) !important;
+  font-size: 30px !important;
+  font-weight: 900 !important;
+  line-height: 40px !important;
+  color: #000 !important;
+  margin: 50px auto !important;
   max-width: 1200px;
   padding: 0 24px;
 }
 
 @media (width >= 900px) {
-  main > div:not(.section) .default-content-wrapper > p,
-  main .default-content-wrapper > p:first-child {
+  main > div:not(.section) > p,
+  main > div:not(.section) .default-content-wrapper > p {
     padding: 0 32px;
   }
 }
