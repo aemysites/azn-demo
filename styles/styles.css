@@ -428,3 +428,45 @@ main .default-content-wrapper > p {
     padding: 0 32px;
   }
 }
+
+/* Footnotes and References sections styling */
+main .section h2 {
+  font-family: var(--lokelma-font-family-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+/* Footnote paragraphs - smaller, regular weight */
+main .section p {
+  font-family: var(--lokelma-font-family-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  text-align: left;
+  margin: 12px 0;
+}
+
+/* Reference list items */
+main .section ol,
+main .section ul {
+  font-family: var(--lokelma-font-family-body);
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.6;
+  margin-left: 20px;
+}
+
+main .section li {
+  margin-bottom: 12px;
+}
+
+/* Emphasis (italics) in references */
+main .section em {
+  font-style: italic;
+  font-weight: 400;
+}
