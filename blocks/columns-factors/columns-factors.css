@@ -60,19 +60,19 @@
 
 /* Icon container */
 .columns-factors > div > div picture {
-  width: var(--columns-factors-icon-size);
-  height: var(--columns-factors-icon-size);
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   position: relative;
   z-index: 1;
 }
 
 .columns-factors > div > div img {
-  width: var(--columns-factors-icon-size);
-  height: var(--columns-factors-icon-size);
+  width: 80px;
+  height: 80px;
   object-fit: contain;
 }
 
@@ -87,6 +87,8 @@
   margin: 0;
   position: relative;
   z-index: 1;
+  max-width: 180px;
+  padding: 0 10px;
 }
 
 .columns-factors > div > div strong {

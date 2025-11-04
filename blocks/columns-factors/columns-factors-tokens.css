@@ -15,11 +15,11 @@
   /* Text styling - adjusted to fit inside circles */
   --columns-factors-label-color: var(--lokelma-blue);
   --columns-factors-label-font-family: var(--lokelma-font-family-heading);
-  --columns-factors-label-font-size: 28px;
+  --columns-factors-label-font-size: 24px;
   --columns-factors-label-font-weight: 800; /* XBold */
-  --columns-factors-label-line-height: 1.2;
+  --columns-factors-label-line-height: 1.1;
   --columns-factors-label-text-align: center;
-  --columns-factors-label-letter-spacing: -0.56px;
+  --columns-factors-label-letter-spacing: -0.48px;
 
   /* Column layout */
   --columns-factors-column-gap: 59px;
