@@ -47,14 +47,13 @@
   background: #F8D9A2;
 }
 
-/* Inner white circle with yellow border */
+/* Inner white circle - no border */
 .columns-factors > div > div::before {
   content: '';
   position: absolute;
   inset: 25px;
   border-radius: 50%;
   background-color: #FFFFFF;
-  border: var(--columns-factors-circle-border-width) solid var(--columns-factors-circle-border-color);
   z-index: 0;
 }
 
