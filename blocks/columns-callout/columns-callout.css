@@ -9,22 +9,29 @@
   background-color: var(--columns-callout-bg-color);
   border-radius: var(--columns-callout-border-radius);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
+  /* Create parallelogram shape with slanted right edge */
+  clip-path: polygon(
+    0 0,
+    calc(100% - 100px) 0,
+    100% 100%,
+    0 100%
+  );
 }
 
-/* Angular arrow decoration on right side */
+/* Small yellow triangular notch at top-right corner */
 .columns-callout::after {
   content: '';
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -1px;
+  top: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 var(--columns-callout-arrow-size) var(--columns-callout-arrow-size);
-  border-color: transparent transparent var(--columns-callout-arrow-color) transparent;
+  border-width: 0 var(--columns-callout-notch-size) var(--columns-callout-notch-size) 0;
+  border-color: transparent var(--columns-callout-arrow-color) transparent transparent;
 }
 
 .columns-callout > div {
