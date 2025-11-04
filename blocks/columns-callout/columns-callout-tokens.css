@@ -8,7 +8,6 @@
 
   /* Background styling */
   --columns-callout-bg-color: var(--lokelma-green);
-  --columns-callout-border-radius: 0;
 
   /* Text styling - exact from Figma */
   --columns-callout-text-color: #ffffff;
@@ -17,8 +16,7 @@
   --columns-callout-font-weight: 700; /* Bold */
   --columns-callout-line-height: 1.4;
 
-  /* Yellow notch at top-right - exact from Figma */
-  --columns-callout-notch-size: 80px;
+  /* Yellow notch decoration - exact from Figma */
   --columns-callout-arrow-color: var(--lokelma-yellow);
 
   /* Responsive */

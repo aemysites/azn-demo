@@ -6,32 +6,31 @@
   min-height: var(--columns-callout-mobile-height);
   margin: var(--columns-callout-margin);
   padding: var(--columns-callout-mobile-padding-y) var(--columns-callout-mobile-padding-x);
-  background-color: var(--columns-callout-bg-color);
-  border-radius: var(--columns-callout-border-radius);
   position: relative;
-  overflow: visible;
   display: flex;
   align-items: center;
-  /* Create parallelogram shape with slanted right edge */
+  /* Create parallelogram with slanted right edge using clip-path */
+  background-color: var(--columns-callout-bg-color);
   clip-path: polygon(
     0 0,
-    calc(100% - 100px) 0,
+    calc(100% - 80px) 0,
     100% 100%,
     0 100%
   );
 }
 
-/* Small yellow triangular notch at top-right corner */
-.columns-callout::after {
+/* Yellow triangular notch at top-right corner */
+.columns-callout::before {
   content: '';
   position: absolute;
-  right: -1px;
+  right: 0;
   top: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 var(--columns-callout-notch-size) var(--columns-callout-notch-size) 0;
+  border-width: 0 60px 60px 0;
   border-color: transparent var(--columns-callout-arrow-color) transparent transparent;
+  z-index: 1;
 }
 
 .columns-callout > div {
