@@ -14,24 +14,36 @@
   align-items: var(--columns-statistics-column-align);
 }
 
+/* Each column is a teal double-ring circle container */
 .columns-statistics > div > div {
   display: flex;
   flex-direction: column;
   align-items: var(--columns-statistics-column-align);
+  justify-content: center;
   text-align: var(--columns-statistics-text-align);
+  width: var(--columns-statistics-circle-size);
+  height: var(--columns-statistics-circle-size);
+  border-radius: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+  position: relative;
+  background: var(--lokelma-light-green);
 }
 
-/* Pie chart images */
-.columns-statistics > div > div picture {
-  width: var(--columns-statistics-chart-size);
-  height: var(--columns-statistics-chart-size);
-  margin: var(--columns-statistics-chart-margin);
+/* Inner white circle - no border */
+.columns-statistics > div > div::before {
+  content: '';
+  position: absolute;
+  inset: 30px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 0;
 }
 
+/* Hide images - not used in Figma design */
+.columns-statistics > div > div picture,
 .columns-statistics > div > div img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  display: none;
 }
 
 /* Percentage values (bold text) */
@@ -43,7 +55,9 @@
   line-height: var(--columns-statistics-percentage-line-height);
   letter-spacing: var(--columns-statistics-percentage-letter-spacing);
   display: block;
-  margin-bottom: 8px;
+  margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
 /* Label text (e.g., "with HF", "with chronic HF") */
@@ -54,11 +68,15 @@
   color: var(--columns-statistics-label-color);
   line-height: var(--columns-statistics-label-line-height);
   margin: 0;
+  position: relative;
+  z-index: 1;
 }
 
-/* First paragraph may contain "Up to" prefix */
+/* "Up to" prefix text */
 .columns-statistics > div > div p:first-of-type {
-  margin-bottom: 4px;
+  margin-bottom: 0;
+  font-size: var(--columns-statistics-small-font-size);
+  line-height: var(--columns-statistics-small-line-height);
 }
 
 @media (width >= 900px) {
