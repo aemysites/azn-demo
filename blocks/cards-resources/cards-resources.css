@@ -17,11 +17,6 @@
   padding: 0 var(--lokelma-spacing-m);
 }
 
-/* 2-column variant */
-.cards-resources.two-columns > .cards-resources-container {
-  grid-template-columns: repeat(2, 1fr);
-}
-
 /* Individual card */
 .card-resource {
   display: flex;
@@ -33,10 +28,7 @@
 /* Icon area with teal gradient background */
 .card-resource-icon {
   height: 222px;
-  background: url('/content/images/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, rgba(0, 146, 124, 0.8) 0%, rgba(115, 195, 183, 0.8) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -66,15 +58,6 @@
   font-weight: var(--lokelma-font-weight-regular);
   font-size: 24px;
   line-height: var(--lokelma-line-height-heading);
-  color: var(--lokelma-color-text);
-  margin: 0;
-}
-
-/* Description (optional) */
-.card-resource-body .card-resource-description {
-  font-family: var(--lokelma-font-family-body);
-  font-size: 16px;
-  line-height: 1.5;
   color: var(--lokelma-color-text);
   margin: 0;
 }
