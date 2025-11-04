@@ -129,7 +129,7 @@
   --lokelma-color-background: var(--az-white);
 
   /* LOKELMA Typography */
-  --lokelma-font-family-heading: 'Lexia', Georgia, serif;
+  --lokelma-font-family-heading: 'Lexia', 'Merriweather', Georgia, serif;
   --lokelma-font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* LOKELMA Font Weights */
@@ -415,7 +415,7 @@ main > div > p {
   text-align: center;
   font-family: var(--lokelma-font-family-heading);
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 40px;
   color: #000;
   margin: 50px auto;
