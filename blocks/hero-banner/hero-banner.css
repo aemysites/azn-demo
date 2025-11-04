@@ -28,19 +28,21 @@
 .hero-banner > div:first-child > div {
   width: 100%;
   height: 100%;
+  display: flex;
 }
 
-.hero-banner picture {
+.hero-banner > div:first-child picture {
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
 }
 
-.hero-banner img {
+.hero-banner > div:first-child img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   display: block;
+  object-position: right center;
 }
 
 /* Text content container */
