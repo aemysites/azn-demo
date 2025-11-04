@@ -409,3 +409,22 @@ main .section.highlight {
 .section.hidden {
   display: none;
 }
+
+/* Intro/lead paragraphs before sections */
+main > div > p {
+  text-align: center;
+  font-family: var(--lokelma-font-family-heading);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 40px;
+  color: #000;
+  margin: 50px auto;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+@media (width >= 900px) {
+  main > div > p {
+    padding: 0 32px;
+  }
+}
