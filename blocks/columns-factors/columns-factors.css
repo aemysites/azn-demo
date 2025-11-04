@@ -30,21 +30,21 @@
   background: #FDF6ED;
 }
 
-/* Outer ring gradient variations - lighter to darker beige/yellow */
+/* Outer ring gradient variations - lighter to darker beige/yellow with more saturation */
 .columns-factors > div > div:nth-child(1) {
-  background: #FDF8F0;
+  background: #FBF3E6;
 }
 
 .columns-factors > div > div:nth-child(2) {
-  background: #FCEFD9;
+  background: #F9E8C8;
 }
 
 .columns-factors > div > div:nth-child(3) {
-  background: #FAE4BD;
+  background: #F5D89E;
 }
 
 .columns-factors > div > div:nth-child(4) {
-  background: #F8D9A2;
+  background: #F1C873;
 }
 
 /* Inner white circle - no border */
