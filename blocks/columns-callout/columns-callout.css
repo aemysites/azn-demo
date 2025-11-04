@@ -9,7 +9,15 @@
   position: relative;
   display: flex;
   align-items: center;
-  /* Create parallelogram with slanted right edge using clip-path */
+  background-color: var(--columns-callout-bg-color);
+  overflow: visible;
+}
+
+/* Main teal parallelogram shape with slanted right edge */
+.columns-callout::after {
+  content: '';
+  position: absolute;
+  inset: 0;
   background-color: var(--columns-callout-bg-color);
   clip-path: polygon(
     0 0,
@@ -17,13 +25,14 @@
     100% 100%,
     0 100%
   );
+  z-index: 0;
 }
 
-/* Yellow triangular notch at top-right corner - positioned outside clip-path */
+/* Yellow triangular notch at top-right corner */
 .columns-callout::before {
   content: '';
   position: absolute;
-  right: -80px;
+  right: 0;
   top: 0;
   width: 0;
   height: 0;
@@ -36,6 +45,8 @@
 .columns-callout > div {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .columns-callout > div > div {
