@@ -30,11 +30,11 @@
   background: var(--lokelma-light-green);
 }
 
-/* Inner white circle - no border */
+/* Inner white circle - thicker outer ring */
 .columns-statistics > div > div::before {
   content: '';
   position: absolute;
-  inset: 30px;
+  inset: 45px;
   border-radius: 50%;
   background-color: #FFFFFF;
   z-index: 0;

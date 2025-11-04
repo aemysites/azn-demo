@@ -12,21 +12,21 @@
   /* Percentage text styling - exact from Figma */
   --columns-statistics-percentage-color: var(--lokelma-blue);
   --columns-statistics-percentage-font-family: var(--lokelma-font-family-heading);
-  --columns-statistics-percentage-font-size: 64px;
+  --columns-statistics-percentage-font-size: 56px;
   --columns-statistics-percentage-font-weight: 800; /* XBold */
   --columns-statistics-percentage-line-height: 1.2;
-  --columns-statistics-percentage-letter-spacing: -1.28px;
+  --columns-statistics-percentage-letter-spacing: -1.12px;
 
   /* Label text styling - exact from Figma */
   --columns-statistics-label-color: var(--lokelma-blue);
   --columns-statistics-label-font-family: var(--lokelma-font-family-heading);
-  --columns-statistics-label-font-size: 20px;
+  --columns-statistics-label-font-size: 18px;
   --columns-statistics-label-font-weight: 700; /* Bold */
-  --columns-statistics-label-line-height: 26px;
+  --columns-statistics-label-line-height: 24px;
 
   /* "Up to" small text */
-  --columns-statistics-small-font-size: 20px;
-  --columns-statistics-small-line-height: 26px;
+  --columns-statistics-small-font-size: 18px;
+  --columns-statistics-small-line-height: 24px;
 
   /* Column layout */
   --columns-statistics-column-gap: 59px;
