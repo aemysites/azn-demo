@@ -14,8 +14,13 @@ export default function decorate(block) {
 
     const cells = [...row.children];
 
-    // First cell: Icon
-    if (cells[0]) {
+    // Determine if this is a 3-column (with image) or 2-column (no image) format
+    const hasImage = cells.length === 3;
+    let contentCellIndex = hasImage ? 1 : 0;
+    let linkCellIndex = hasImage ? 2 : 1;
+
+    // First cell: Icon (only if 3-column format)
+    if (hasImage && cells[0]) {
       const iconArea = document.createElement('div');
       iconArea.className = 'card-resource-icon';
 
@@ -35,23 +40,43 @@ export default function decorate(block) {
       card.appendChild(iconArea);
     }
 
-    // Remaining cells: Content (title and link)
+    // Content cell: Title and Description
     const body = document.createElement('div');
     body.className = 'card-resource-body';
 
-    // Second cell: Title
-    if (cells[1]) {
-      const title = document.createElement('h3');
-      title.textContent = cells[1].textContent.trim();
-      body.appendChild(title);
+    if (cells[contentCellIndex]) {
+      // Extract title and description from cell content
+      const cellContent = cells[contentCellIndex].innerHTML;
+
+      // Check if content has bold title followed by description
+      const strongMatch = cellContent.match(/<strong>(.*?)<\/strong>/);
+      if (strongMatch) {
+        // Has bold title - extract it
+        const title = document.createElement('h3');
+        title.textContent = strongMatch[1];
+        body.appendChild(title);
+
+        // Extract description (content after <br><br>)
+        const descMatch = cellContent.match(/<\/strong><br><br>([\s\S]*)/);
+        if (descMatch) {
+          const description = document.createElement('p');
+          description.innerHTML = descMatch[1];
+          body.appendChild(description);
+        }
+      } else {
+        // No bold formatting - use entire content as title
+        const title = document.createElement('h3');
+        title.textContent = cells[contentCellIndex].textContent.trim();
+        body.appendChild(title);
+      }
     }
 
-    // Third cell: Link/Button
-    if (cells[2]) {
+    // Link cell: Button
+    if (cells[linkCellIndex]) {
       const buttonContainer = document.createElement('div');
       buttonContainer.className = 'button-container';
 
-      const link = cells[2].querySelector('a');
+      const link = cells[linkCellIndex].querySelector('a');
       if (link) {
         link.textContent = link.textContent.trim() || 'Learn More';
         buttonContainer.appendChild(link);
