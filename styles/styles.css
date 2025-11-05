@@ -472,48 +472,30 @@ main .section:not(.columns-callout-container) em {
   font-weight: 400;
 }
 
-/* About Hyperkalemia page specific styling */
-/* Main heading - "Hyperkalemia is an electrolyte disorder" */
+/* About Hyperkalemia page - h2 heading styling */
 main > div > h2 {
   font-family: var(--lokelma-font-family-heading);
   font-size: var(--lokelma-font-size-display-s);
   font-weight: var(--lokelma-font-weight-regular);
   color: var(--lokelma-blue);
-  text-align: center;
   line-height: var(--lokelma-line-height-tight);
-  margin: 60px auto 40px;
-  max-width: 1200px;
-  padding: 0 24px;
 }
 
-/* Subheading - "Predisposing factors:" */
+/* About Hyperkalemia page - h3 heading styling */
 main > div > h3 {
   font-family: var(--lokelma-font-family-body);
   font-size: var(--lokelma-font-size-xl);
   font-weight: var(--lokelma-font-weight-bold);
   color: var(--lokelma-green);
   text-align: center;
-  margin: 40px auto 24px;
-  max-width: 1200px;
-  padding: 0 24px;
-}
-
-/* Light background for content sections */
-main > div:has(h2),
-main > div:has(h3) {
-  background-color: var(--lokelma-gradient-light);
-  padding: 60px 0;
-  margin: 0;
 }
 
 @media (width >= 900px) {
   main > div > h2 {
     font-size: var(--lokelma-font-size-display-s);
-    padding: 0 32px;
   }
 
   main > div > h3 {
     font-size: var(--lokelma-font-size-xxl);
-    padding: 0 32px;
   }
 }
