@@ -124,25 +124,22 @@ body.onkologie-page .columns-factors {
 body.onkologie-page .columns-factors > div {
   width: var(--columns-factors-circle-size);
   height: var(--columns-factors-circle-size);
-  border-radius: var(--columns-factors-circle-border-radius);
+  border-radius: 50%;
   display: flex;
   flex-direction: column;
-  align-items: var(--columns-factors-column-align);
-  text-align: var(--columns-factors-label-text-align);
+  align-items: center;
+  text-align: center;
   padding: 25px;
   box-sizing: border-box;
   justify-content: center;
   position: relative;
+  background: #FFFFFF;
+  border: 25px solid;
 }
 
-/* Inner white circle for onkologie page */
+/* Remove inner circle for onkologie - using single ring from Figma */
 body.onkologie-page .columns-factors > div::before {
-  content: '';
-  position: absolute;
-  inset: 25px;
-  border-radius: 50%;
-  background-color: #FFFFFF;
-  z-index: 0;
+  display: none;
 }
 
 /* Content above white circle */
@@ -186,35 +183,35 @@ body.onkologie-page .columns-factors > div strong {
   }
 }
 
-/* Onkologie page: Progressive gradient for all 8 circles */
+/* Onkologie page: Progressive gradient ring colors from Figma */
 body.onkologie-page .columns-factors > div:nth-child(1) {
-  background: #FBF3E6;
+  border-color: #FBF3E6;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(2) {
-  background: #F9E8C8;
+  border-color: #F9E8C8;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(3) {
-  background: #F5D89E;
+  border-color: #F5D89E;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(4) {
-  background: #F1C873;
+  border-color: #F1C873;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(5) {
-  background: #F9E8C8;
+  border-color: #F9E8C8;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(6) {
-  background: #F5D89E;
+  border-color: #F5D89E;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(7) {
-  background: #F1C873;
+  border-color: #F1C873;
 }
 
 body.onkologie-page .columns-factors > div:nth-child(8) {
-  background: #EDB84E;
+  border-color: #EDB84E;
 }
