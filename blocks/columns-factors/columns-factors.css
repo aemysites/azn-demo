@@ -147,6 +147,34 @@ body.onkologie-page .columns-factors > div::before {
 
 /* Content above white circle */
 body.onkologie-page .columns-factors > div > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Icon container - copy from about page */
+body.onkologie-page .columns-factors > div picture {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+body.onkologie-page .columns-factors > div img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Ensure text is above white circle */
+body.onkologie-page .columns-factors > div p,
+body.onkologie-page .columns-factors > div strong {
   position: relative;
   z-index: 1;
 }
