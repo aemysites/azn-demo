@@ -116,9 +116,9 @@
 /* Page-specific layout: Onkologie page only - 4-column grid */
 body.onkologie-page .columns-factors {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, auto);
   gap: var(--columns-factors-mobile-gap);
-  justify-items: center;
+  justify-content: center;
 }
 
 body.onkologie-page .columns-factors > div {
@@ -128,7 +128,7 @@ body.onkologie-page .columns-factors > div {
 
 @media (width >= 900px) {
   body.onkologie-page .columns-factors {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, auto);
     gap: var(--columns-factors-column-gap);
   }
 }
