@@ -491,6 +491,17 @@ main .default-content-wrapper h3 {
   text-align: center !important;
 }
 
+/* About Hyperkalemia page - "In studies..." paragraph styling */
+main .default-content-wrapper > p strong {
+  font-family: var(--lokelma-font-family-heading) !important;
+  font-size: var(--lokelma-font-size-xxl) !important;
+  font-weight: var(--lokelma-font-weight-bold) !important;
+  color: #000 !important;
+  display: block !important;
+  text-align: center !important;
+  line-height: var(--lokelma-line-height-base) !important;
+}
+
 @media (width >= 900px) {
   main .default-content-wrapper h2:first-of-type {
     font-size: var(--lokelma-font-size-display-s) !important;
