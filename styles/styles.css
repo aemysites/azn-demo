@@ -487,7 +487,7 @@ main .default-content-wrapper h3 {
   font-family: var(--lokelma-font-family-body) !important;
   font-size: var(--lokelma-font-size-xl) !important;
   font-weight: var(--lokelma-font-weight-bold) !important;
-  color: var(--lokelma-green) !important;
+  color: var(--lokelma-blue) !important;
   text-align: center !important;
 }
 
