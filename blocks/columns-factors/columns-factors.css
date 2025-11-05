@@ -112,3 +112,16 @@
     flex: 0 1 auto;
   }
 }
+
+/* Page-specific layout: Onkologie page only - side-by-side wrapping grid */
+body.onkologie .columns-factors > div {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (width >= 900px) {
+  body.onkologie .columns-factors > div {
+    gap: var(--columns-factors-column-gap);
+  }
+}
