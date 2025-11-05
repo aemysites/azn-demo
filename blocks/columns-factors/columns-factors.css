@@ -173,7 +173,7 @@ body.onkologie-page .columns-factors > div br {
 /* Icon container - positioned at top and centered */
 body.onkologie-page .columns-factors > div picture {
   width: 100%;
-  height: 80px;
+  height: 90px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,19 +184,19 @@ body.onkologie-page .columns-factors > div picture {
 }
 
 body.onkologie-page .columns-factors > div img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   object-fit: contain;
   display: block;
   margin: 0 auto;
 }
 
-/* Text labels positioned at bottom - smaller font for better fit */
+/* Text labels positioned at bottom - optimal size for readability */
 body.onkologie-page .columns-factors > div p {
   position: relative;
   z-index: 1;
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.25;
   text-align: center;
   width: 100%;
 }
@@ -207,8 +207,8 @@ body.onkologie-page .columns-factors > div strong {
   font-weight: 700;
   display: block;
   text-align: center;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 15px;
+  line-height: 1.25;
   max-width: 100%;
   word-wrap: break-word;
   hyphens: auto;
