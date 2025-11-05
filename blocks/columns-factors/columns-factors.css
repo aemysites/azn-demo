@@ -129,7 +129,7 @@ body.onkologie-page .columns-factors > div {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 40px 30px 30px 30px;
+  padding: 35px 25px 25px 25px;
   box-sizing: border-box;
   justify-content: space-between;
   position: relative;
@@ -155,9 +155,9 @@ body.onkologie-page .columns-factors > div > div {
   height: 100%;
   border-radius: 0;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   background: transparent;
-  gap: 10px;
+  gap: 15px;
 }
 
 /* Disable inner white circle from base CSS */
@@ -170,33 +170,35 @@ body.onkologie-page .columns-factors > div br {
   display: none;
 }
 
-/* Icon container - positioned at top */
+/* Icon container - positioned at top and centered */
 body.onkologie-page .columns-factors > div picture {
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   position: relative;
   z-index: 1;
   flex-shrink: 0;
 }
 
 body.onkologie-page .columns-factors > div img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   object-fit: contain;
   display: block;
+  margin: 0 auto;
 }
 
-/* Text labels positioned at bottom */
+/* Text labels positioned at bottom - smaller font for better fit */
 body.onkologie-page .columns-factors > div p {
   position: relative;
   z-index: 1;
   margin: 0;
-  line-height: 1.3;
+  line-height: 1.2;
   text-align: center;
+  width: 100%;
 }
 
 body.onkologie-page .columns-factors > div strong {
@@ -205,6 +207,11 @@ body.onkologie-page .columns-factors > div strong {
   font-weight: 700;
   display: block;
   text-align: center;
+  font-size: 14px;
+  line-height: 1.2;
+  max-width: 100%;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 @media (width >= 900px) {
