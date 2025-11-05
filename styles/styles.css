@@ -473,29 +473,30 @@ main .section:not(.columns-callout-container) em {
 }
 
 /* About Hyperkalemia page - h2 heading styling */
-main > div > h2 {
-  font-family: var(--lokelma-font-family-heading);
-  font-size: var(--lokelma-font-size-display-s);
-  font-weight: var(--lokelma-font-weight-regular);
-  color: var(--lokelma-blue);
-  line-height: var(--lokelma-line-height-tight);
+main .default-content-wrapper h2:first-of-type {
+  font-family: var(--lokelma-font-family-heading) !important;
+  font-size: var(--lokelma-font-size-display-s) !important;
+  font-weight: var(--lokelma-font-weight-regular) !important;
+  color: var(--lokelma-blue) !important;
+  line-height: var(--lokelma-line-height-tight) !important;
+  text-align: left !important;
 }
 
 /* About Hyperkalemia page - h3 heading styling */
-main > div > h3 {
-  font-family: var(--lokelma-font-family-body);
-  font-size: var(--lokelma-font-size-xl);
-  font-weight: var(--lokelma-font-weight-bold);
-  color: var(--lokelma-green);
-  text-align: center;
+main .default-content-wrapper h3 {
+  font-family: var(--lokelma-font-family-body) !important;
+  font-size: var(--lokelma-font-size-xl) !important;
+  font-weight: var(--lokelma-font-weight-bold) !important;
+  color: var(--lokelma-green) !important;
+  text-align: center !important;
 }
 
 @media (width >= 900px) {
-  main > div > h2 {
-    font-size: var(--lokelma-font-size-display-s);
+  main .default-content-wrapper h2:first-of-type {
+    font-size: var(--lokelma-font-size-display-s) !important;
   }
 
-  main > div > h3 {
-    font-size: var(--lokelma-font-size-xxl);
+  main .default-content-wrapper h3 {
+    font-size: var(--lokelma-font-size-xxl) !important;
   }
 }
