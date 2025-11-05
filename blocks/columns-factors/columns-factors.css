@@ -124,6 +124,31 @@ body.onkologie-page .columns-factors {
 body.onkologie-page .columns-factors > div {
   width: var(--columns-factors-circle-size);
   height: var(--columns-factors-circle-size);
+  border-radius: var(--columns-factors-circle-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: var(--columns-factors-column-align);
+  text-align: var(--columns-factors-label-text-align);
+  padding: 25px;
+  box-sizing: border-box;
+  justify-content: center;
+  position: relative;
+}
+
+/* Inner white circle for onkologie page */
+body.onkologie-page .columns-factors > div::before {
+  content: '';
+  position: absolute;
+  inset: 25px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  z-index: 0;
+}
+
+/* Content above white circle */
+body.onkologie-page .columns-factors > div > div {
+  position: relative;
+  z-index: 1;
 }
 
 @media (width >= 900px) {
