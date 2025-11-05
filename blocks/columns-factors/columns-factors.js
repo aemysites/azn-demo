@@ -2,6 +2,11 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
+  // Add page-specific class for Onkologie page grid layout
+  if (document.title.toLowerCase().includes('onkologie')) {
+    document.body.classList.add('onkologie-page');
+  }
+
   // setup image columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {

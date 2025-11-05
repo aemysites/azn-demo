@@ -113,15 +113,16 @@
   }
 }
 
-/* Page-specific layout: Onkologie page only - side-by-side wrapping grid */
-body.onkologie .columns-factors > div {
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+/* Page-specific layout: Onkologie page only - 2-column grid */
+body.onkologie-page .columns-factors > div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--columns-factors-mobile-gap);
+  justify-items: center;
 }
 
 @media (width >= 900px) {
-  body.onkologie .columns-factors > div {
+  body.onkologie-page .columns-factors > div {
     gap: var(--columns-factors-column-gap);
   }
 }
