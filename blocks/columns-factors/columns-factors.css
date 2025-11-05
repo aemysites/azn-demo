@@ -142,13 +142,24 @@ body.onkologie-page .columns-factors > div::before {
   display: none;
 }
 
-/* Content above white circle */
+/* Disable inner circle styling from base CSS - no double ring for onkologie */
 body.onkologie-page .columns-factors > div > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
   z-index: 1;
+  /* Override base double-ring styling */
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* Disable inner white circle from base CSS */
+body.onkologie-page .columns-factors > div > div::before {
+  display: none;
 }
 
 /* Icon container - copy from about page */
