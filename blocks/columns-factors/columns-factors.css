@@ -9,11 +9,9 @@
 
 .columns-factors > div {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: var(--columns-factors-mobile-gap);
   align-items: var(--columns-factors-column-align);
-  justify-content: center;
 }
 
 /* Each column is a double-ring circle container */
@@ -105,7 +103,9 @@
 
 @media (width >= 900px) {
   .columns-factors > div {
+    flex-direction: row;
     gap: var(--columns-factors-column-gap);
+    justify-content: center;
   }
 
   .columns-factors > div > div {
