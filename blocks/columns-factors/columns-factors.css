@@ -121,6 +121,11 @@ body.onkologie-page .columns-factors {
   justify-items: center;
 }
 
+body.onkologie-page .columns-factors > div {
+  width: var(--columns-factors-circle-size);
+  height: var(--columns-factors-circle-size);
+}
+
 @media (width >= 900px) {
   body.onkologie-page .columns-factors {
     grid-template-columns: repeat(4, 1fr);
