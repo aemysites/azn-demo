@@ -97,6 +97,8 @@
   color: var(--columns-factors-label-color);
   line-height: var(--columns-factors-label-line-height);
   letter-spacing: var(--columns-factors-label-letter-spacing);
+  -webkit-text-stroke: 0.5px var(--columns-factors-label-color);
+  paint-order: stroke fill;
 }
 
 @media (width >= 900px) {
