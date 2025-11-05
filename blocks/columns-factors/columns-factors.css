@@ -127,3 +127,36 @@ body.onkologie-page .columns-factors {
     gap: var(--columns-factors-column-gap);
   }
 }
+
+/* Onkologie page: Progressive gradient for all 8 circles */
+body.onkologie-page .columns-factors > div:nth-child(1) {
+  background: #FBF3E6;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(2) {
+  background: #F9E8C8;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(3) {
+  background: #F5D89E;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(4) {
+  background: #F1C873;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(5) {
+  background: #F9E8C8;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(6) {
+  background: #F5D89E;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(7) {
+  background: #F1C873;
+}
+
+body.onkologie-page .columns-factors > div:nth-child(8) {
+  background: #EDB84E;
+}
