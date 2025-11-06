@@ -458,8 +458,24 @@ function decorateIcon(span, prefix = '', alt = '') {
   img.src = `${window.hlx.codeBasePath}${prefix}/icons/${iconName}.${iconExtension}`;
   img.alt = alt;
   img.loading = 'lazy';
-  img.width = 16;
-  img.height = 16;
+  
+  // Set icon sizes based on type and location
+  const isBreadcrumbIcon = span.closest('.nav-bottom-section:first-of-type') !== null;
+  
+  if (isBreadcrumbIcon) {
+    // Breadcrumb icons should be 24x22px
+    img.width = 24;
+    img.height = 22;
+  } else if (iconName === 'play') {
+    // Play button icons should be 12x12px
+    img.width = 12;
+    img.height = 12;
+  } else {
+    // Default icon size
+    img.width = 16;
+    img.height = 16;
+  }
+  
   span.append(img);
 }
 
