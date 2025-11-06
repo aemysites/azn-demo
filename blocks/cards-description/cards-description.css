@@ -1,0 +1,130 @@
+/**
+ * Cards Description Block - Cards with Image and Description
+ * Design: Cards with images and text content, no CTAs
+ *
+ * KEY FEATURES:
+ * - Equal card heights: grid-auto-rows: 1fr ensures all cards in a row have same height
+ * - Text truncation: Descriptions limited to 3 lines with ellipsis (see .card-description-body p)
+ * - Responsive: 3 columns (desktop) → 2 columns (tablet) → 1 column (mobile)
+ * - Fixed image height: 222px (desktop), 180px (mobile)
+ */
+
+.cards-description {
+  padding: var(--lokelma-spacing-xl) 0;
+}
+
+.cards-description > .cards-description-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr; /* Equal height rows - all cards in same row will have same height */
+  gap: var(--lokelma-spacing-m);
+  max-width: var(--lokelma-max-width-content);
+  margin: 0 auto;
+  padding: 0 var(--lokelma-spacing-m, 24px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual card */
+.card-description {
+  position: relative;
+  background: white;
+  overflow: hidden;
+  display: flex;
+}
+
+/* Card content wrapper */
+.card-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+/* Image area */
+.card-description-image {
+  height: 222px;
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.card-description-image picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card-description-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Content area */
+.card-description-body {
+  background: rgba(115, 195, 183, 0.2);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Title */
+.card-description-body h3 {
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-regular, 400);
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--lokelma-color-primary, #003b45);
+  margin: 0;
+}
+
+/* Description */
+.card-description-body p {
+  font-family: var(--lokelma-font-family-body, 'Roboto', sans-serif);
+  font-weight: var(--lokelma-font-weight-regular, 400);
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--lokelma-color-primary, #003b45);
+  margin: 0;
+
+  /* Text truncation: Limit to 3 lines with ellipsis (...)
+   * This ensures consistent card heights even with varying content lengths
+   * Recommended: Keep descriptions under 250 characters for optimal display */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .cards-description > .cards-description-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-description > .cards-description-container {
+    grid-template-columns: 1fr;
+  }
+
+  .card-description-image {
+    height: 180px;
+  }
+
+  .card-description-body h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .card-description-body p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
