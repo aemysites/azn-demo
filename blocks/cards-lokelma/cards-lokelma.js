@@ -1,15 +1,36 @@
 /**
  * Cards Lokelma Block - Efficacy Cards with Icons
- * Extracted from Figma: node-id=677-6811 (Group 107303)
+ * Extracted from Figma: node-id=677-6820 (Group 107302)
  * Page: 1.0 Post-gate HCP Homepage – Slide 1_P3
+ * Pixel-perfect match to Figma specifications
  */
 
 export default function decorate(block) {
   const rows = [...block.children];
+
+  // Check if first row contains a heading (if it has no picture, it's likely the heading)
+  let headingElement = null;
+  let cardRows = rows;
+
+  if (rows.length > 0) {
+    const firstRow = rows[0];
+    const firstCell = firstRow.querySelector('div');
+    if (firstCell && !firstCell.querySelector('picture')) {
+      // This is the heading row
+      const headingText = firstCell.textContent.trim();
+      if (headingText) {
+        headingElement = document.createElement('h2');
+        headingElement.className = 'cards-lokelma-heading';
+        headingElement.innerHTML = firstCell.innerHTML;
+        cardRows = rows.slice(1); // Skip the heading row for cards
+      }
+    }
+  }
+
   const container = document.createElement('div');
   container.className = 'cards-lokelma-container';
 
-  rows.forEach((row) => {
+  cardRows.forEach((row) => {
     const cells = [...row.children];
 
     cells.forEach((cell) => {
@@ -57,17 +78,22 @@ export default function decorate(block) {
           card.appendChild(titleWrapper);
 
           // Middle sections are content (bullet points)
+          // Create a proper unordered list
           if (sections.length > 2) {
             const contentWrapper = document.createElement('div');
             contentWrapper.className = 'card-lokelma-content';
 
-            // All sections except first and last are content
+            // Create UL element for bullet points
+            const ul = document.createElement('ul');
+
+            // All sections except first and last are content (bullet items)
             for (let i = 1; i < sections.length - 1; i++) {
-              const contentP = document.createElement('p');
-              contentP.innerHTML = sections[i];
-              contentWrapper.appendChild(contentP);
+              const li = document.createElement('li');
+              li.innerHTML = sections[i];
+              ul.appendChild(li);
             }
 
+            contentWrapper.appendChild(ul);
             card.appendChild(contentWrapper);
           }
 
@@ -88,5 +114,8 @@ export default function decorate(block) {
   });
 
   block.textContent = '';
+  if (headingElement) {
+    block.append(headingElement);
+  }
   block.append(container);
 }

@@ -14,7 +14,15 @@ export default function decorate(block) {
 
     const cells = [...row.children];
 
-    // First cell: Icon
+    // Create wrapper for card content
+    const wrapper = document.createElement('div');
+    wrapper.className = 'card-resource-wrapper';
+
+    // Create background area
+    const bgArea = document.createElement('div');
+    bgArea.className = 'card-resource-bg';
+
+    // First cell: Icon (absolutely positioned)
     if (cells[0]) {
       const iconArea = document.createElement('div');
       iconArea.className = 'card-resource-icon';
@@ -34,6 +42,8 @@ export default function decorate(block) {
 
       card.appendChild(iconArea);
     }
+
+    wrapper.appendChild(bgArea);
 
     // Remaining cells: Content (title and link)
     const body = document.createElement('div');
@@ -60,7 +70,8 @@ export default function decorate(block) {
       body.appendChild(buttonContainer);
     }
 
-    card.appendChild(body);
+    wrapper.appendChild(body);
+    card.appendChild(wrapper);
     container.appendChild(card);
   });
 
