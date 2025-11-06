@@ -37,7 +37,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 100px;
+  --nav-height: 64px; /* Reduced from 100px to match Figma: 32px content + 16px padding top/bottom */
   --header-height: var(--nav-height);
 
   /* ===== POSITIVUS DESIGN TOKENS ===== */
@@ -382,6 +382,34 @@ main img {
 .icon img {
   height: 100%;
   width: 100%;
+}
+
+/* Play button icon - 12x12px size */
+.icon-play {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+}
+
+.icon-play img,
+.icon-play picture img {
+  width: 12px !important;
+  height: 12px !important;
+  max-width: 12px !important;
+  max-height: 12px !important;
+  min-width: 12px !important;
+  min-height: 12px !important;
+  aspect-ratio: 1 / 1 !important;
+  display: block;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.icon-play picture {
+  width: 12px !important;
+  height: 12px !important;
+  display: block;
+  flex-shrink: 0;
 }
 
 /* sections */

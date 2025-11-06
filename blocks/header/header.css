@@ -109,7 +109,7 @@ header .nav-wrapper {
     grid-area: brand;
     width: 100vw;
     background-color: rgb(243, 243, 243);
-    padding: 10px 24px;
+    padding: 16px 0; /* Match Figma: 16px top/bottom padding */
     font-size: 14px;
     font-weight: 400;
     line-height: 1.5;
@@ -119,12 +119,15 @@ header .nav-wrapper {
     margin-left: -50vw;
     margin-right: -50vw;
     box-sizing: border-box;
+    border-bottom: 1px solid transparent; /* 1px border as per Figma */
   }
   
   header nav .nav-brand .default-content-wrapper {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 60px; /* Match Figma: 60px left/right padding */
+    box-sizing: border-box;
   }
 
   header nav .nav-brand ul {
@@ -134,7 +137,9 @@ header .nav-wrapper {
     gap: 12px;
     list-style: none;
     margin: 0;
-    padding: 10px 0;
+    padding: 0; /* Remove padding to achieve 27px content height */
+    height: 27px; /* Match Figma: 27px content height */
+    box-sizing: border-box;
   }
 
   header nav .nav-brand li {
@@ -207,11 +212,16 @@ header .nav-wrapper {
 
   @media (width >= 900px) {
     header .nav-brand {
-      padding: 10px 32px;
+      padding: 16px 0; /* Match Figma: 16px top/bottom padding */
+    }
+
+    header nav .nav-brand .default-content-wrapper {
+      padding: 0 60px; /* Match Figma: 60px left/right padding */
     }
 
     header nav .nav-brand ul {
       gap: 32px;
+      height: 27px; /* Match Figma: 27px content height */
     }
   }
 
@@ -269,7 +279,7 @@ header .nav-wrapper {
     align-items: center;
     font-size: initial;
     line-height: initial;
-    margin-left: -24px; /* Pull logo further left */
+    margin-left: 0; /* Align with breadcrumb - start from same left position */
   }
 
   /* Create spacer after logo to center nav items */
@@ -285,13 +295,13 @@ header .nav-wrapper {
     align-items: center;
     width: 248px;
     height: auto;
-    padding: 8px 0; /* Reduced padding */
+    padding: 16px 0; /* Match Figma: 16px top/bottom padding */
     min-height: auto; /* Remove any min-height */
   }
 
   header nav .nav-sections ul > li:first-child .icon img,
   header nav .nav-sections ul > li:first-child .icon-logo img {
-    max-height: 45px !important; /* Reduced logo size */
+    max-height: 32px !important; /* Match Figma: 32px content height */
     width: auto !important; /* Override width to auto */
     height: auto !important; /* Override height to auto */
     display: block;
@@ -308,7 +318,7 @@ header .nav-wrapper {
 
   header nav .nav-sections ul > li:not(:first-child) p {
     margin: 0;
-    padding: 4px 0; /* Reduced padding to decrease height */
+    padding: 0; /* No padding to match Figma height */
     text-transform: uppercase;
     letter-spacing: 0.5px;
     color: #333;
@@ -398,7 +408,7 @@ header .nav-wrapper {
     }
 
     header nav .nav-sections ul > li:first-child {
-      margin-left: -32px; /* Pull logo further left on desktop */
+      margin-left: 0; /* Align with breadcrumb - start from same left position */
     }
   
     header nav[aria-expanded='true'] .nav-sections {
@@ -407,14 +417,14 @@ header .nav-wrapper {
 
     /* Ensure logo displays at full size on desktop */
     header nav .nav-sections ul > li:first-child .icon img {
-      max-height: 50px !important; /* Reduced logo size on desktop */
+      max-height: 32px !important; /* Match Figma: 32px content height */
       width: auto !important;
       height: auto !important;
     }
 
     header nav .nav-sections ul > li:first-child .icon,
     header nav .nav-sections ul > li:first-child .icon-logo {
-      padding: 10px 0; /* Further reduced padding on desktop */
+      padding: 16px 0; /* Match Figma: 16px top/bottom padding */
       min-height: auto;
     }
   
@@ -549,6 +559,10 @@ header .nav-wrapper {
     padding-left: 0;
     margin-left: 0;
     width: 100%;
+    max-width: 1248px; /* Match main nav container max-width */
+    margin: 0 auto;
+    padding-left: 0; /* Start from same left position as logo */
+    padding-right: 24px;
   }
 
   /* Secondary navigation section - full width with grey background */
@@ -560,26 +574,27 @@ header .nav-wrapper {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 21px 0; /* Match Figma: 21px top/bottom padding */
     box-sizing: border-box;
+    border-bottom: 1px solid transparent; /* 1px border as per Figma */
   }
 
   header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
     padding-left: 0;
     margin-left: 0;
     width: 100%;
-    max-width: 1248px;
+    max-width: 100%; /* Remove max-width constraint to allow full width */
     margin: 0 auto;
-    padding-left: 88px; /* Even more padding to align with breadcrumb text */
-    padding-right: 24px;
+    padding: 0 60px; /* Match Figma: 60px left/right padding */
+    box-sizing: border-box;
+    overflow-x: auto; /* Allow horizontal scroll if content overflows */
+    overflow-y: visible;
   }
 
   @media (width >= 900px) {
     header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
-      max-width: 1264px;
-      padding-left: 104px; /* Maximum padding on desktop */
-      padding-right: 32px;
+      max-width: 100%; /* Remove max-width constraint */
+      padding: 0 60px; /* Match Figma: 60px left/right padding */
     }
   }
 
@@ -587,7 +602,7 @@ header .nav-wrapper {
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 8px 0; /* Reduced padding to decrease height */
+    padding: 16px 0; /* Match Figma: 16px top/bottom padding */
     margin: 0;
   }
 
@@ -619,6 +634,11 @@ header .nav-wrapper {
     gap: 12px; /* More spacing between icon and text */
   }
 
+  /* Add spacing between play button icon and text in breadcrumb */
+  header .nav-bottom-section:first-of-type .icon-play {
+    margin-right: 8px; /* Space between play button and text */
+  }
+
   header .nav-bottom-section:first-of-type a {
     margin: 0;
     padding: 0;
@@ -641,32 +661,50 @@ header .nav-wrapper {
   header .nav-bottom-section:first-of-type .icon-logo {
     display: inline-flex;
     align-items: center;
-    width: 14px; /* Smaller icon size */
-    height: 14px; /* Smaller icon size */
+    width: 24px;
+    height: 22px;
+    flex-shrink: 0;
   }
 
   header .nav-bottom-section:first-of-type .icon-home img,
-  header .nav-bottom-section:first-of-type .icon-logo img {
-    width: 14px; /* Smaller icon size */
-    height: 14px; /* Smaller icon size */
+  header .nav-bottom-section:first-of-type .icon-logo img,
+  header .nav-bottom-section:first-of-type .icon-home picture img,
+  header .nav-bottom-section:first-of-type .icon-logo picture img {
+    width: 24px !important;
+    height: 22px !important;
+    max-width: 24px !important;
+    max-height: 22px !important;
+    min-width: 24px !important;
+    min-height: 22px !important;
+    aspect-ratio: 24 / 22 !important;
     display: block;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  header .nav-bottom-section:first-of-type .icon-home picture,
+  header .nav-bottom-section:first-of-type .icon-logo picture {
+    width: 24px !important;
+    height: 22px !important;
+    display: block;
+    flex-shrink: 0;
   }
 
   /* Secondary navigation styling - second bottom section */
-  header .nav-bottom-section:not(:first-of-type) {
-    background-color: #F5F5F5; /* Light grey background to match top utility bar */
-  }
-
   header .nav-bottom-section:not(:first-of-type) ul {
-    display: flex;
+    display: flex !important;
     align-items: center;
+    justify-content: center; /* Center the navigation items */
     list-style: none;
-    padding: 12px 0;
+    padding: 0; /* Remove padding to achieve 22px content height */
     margin: 0;
     gap: 12px; /* Reduced spacing to fit items on one line */
-    flex-wrap: nowrap; /* Prevent wrapping to next line */
-    width: 100%;
-    overflow-x: auto; /* Allow horizontal scroll if needed on small screens */
+    flex-wrap: nowrap !important; /* Force no wrapping */
+    width: 100%; /* Full width of container */
+    min-width: max-content; /* Ensure all items fit without wrapping */
+    overflow-x: visible; /* Let parent handle overflow */
+    height: 22px; /* Match Figma: 22px content height */
+    box-sizing: border-box;
   }
 
   header .nav-bottom-section:not(:first-of-type) li {
@@ -676,10 +714,13 @@ header .nav-wrapper {
     font-weight: 400;
     color: #333;
     white-space: nowrap; /* Prevent text wrapping within items */
+    flex-shrink: 0; /* Prevent items from shrinking */
+    flex-grow: 0; /* Prevent items from growing */
   }
 
   header .nav-bottom-section:not(:first-of-type) a,
-  header .nav-bottom-section:not(:first-of-type) li {
+  header .nav-bottom-section:not(:first-of-type) li,
+  header .nav-bottom-section:not(:first-of-type) p {
     color: #333;
     text-decoration: none;
     font-size: 14px;
@@ -687,6 +728,7 @@ header .nav-wrapper {
     padding-bottom: 4px;
     position: relative;
     transition: color 0.2s ease;
+    white-space: nowrap; /* Ensure text doesn't wrap */
   }
 
   header .nav-bottom-section:not(:first-of-type) a:hover {
@@ -729,13 +771,24 @@ header .nav-wrapper {
       padding-left: 0; /* Align with logo on desktop */
       padding-right: 32px;
     }
+
+    header .nav-bottom-section:first-of-type .default-content-wrapper {
+      max-width: 1264px; /* Match main nav container max-width on desktop */
+      padding-left: 0; /* Start from same left position as logo */
+      padding-right: 32px;
+    }
     
     header .nav-bottom-section:first-of-type ul {
       padding: 10px 0; /* Reduced padding on desktop */
     }
 
+    header .nav-bottom-section:not(:first-of-type) {
+      padding: 21px 0; /* Match Figma: 21px top/bottom padding */
+    }
+
     header .nav-bottom-section:not(:first-of-type) ul {
-      padding: 16px 0;
+      padding: 0; /* Remove padding to achieve 22px content height */
+      height: 22px; /* Match Figma: 22px content height */
       gap: 20px; /* Slightly more spacing on desktop */
     }
   }
