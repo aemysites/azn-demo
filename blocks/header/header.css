@@ -593,7 +593,7 @@ header .nav-wrapper {
     background-color: #F5F5F5; /* Light grey background to match top utility bar */
     width: 100vw;
     position: relative;
-    left: 50%;
+    left: 51%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
