@@ -151,8 +151,8 @@ header .nav-wrapper {
   header nav .nav-brand li:first-child a {
     color: #000;
     text-decoration: none;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
   }
 
   header nav .nav-brand li:nth-child(2) {
@@ -160,8 +160,8 @@ header .nav-wrapper {
     padding-left: 0; /* Remove padding since icon is removed */
     color: #000;
     cursor: pointer;
-    font-size: 18px;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
   }
 
   /* Remove user icon for Login/Register */
@@ -179,24 +179,24 @@ header .nav-wrapper {
   header nav .nav-brand li:last-child a {
     text-decoration: none;
     color: #000;
-    font-size: 18px;
+    font-size: 14px;
     padding: 0 4px;
   }
 
   header nav .nav-brand li:last-child strong {
-    font-weight: 700;
+    font-weight: 600;
   }
 
   header nav .nav-brand li:last-child strong a {
     color: #AA226E;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
   }
 
   header nav .nav-brand li:last-child a:not(strong a) {
     color: #AA226E;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
   }
 
   /* Pipe separator between EN and FR */
@@ -239,6 +239,21 @@ header .nav-wrapper {
     display: block;
     visibility: visible;
     padding: 0 24px 0 0;
+  }
+
+  /* Reduce height for second row when .second class is added */
+  header nav .nav-sections.second {
+    padding: 10px 24px 10px 0;
+  }
+
+  header nav .nav-sections.second ul > li:first-child .icon,
+  header nav .nav-sections.second ul > li:first-child .icon-logo {
+    padding: 10px 0 !important;
+  }
+
+  header nav .nav-sections.second .default-content-wrapper > ul {
+    align-items: center;
+    min-height: auto;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -308,32 +323,27 @@ header .nav-wrapper {
     margin: 0;
   }
 
-  /* Navigation items styling - restore font-size and display */
+  /* Navigation items styling - text directly in li elements */
   header nav .nav-sections ul > li:not(:first-child) {
     font-size: 14px;
     line-height: 1.5;
     font-weight: 400;
     color: #333;
-  }
-
-  header nav .nav-sections ul > li:not(:first-child) p {
-    margin: 0;
-    padding: 0; /* No padding to match Figma height */
+    position: relative;
+    display: inline-block;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #333;
-    font-size: 14px;
-    font-weight: 400;
     cursor: pointer;
-    position: relative;
+    padding: 0;
+    margin: 0;
   }
 
-  header nav .nav-sections ul > li:not(:first-child) p:hover {
+  header nav .nav-sections ul > li:not(:first-child):hover {
     color: #AA226E;
   }
 
-  /* Add dropdown arrow to THERAPEUTIC AREAS (second item) */
-  header nav .nav-sections ul > li:nth-child(2) p::after {
+  /* Add dropdown arrow to THERAPEUTIC AREAS (second item) - targeting li directly */
+  header nav .nav-sections ul > li:nth-child(2)::after {
     content: '';
     display: inline-block;
     position: absolute;
@@ -342,14 +352,18 @@ header .nav-wrapper {
     transform: translateY(-50%) rotate(135deg);
     width: 6px;
     height: 6px;
-    border: 2px solid currentcolor;
+    border: 2px solid #AA226E; /* Purple color to match brand */
     border-radius: 0 1px 0 0;
     border-width: 2px 2px 0 0;
     margin-left: 8px;
     vertical-align: middle;
   }
 
-  header nav .nav-sections ul > li:nth-child(2).nav-drop[aria-expanded='true'] p::after {
+  header nav .nav-sections ul > li:nth-child(2):hover::after {
+    border-color: #AA226E; /* Keep purple on hover */
+  }
+
+  header nav .nav-sections ul > li:nth-child(2).nav-drop[aria-expanded='true']::after {
     transform: translateY(-50%) rotate(315deg);
   }
 
@@ -405,6 +419,15 @@ header .nav-wrapper {
       display: block;
       visibility: visible;
       white-space: nowrap;
+    }
+
+    header nav .nav-sections.second {
+      padding: 10px 32px 10px 0;
+    }
+
+    header nav .nav-sections.second ul > li:first-child .icon,
+    header nav .nav-sections.second ul > li:first-child .icon-logo {
+      padding: 10px 0 !important;
     }
 
     header nav .nav-sections ul > li:first-child {
@@ -791,4 +814,25 @@ header .nav-wrapper {
       height: 22px; /* Match Figma: 22px content height */
       gap: 20px; /* Slightly more spacing on desktop */
     }
+  }
+
+  /* Less padding class - reduce padding from 16px to 10px */
+  header .less,
+  header .nav-brand.less,
+  header .nav-bottom-section.less {
+    padding: 10px 0 !important;
+  }
+
+  header .nav-brand.less .default-content-wrapper,
+  header .nav-bottom-section.less .default-content-wrapper {
+    padding: 0 10px !important;
+  }
+
+  header .nav-sections ul > li:first-child .icon.less,
+  header .nav-sections ul > li:first-child .icon-logo.less {
+    padding: 10px 0 !important;
+  }
+
+  header .nav-bottom-section:first-of-type.less ul {
+    padding: 10px 0 !important;
   }
