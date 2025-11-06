@@ -37,7 +37,7 @@
   --heading-font-size-xs: 22px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 100px;
   --header-height: var(--nav-height);
 
   /* ===== POSITIVUS DESIGN TOKENS ===== */
@@ -235,7 +235,7 @@ body.appear {
 }
 
 header {
-  height: var(--nav-height);
+  height: auto;
 }
 
 header .header,
