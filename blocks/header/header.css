@@ -65,7 +65,7 @@ header .nav-wrapper {
   /* hamburger */
   header nav .nav-hamburger {
     grid-area: hamburger;
-    display: flex;
+    display: none; /* Hide hamburger menu completely */
     align-items: center;
     padding: 0 24px;
   }
@@ -152,26 +152,16 @@ header .nav-wrapper {
 
   header nav .nav-brand li:nth-child(2) {
     position: relative;
-    padding-left: 44px;
+    padding-left: 0; /* Remove padding since icon is removed */
     color: #000;
     cursor: pointer;
     font-size: 18px;
     font-weight: 300;
   }
 
-  /* User icon for Login/Register */
+  /* Remove user icon for Login/Register */
   header nav .nav-brand li:nth-child(2)::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    background-color: #AA226E;;
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z' fill='white'/%3E%3C/svg%3E");
-    background-size: 20px 20px;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: none; /* Hide the icon */
   }
 
   /* Language switcher styling */
@@ -206,10 +196,13 @@ header .nav-wrapper {
 
   /* Pipe separator between EN and FR */
   header nav .nav-brand li:last-child strong::after {
-    content: '|';
-    color: rgb(240, 171, 0);
-    font-weight: 900;
-    margin: 0 4px;
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: #E0E0E0;
+    margin: 0 8px;
+    vertical-align: middle;
   }
 
   @media (width >= 900px) {
@@ -235,15 +228,15 @@ header .nav-wrapper {
     flex: 1 1 auto;
     display: block;
     visibility: visible;
-    padding: 0 24px;
+    padding: 0 24px 0 0;
   }
-  
+
   header nav[aria-expanded='true'] .nav-sections {
     display: block;
     visibility: visible;
     align-self: start;
   }
-  
+
   header nav .nav-sections ul {
     list-style: none;
     padding-left: 0;
@@ -251,10 +244,16 @@ header .nav-wrapper {
     font-size: 0;
   }
 
+  header nav .nav-sections .default-content-wrapper {
+    padding-left: 0;
+  }
+
   header nav .nav-sections .default-content-wrapper > ul {
     display: flex;
     align-items: center;
-    gap: 0;
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
   }
 
   /* Logo styling */
@@ -265,29 +264,121 @@ header .nav-wrapper {
   }
 
   header nav .nav-sections ul > li:first-child {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
+    font-size: initial;
+    line-height: initial;
+    margin-left: -24px; /* Pull logo further left */
+  }
+
+  /* Create spacer after logo to center nav items */
+  header nav .nav-sections .default-content-wrapper > ul::after {
+    content: '';
+    flex: 0 0 248px; /* Match logo width to balance layout */
   }
 
   /* Show logo icon */
-  header nav .nav-sections ul > li:first-child .icon {
+  header nav .nav-sections ul > li:first-child .icon,
+  header nav .nav-sections ul > li:first-child .icon-logo {
     display: flex;
     align-items: center;
     width: 248px;
     height: auto;
-    padding: 20px 0;
+    padding: 8px 0; /* Reduced padding */
+    min-height: auto; /* Remove any min-height */
   }
 
-  header nav .nav-sections ul > li:first-child .icon img {
-    max-height: 55px;
-    width: auto;
+  header nav .nav-sections ul > li:first-child .icon img,
+  header nav .nav-sections ul > li:first-child .icon-logo img {
+    max-height: 45px !important; /* Reduced logo size */
+    width: auto !important; /* Override width to auto */
+    height: auto !important; /* Override height to auto */
     display: block;
+    margin: 0;
   }
 
-  /* Hide menu icon - we use hamburger instead */
-  header nav .nav-sections ul > li:last-child {
+  /* Navigation items styling - restore font-size and display */
+  header nav .nav-sections ul > li:not(:first-child) {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+  }
+
+  header nav .nav-sections ul > li:not(:first-child) p {
+    margin: 0;
+    padding: 4px 0; /* Reduced padding to decrease height */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+  }
+
+  header nav .nav-sections ul > li:not(:first-child) p:hover {
+    color: #AA226E;
+  }
+
+  /* Add dropdown arrow to THERAPEUTIC AREAS (second item) */
+  header nav .nav-sections ul > li:nth-child(2) p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  header nav .nav-sections ul > li:nth-child(2).nav-drop[aria-expanded='true'] p::after {
+    transform: translateY(-50%) rotate(315deg);
+  }
+
+  /* Hide duplicate logos - only show first logo */
+  header nav .nav-sections ul > li:not(:first-child) .icon-logo {
     display: none;
+  }
+
+  /* Dropdown arrow for navigation items with submenu */
+  header nav .nav-sections .nav-drop {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  header nav .nav-sections .nav-drop p {
+    position: relative;
+    padding-right: 0;
+    display: inline-block;
+  }
+
+  header nav .nav-sections .nav-drop p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  header nav .nav-sections .nav-drop[aria-expanded='true'] p::after {
+    transform: translateY(-50%) rotate(315deg);
   }
   
   header nav .nav-sections ul > li > ul {
@@ -300,10 +391,14 @@ header .nav-wrapper {
 
   @media (width >= 900px) {
     header nav .nav-sections {
-      padding: 0 32px;
+      padding: 0 32px 0 0;
       display: block;
       visibility: visible;
       white-space: nowrap;
+    }
+
+    header nav .nav-sections ul > li:first-child {
+      margin-left: -32px; /* Pull logo further left on desktop */
     }
   
     header nav[aria-expanded='true'] .nav-sections {
@@ -312,7 +407,15 @@ header .nav-wrapper {
 
     /* Ensure logo displays at full size on desktop */
     header nav .nav-sections ul > li:first-child .icon img {
-      max-height: 65px;
+      max-height: 50px !important; /* Reduced logo size on desktop */
+      width: auto !important;
+      height: auto !important;
+    }
+
+    header nav .nav-sections ul > li:first-child .icon,
+    header nav .nav-sections ul > li:first-child .icon-logo {
+      padding: 10px 0; /* Further reduced padding on desktop */
+      min-height: auto;
     }
   
     header nav .nav-sections .nav-drop {
@@ -396,21 +499,218 @@ header .nav-wrapper {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: auto;
+    margin: 0 auto;
     max-width: 1248px;
+    width: 100%;
     flex: 0 0 auto;
     padding: 0 24px;
-    background-color: #F5F5F5;
     font-size: var(--body-font-size-xs);
   }
   
   header .nav-top-container {
     border-bottom: 1px solid #E0E0E0;
+    align-items: center;
   }
   
   header .nav-bottom-container {
-    border-top: 1px solid #E0E0E0;
+    background-color: #FFFFFF; /* White background */
+    align-items: flex-start;
+    padding-left: 0; /* Align with logo */
+    padding-right: 24px;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Full-width border line above breadcrumb */
+  header .nav-bottom-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #E0E0E0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  /* Breadcrumb section - align with logo */
+  header .nav-bottom-section {
+    width: 100%;
+    background-color: #FFFFFF; /* White background for breadcrumb */
+  }
+
+  header .nav-bottom-section:first-of-type {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  header .nav-bottom-section:first-of-type .default-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Secondary navigation section - full width with grey background */
+  header .nav-bottom-section:not(:first-of-type) {
+    background-color: #F5F5F5; /* Light grey background to match top utility bar */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding-left: 88px; /* Even more padding to align with breadcrumb text */
+    padding-right: 24px;
+  }
+
+  @media (width >= 900px) {
+    header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
+      max-width: 1264px;
+      padding-left: 104px; /* Maximum padding on desktop */
+      padding-right: 32px;
+    }
+  }
+
+  header .nav-bottom-section:first-of-type ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 8px 0; /* Reduced padding to decrease height */
+    margin: 0;
+  }
+
+  header .nav-bottom-section:first-of-type li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333; /* Black color as per Figma */
+    margin: 0;
+    padding: 0;
+    margin-right: 20px !important; /* Spacing between items - increased */
+  }
+
+  header .nav-bottom-section:first-of-type li:last-child {
+    margin-right: 0 !important; /* No margin on last item */
+  }
+
+  /* Remove arrow separator - using icon instead */
+  header .nav-bottom-section:first-of-type li:not(:last-child)::after {
+    content: none;
+  }
+
+  header .nav-bottom-section:first-of-type p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* More spacing between icon and text */
+  }
+
+  header .nav-bottom-section:first-of-type a {
+    margin: 0;
+    padding: 0;
+  }
+
+  header .nav-bottom-section:first-of-type a,
+  header .nav-bottom-section:first-of-type p {
+    color: #333; /* Black color as per Figma */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  header .nav-bottom-section:first-of-type a:hover {
+    color: #000; /* Darker black on hover */
+    text-decoration: underline;
+  }
+
+  header .nav-bottom-section:first-of-type .icon-home,
+  header .nav-bottom-section:first-of-type .icon-logo {
+    display: inline-flex;
+    align-items: center;
+    width: 14px; /* Smaller icon size */
+    height: 14px; /* Smaller icon size */
+  }
+
+  header .nav-bottom-section:first-of-type .icon-home img,
+  header .nav-bottom-section:first-of-type .icon-logo img {
+    width: 14px; /* Smaller icon size */
+    height: 14px; /* Smaller icon size */
+    display: block;
+  }
+
+  /* Secondary navigation styling - second bottom section */
+  header .nav-bottom-section:not(:first-of-type) {
+    background-color: #F5F5F5; /* Light grey background to match top utility bar */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+    gap: 12px; /* Reduced spacing to fit items on one line */
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scroll if needed on small screens */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    white-space: nowrap; /* Prevent text wrapping within items */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) a,
+  header .nav-bottom-section:not(:first-of-type) li {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) a:hover {
+    color: #AA226E;
+  }
+
+  /* active state for secondary nav - bold text with orange underline */
+  header .nav-bottom-section:not(:first-of-type) li strong,
+  header .nav-bottom-section:not(:first-of-type) a.active {
+    color: #333;
+    font-weight: 600;
+    position: relative;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) li strong::after,
+  header .nav-bottom-section:not(:first-of-type) a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgb(240, 171, 0);
+    border-radius: 2px 2px 0 0;
   }
   
   header .nav-top-container:empty,
@@ -423,5 +723,19 @@ header .nav-wrapper {
     header .nav-bottom-container {
       max-width: 1264px;
       padding: 0 32px;
+    }
+    
+    header .nav-bottom-container {
+      padding-left: 0; /* Align with logo on desktop */
+      padding-right: 32px;
+    }
+    
+    header .nav-bottom-section:first-of-type ul {
+      padding: 10px 0; /* Reduced padding on desktop */
+    }
+
+    header .nav-bottom-section:not(:first-of-type) ul {
+      padding: 16px 0;
+      gap: 20px; /* Slightly more spacing on desktop */
     }
   }
