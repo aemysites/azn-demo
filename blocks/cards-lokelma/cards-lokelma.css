@@ -1,93 +1,184 @@
 /**
  * Cards Lokelma Block - Efficacy Cards with Icons
- * Extracted from Figma: node-id=677-6811 (Group 107303)
+ * Extracted from Figma: node-id=677-6820 (Group 107302)
  * Page: 1.0 Post-gate HCP Homepage – Slide 1_P3
  * Design: "Think LOKELMA for its demonstrated efficacy" section
+ * Pixel-perfect match to Figma specifications
  */
 
 .cards-lokelma {
   padding: var(--lokelma-spacing-xl) 0;
 }
 
-.cards-lokelma > .cards-lokelma-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--lokelma-spacing-l);
-  max-width: var(--lokelma-max-width-content);
-  margin: 0 auto;
+/* Main heading - "Think LOKELMA for its demonstrated efficacy" */
+.cards-lokelma-heading {
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: var(--lokelma-font-weight-regular);
+  font-size: 48px;
+  line-height: 58px;
+  color: var(--lokelma-color-primary, #003b45);
+  margin: 0 auto 89px;
+  max-width: 1246px;
   padding: 0 var(--lokelma-spacing-m);
 }
 
-/* Individual card */
-.card-lokelma {
+.cards-lokelma-heading sup {
+  font-size: 30.96px;
+}
+
+/* Cards container */
+.cards-lokelma > .cards-lokelma-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: var(--lokelma-spacing-l);
-  background: url('/content/images/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png');
+  gap: 42px;
+  max-width: 1246px;
+  margin: 0 auto;
+  padding: 0 var(--lokelma-spacing-m);
+  justify-content: center;
+}
+
+/* Individual card - 603px x 587px */
+.card-lokelma {
+  position: relative;
+  width: 603px;
+  height: 587px;
+  background-color: #003b45;
+  background-image: url('../../content/images/card-background-teal.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  position: relative;
-  min-height: 587px;
-}
-
-/* Icon wrapper with yellow circle */
-.card-lokelma-icon {
-  width: 130px;
-  height: 130px;
-  border-radius: var(--lokelma-border-radius-circle);
-  background: var(--lokelma-color-background);
-  border: 4px solid var(--lokelma-color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: var(--lokelma-spacing-m);
+  padding: 0 10px;
   flex-shrink: 0;
 }
 
-.card-lokelma-icon img {
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
+/* Light overlay to match Figma's lighter appearance */
+.card-lokelma::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(232, 245, 243, 0.85);
+  pointer-events: none;
+  z-index: 0;
 }
 
-/* Title */
+/* Icon wrapper with circle layers - positioned absolutely */
+.card-lokelma-icon {
+  position: absolute;
+  width: 126px;
+  height: 126px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #fff;
+  border: 5.59px solid var(--lokelma-color-accent, #f7a800);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Inner teal circle border - only for first card (clock icon) */
+.card-lokelma:first-child .card-lokelma-icon::before {
+  content: '';
+  position: absolute;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--lokelma-color-primary, #003b45);
+  z-index: 1;
+}
+
+.card-lokelma:first-child .card-lokelma-icon {
+  top: 26px;
+}
+
+.card-lokelma:last-child .card-lokelma-icon {
+  top: 26px;
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+/* First card clock icon - smaller size with inner circle */
+.card-lokelma:first-child .card-lokelma-icon img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+/* Second card wave icon - fills entire circle */
+.card-lokelma:last-child .card-lokelma-icon img {
+  width: 126px;
+  height: 126px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+/* Title - positioned absolutely */
 .card-lokelma-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 583px;
   text-align: center;
-  margin-bottom: var(--lokelma-spacing-m);
+  z-index: 10;
+}
+
+.card-lokelma:first-child .card-lokelma-title {
+  top: 173px;
+}
+
+.card-lokelma:last-child .card-lokelma-title {
+  top: 173px;
 }
 
 .card-lokelma-title p {
-  font-family: var(--lokelma-font-family-heading);
-  font-weight: var(--lokelma-font-weight-medium);
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-medium, 500);
   font-size: 26px;
-  line-height: var(--lokelma-line-height-tight);
-  color: var(--lokelma-color-text);
+  line-height: 1.3;
+  color: var(--lokelma-color-text, #000);
   margin: 0;
 }
 
-/* Content area with bullet points */
+.card-lokelma-title sup {
+  font-size: 16.77px;
+}
+
+/* Content area with bullet points - positioned absolutely */
 .card-lokelma-content {
-  flex: 1;
-  width: 100%;
-  margin-bottom: var(--lokelma-spacing-m);
+  position: absolute;
+  top: 239px;
+  left: 29px;
+  width: 543px;
+  z-index: 10;
+}
+
+.card-lokelma:last-child .card-lokelma-content {
+  top: 238px;
+  left: 30px;
 }
 
 .card-lokelma-content ul,
 .card-lokelma-content ol {
   list-style-position: outside;
-  padding-left: var(--lokelma-spacing-m);
+  list-style-type: disc;
+  padding-left: 24px;
   margin: 0;
 }
 
 .card-lokelma-content li {
-  font-family: var(--lokelma-font-family-body);
-  font-weight: var(--lokelma-font-weight-regular);
+  font-family: var(--lokelma-font-family-body, 'Inter', sans-serif);
+  font-weight: var(--lokelma-font-weight-regular, 400);
   font-size: 22px;
-  line-height: var(--lokelma-line-height-tight);
-  color: var(--lokelma-color-text);
+  line-height: 1.3;
+  color: var(--lokelma-color-text, #000);
   margin-bottom: 10px;
+  padding-left: 0;
 }
 
 .card-lokelma-content li:last-child {
@@ -95,52 +186,138 @@
 }
 
 .card-lokelma-content strong {
-  font-weight: var(--lokelma-font-weight-bold);
+  font-weight: var(--lokelma-font-weight-bold, 700);
 }
 
-/* Citation box at bottom */
+.card-lokelma-content sup {
+  font-size: 14.19px;
+}
+
+/* Citation box at bottom - positioned absolutely */
 .card-lokelma-citation {
-  width: 100%;
-  border: var(--lokelma-border-width) solid var(--lokelma-color-primary);
+  position: absolute;
+  top: 475px;
+  left: 10px;
+  width: 582px;
+  height: 82px;
+  border: 1px solid var(--lokelma-color-primary, #003b45);
   background: rgba(255, 255, 255, 0.5);
-  padding: 10px var(--lokelma-spacing-s);
-  text-align: center;
-  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.card-lokelma:last-child .card-lokelma-citation {
+  width: 583px;
 }
 
 .card-lokelma-citation p {
-  font-family: var(--lokelma-font-family-heading);
-  font-weight: var(--lokelma-font-weight-medium);
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-medium, 500);
   font-size: 22px;
-  line-height: var(--lokelma-line-height-tight);
-  color: var(--lokelma-color-primary);
+  line-height: 1.3;
+  color: var(--lokelma-color-primary, #003b45);
+  text-align: center;
   margin: 0;
 }
 
 /* Responsive layout */
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
+  .cards-lokelma-heading {
+    font-size: 42px;
+    line-height: 52px;
+    margin-bottom: 60px;
+  }
+
   .cards-lokelma > .cards-lokelma-container {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: var(--lokelma-spacing-m);
+    align-items: center;
   }
 
   .card-lokelma {
-    min-height: auto;
+    width: 100%;
+    max-width: 603px;
+    height: auto;
+    min-height: 587px;
+  }
+
+  .card-lokelma:first-child .card-lokelma-title,
+  .card-lokelma:last-child .card-lokelma-title {
+    top: 173px;
   }
 }
 
 @media (max-width: 600px) {
+  .cards-lokelma-heading {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+
+  .card-lokelma {
+    min-height: 600px;
+  }
+
   .card-lokelma-icon {
     width: 100px;
     height: 100px;
+    border: 4px solid var(--lokelma-color-accent, #f7a800);
+  }
+
+  .card-lokelma-icon::after {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--lokelma-color-primary, #003b45);
+  }
+
+  .card-lokelma-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .card-lokelma:first-child .card-lokelma-icon,
+  .card-lokelma:last-child .card-lokelma-icon {
+    top: 20px;
+  }
+
+  .card-lokelma:first-child .card-lokelma-title,
+  .card-lokelma:last-child .card-lokelma-title {
+    top: 140px;
+  }
+
+  .card-lokelma-title {
+    width: calc(100% - 40px);
   }
 
   .card-lokelma-title p {
-    font-size: 22px;
+    font-size: 20px;
   }
 
-  .card-lokelma-content li,
+  .card-lokelma-content {
+    top: 200px;
+    left: 20px;
+    width: calc(100% - 40px);
+  }
+
+  .card-lokelma-content ul {
+    padding-left: 20px;
+  }
+
+  .card-lokelma-content li {
+    font-size: 18px;
+  }
+
+  .card-lokelma-citation {
+    left: 10px;
+    width: calc(100% - 20px);
+    height: auto;
+    min-height: 82px;
+  }
+
   .card-lokelma-citation p {
-    font-size: var(--lokelma-font-size-m);
+    font-size: 18px;
   }
 }

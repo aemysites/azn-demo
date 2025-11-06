@@ -1,0 +1,741 @@
+/* header and nav layout */
+header {
+  margin: 0;
+  padding: 0;
+}
+
+header .nav-wrapper {
+    background-color: #FFFFFF;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+  }
+  
+  header nav {
+    box-sizing: border-box;
+    display: grid;
+    grid-template:
+      'brand brand brand' auto
+      'sections hamburger tools' var(--nav-height) / 1fr auto auto;
+    align-items: center;
+    gap: 0;
+    margin: auto;
+    max-width: 1248px;
+    width: 100%;
+    flex: 1;
+    padding: 0;
+    font-family: var(--body-font-family);
+    background-color: #FFFFFF;
+  }
+  
+  header nav[aria-expanded='true'] {
+    overflow-y: auto;
+    min-height: 100dvh;
+  }
+  
+  @media (width >= 900px) {
+    header nav {
+      display: grid;
+      grid-template:
+        'brand brand brand' auto
+        'sections hamburger tools' var(--nav-height) / 1fr auto auto;
+      gap: 0;
+      max-width: 1264px;
+      padding: 0;
+    }
+  
+    header nav[aria-expanded='true'] {
+      min-height: 0;
+      overflow: visible;
+    }
+  }
+  
+  header nav p {
+    margin: 0;
+    line-height: 1;
+  }
+  
+  header nav a:any-link {
+    color: currentcolor;
+  }
+  
+  /* hamburger */
+  header nav .nav-hamburger {
+    grid-area: hamburger;
+    display: none; /* Hide hamburger menu completely */
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  header nav .nav-hamburger button {
+    height: 32px;
+    width: 32px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header nav .nav-hamburger button:hover {
+    opacity: 0.7;
+  }
+  
+  /* Menu icon styling */
+  header nav .nav-hamburger .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  header nav .nav-hamburger .icon img {
+    width: 45px;
+    height: 38px;
+    display: block;
+  }
+  
+  /* brand - top utility bar */
+  header .nav-brand {
+    grid-area: brand;
+    width: 100vw;
+    background-color: rgb(243, 243, 243);
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    box-sizing: border-box;
+  }
+  
+  header nav .nav-brand .default-content-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header nav .nav-brand ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  header nav .nav-brand li {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  header nav .nav-brand li:first-child a {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  header nav .nav-brand li:nth-child(2) {
+    position: relative;
+    padding-left: 0; /* Remove padding since icon is removed */
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  /* Remove user icon for Login/Register */
+  header nav .nav-brand li:nth-child(2)::before {
+    display: none; /* Hide the icon */
+  }
+
+  /* Language switcher styling */
+  header nav .nav-brand li:last-child {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav .nav-brand li:last-child a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    padding: 0 4px;
+  }
+
+  header nav .nav-brand li:last-child strong {
+    font-weight: 700;
+  }
+
+  header nav .nav-brand li:last-child strong a {
+    color: #AA226E;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  header nav .nav-brand li:last-child a:not(strong a) {
+    color: #AA226E;
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  /* Pipe separator between EN and FR */
+  header nav .nav-brand li:last-child strong::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    background-color: #E0E0E0;
+    margin: 0 8px;
+    vertical-align: middle;
+  }
+
+  @media (width >= 900px) {
+    header .nav-brand {
+      padding: 10px 32px;
+    }
+
+    header nav .nav-brand ul {
+      gap: 32px;
+    }
+  }
+
+  header nav .nav-brand img {
+    width: auto;
+    height: 100%;
+    max-height: calc(var(--nav-height) - 16px);
+    max-width: 128px;
+  }
+  
+  /* sections - logo area */
+  header nav .nav-sections {
+    grid-area: sections;
+    flex: 1 1 auto;
+    display: block;
+    visibility: visible;
+    padding: 0 24px 0 0;
+  }
+
+  header nav[aria-expanded='true'] .nav-sections {
+    display: block;
+    visibility: visible;
+    align-self: start;
+  }
+
+  header nav .nav-sections ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    font-size: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper {
+    padding-left: 0;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* Logo styling */
+  header nav .nav-sections ul > li {
+    font-weight: 500;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  header nav .nav-sections ul > li:first-child {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    font-size: initial;
+    line-height: initial;
+    margin-left: -24px; /* Pull logo further left */
+  }
+
+  /* Create spacer after logo to center nav items */
+  header nav .nav-sections .default-content-wrapper > ul::after {
+    content: '';
+    flex: 0 0 248px; /* Match logo width to balance layout */
+  }
+
+  /* Show logo icon */
+  header nav .nav-sections ul > li:first-child .icon,
+  header nav .nav-sections ul > li:first-child .icon-logo {
+    display: flex;
+    align-items: center;
+    width: 248px;
+    height: auto;
+    padding: 8px 0; /* Reduced padding */
+    min-height: auto; /* Remove any min-height */
+  }
+
+  header nav .nav-sections ul > li:first-child .icon img,
+  header nav .nav-sections ul > li:first-child .icon-logo img {
+    max-height: 45px !important; /* Reduced logo size */
+    width: auto !important; /* Override width to auto */
+    height: auto !important; /* Override height to auto */
+    display: block;
+    margin: 0;
+  }
+
+  /* Navigation items styling - restore font-size and display */
+  header nav .nav-sections ul > li:not(:first-child) {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #333;
+  }
+
+  header nav .nav-sections ul > li:not(:first-child) p {
+    margin: 0;
+    padding: 4px 0; /* Reduced padding to decrease height */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #333;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    position: relative;
+  }
+
+  header nav .nav-sections ul > li:not(:first-child) p:hover {
+    color: #AA226E;
+  }
+
+  /* Add dropdown arrow to THERAPEUTIC AREAS (second item) */
+  header nav .nav-sections ul > li:nth-child(2) p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  header nav .nav-sections ul > li:nth-child(2).nav-drop[aria-expanded='true'] p::after {
+    transform: translateY(-50%) rotate(315deg);
+  }
+
+  /* Hide duplicate logos - only show first logo */
+  header nav .nav-sections ul > li:not(:first-child) .icon-logo {
+    display: none;
+  }
+
+  /* Dropdown arrow for navigation items with submenu */
+  header nav .nav-sections .nav-drop {
+    position: relative;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  header nav .nav-sections .nav-drop p {
+    position: relative;
+    padding-right: 0;
+    display: inline-block;
+  }
+
+  header nav .nav-sections .nav-drop p::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    transform: translateY(-50%) rotate(135deg);
+    width: 6px;
+    height: 6px;
+    border: 2px solid currentcolor;
+    border-radius: 0 1px 0 0;
+    border-width: 2px 2px 0 0;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  header nav .nav-sections .nav-drop[aria-expanded='true'] p::after {
+    transform: translateY(-50%) rotate(315deg);
+  }
+  
+  header nav .nav-sections ul > li > ul {
+    margin-top: 0;
+  }
+  
+  header nav .nav-sections ul > li > ul > li {
+    font-weight: 400;
+  }
+
+  @media (width >= 900px) {
+    header nav .nav-sections {
+      padding: 0 32px 0 0;
+      display: block;
+      visibility: visible;
+      white-space: nowrap;
+    }
+
+    header nav .nav-sections ul > li:first-child {
+      margin-left: -32px; /* Pull logo further left on desktop */
+    }
+  
+    header nav[aria-expanded='true'] .nav-sections {
+      align-self: unset;
+    }
+
+    /* Ensure logo displays at full size on desktop */
+    header nav .nav-sections ul > li:first-child .icon img {
+      max-height: 50px !important; /* Reduced logo size on desktop */
+      width: auto !important;
+      height: auto !important;
+    }
+
+    header nav .nav-sections ul > li:first-child .icon,
+    header nav .nav-sections ul > li:first-child .icon-logo {
+      padding: 10px 0; /* Further reduced padding on desktop */
+      min-height: auto;
+    }
+  
+    header nav .nav-sections .nav-drop {
+      position: relative;
+      padding-right: 16px;
+      cursor: pointer;
+    }
+  
+    header nav .nav-sections .nav-drop::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0.5em;
+      right: 2px;
+      transform: rotate(135deg);
+      width: 6px;
+      height: 6px;
+      border: 2px solid currentcolor;
+      border-radius: 0 1px 0 0;
+      border-width: 2px 2px 0 0;
+    }
+  
+    header nav .nav-sections .nav-drop[aria-expanded='true']::after {
+      top: unset;
+      bottom: 0.5em;
+      transform: rotate(315deg);
+    }
+  
+    header nav .nav-sections ul {
+      display: flex;
+      gap: 24px;
+      margin: 0;
+    }
+  
+    header nav .nav-sections .default-content-wrapper > ul > li {
+      flex: 0 1 auto;
+      position: relative;
+    }
+  
+    header nav .nav-sections .default-content-wrapper > ul > li > ul {
+      display: none;
+      position: relative;
+    }
+  
+    header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+      display: block;
+      position: absolute;
+      left: -24px;
+      width: 200px;
+      top: 150%;
+      padding: 16px;
+      background-color: var(--light-color);
+      white-space: initial;
+    }
+  
+    header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 16px;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid var(--light-color);
+    }
+  
+    header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
+      padding: 8px 0;
+    }
+  }
+  
+  /* tools */
+  header nav .nav-tools {
+    grid-area: tools;
+  }
+  
+  /* containers */
+  header .nav-top-container,
+  header .nav-bottom-container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1248px;
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 0 24px;
+    font-size: var(--body-font-size-xs);
+  }
+  
+  header .nav-top-container {
+    border-bottom: 1px solid #E0E0E0;
+    align-items: center;
+  }
+  
+  header .nav-bottom-container {
+    background-color: #FFFFFF; /* White background */
+    align-items: flex-start;
+    padding-left: 0; /* Align with logo */
+    padding-right: 24px;
+    width: 100%;
+    position: relative;
+  }
+
+  /* Full-width border line above breadcrumb */
+  header .nav-bottom-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #E0E0E0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  /* Breadcrumb section - align with logo */
+  header .nav-bottom-section {
+    width: 100%;
+    background-color: #FFFFFF; /* White background for breadcrumb */
+  }
+
+  header .nav-bottom-section:first-of-type {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  header .nav-bottom-section:first-of-type .default-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Secondary navigation section - full width with grey background */
+  header .nav-bottom-section:not(:first-of-type) {
+    background-color: #F5F5F5; /* Light grey background to match top utility bar */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
+    padding-left: 0;
+    margin-left: 0;
+    width: 100%;
+    max-width: 1248px;
+    margin: 0 auto;
+    padding-left: 88px; /* Even more padding to align with breadcrumb text */
+    padding-right: 24px;
+  }
+
+  @media (width >= 900px) {
+    header .nav-bottom-section:not(:first-of-type) .default-content-wrapper {
+      max-width: 1264px;
+      padding-left: 104px; /* Maximum padding on desktop */
+      padding-right: 32px;
+    }
+  }
+
+  header .nav-bottom-section:first-of-type ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 8px 0; /* Reduced padding to decrease height */
+    margin: 0;
+  }
+
+  header .nav-bottom-section:first-of-type li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333; /* Black color as per Figma */
+    margin: 0;
+    padding: 0;
+    margin-right: 20px !important; /* Spacing between items - increased */
+  }
+
+  header .nav-bottom-section:first-of-type li:last-child {
+    margin-right: 0 !important; /* No margin on last item */
+  }
+
+  /* Remove arrow separator - using icon instead */
+  header .nav-bottom-section:first-of-type li:not(:last-child)::after {
+    content: none;
+  }
+
+  header .nav-bottom-section:first-of-type p {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px; /* More spacing between icon and text */
+  }
+
+  header .nav-bottom-section:first-of-type a {
+    margin: 0;
+    padding: 0;
+  }
+
+  header .nav-bottom-section:first-of-type a,
+  header .nav-bottom-section:first-of-type p {
+    color: #333; /* Black color as per Figma */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  header .nav-bottom-section:first-of-type a:hover {
+    color: #000; /* Darker black on hover */
+    text-decoration: underline;
+  }
+
+  header .nav-bottom-section:first-of-type .icon-home,
+  header .nav-bottom-section:first-of-type .icon-logo {
+    display: inline-flex;
+    align-items: center;
+    width: 14px; /* Smaller icon size */
+    height: 14px; /* Smaller icon size */
+  }
+
+  header .nav-bottom-section:first-of-type .icon-home img,
+  header .nav-bottom-section:first-of-type .icon-logo img {
+    width: 14px; /* Smaller icon size */
+    height: 14px; /* Smaller icon size */
+    display: block;
+  }
+
+  /* Secondary navigation styling - second bottom section */
+  header .nav-bottom-section:not(:first-of-type) {
+    background-color: #F5F5F5; /* Light grey background to match top utility bar */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+    gap: 12px; /* Reduced spacing to fit items on one line */
+    flex-wrap: nowrap; /* Prevent wrapping to next line */
+    width: 100%;
+    overflow-x: auto; /* Allow horizontal scroll if needed on small screens */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) li {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    white-space: nowrap; /* Prevent text wrapping within items */
+  }
+
+  header .nav-bottom-section:not(:first-of-type) a,
+  header .nav-bottom-section:not(:first-of-type) li {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 4px;
+    position: relative;
+    transition: color 0.2s ease;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) a:hover {
+    color: #AA226E;
+  }
+
+  /* active state for secondary nav - bold text with orange underline */
+  header .nav-bottom-section:not(:first-of-type) li strong,
+  header .nav-bottom-section:not(:first-of-type) a.active {
+    color: #333;
+    font-weight: 600;
+    position: relative;
+  }
+
+  header .nav-bottom-section:not(:first-of-type) li strong::after,
+  header .nav-bottom-section:not(:first-of-type) a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: rgb(240, 171, 0);
+    border-radius: 2px 2px 0 0;
+  }
+  
+  header .nav-top-container:empty,
+  header .nav-bottom-container:empty {
+    display: none;
+  }
+  
+  @media (width >= 900px) {
+    header .nav-top-container,
+    header .nav-bottom-container {
+      max-width: 1264px;
+      padding: 0 32px;
+    }
+    
+    header .nav-bottom-container {
+      padding-left: 0; /* Align with logo on desktop */
+      padding-right: 32px;
+    }
+    
+    header .nav-bottom-section:first-of-type ul {
+      padding: 10px 0; /* Reduced padding on desktop */
+    }
+
+    header .nav-bottom-section:not(:first-of-type) ul {
+      padding: 16px 0;
+      gap: 20px; /* Slightly more spacing on desktop */
+    }
+  }

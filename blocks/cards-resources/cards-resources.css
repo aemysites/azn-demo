@@ -14,54 +14,72 @@
   gap: var(--lokelma-spacing-m);
   max-width: var(--lokelma-max-width-content);
   margin: 0 auto;
-  padding: 0 var(--lokelma-spacing-m);
+  padding: 0;
 }
 
 /* Individual card */
 .card-resource {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   background: white;
-  overflow: hidden;
+  overflow: visible;
 }
 
-/* Icon area with teal gradient background */
-.card-resource-icon {
+/* Card content wrapper */
+.card-resource-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+/* Background image area */
+.card-resource-bg {
   height: 222px;
+  width: 100%;
   background: url('/content/images/e6f09ee5f89ff055a09d57b73ad5135c743e8293.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Icon area - absolutely positioned overlay at left: 89px, top: 0 per Figma */
+.card-resource-icon {
+  position: absolute;
+  left: 89px;
+  top: 0;
+  width: 222px;
+  height: 222px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  overflow: visible;
+  z-index: 2;
 }
 
 .card-resource-icon img {
   width: 100px;
   height: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
 }
 
 /* Content area */
 .card-resource-body {
   background: rgba(115, 195, 183, 0.2);
-  padding: var(--lokelma-spacing-l);
+  padding: 30px;
   display: flex;
   flex-direction: column;
-  gap: var(--lokelma-spacing-m);
+  gap: 20px;
   flex: 1;
 }
 
 /* Title */
 .card-resource-body h3 {
-  font-family: var(--lokelma-font-family-heading);
-  font-weight: var(--lokelma-font-weight-regular);
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-regular, 400);
   font-size: 24px;
-  line-height: var(--lokelma-line-height-heading);
-  color: var(--lokelma-color-text);
+  line-height: 34px;
+  color: var(--lokelma-color-primary, #003b45);
   margin: 0;
 }
 
@@ -77,14 +95,16 @@
   background: #fdb515 !important;
   background-color: #fdb515 !important;
   border: 1px solid #fdb515 !important;
-  color: var(--lokelma-color-text) !important;
+  color: var(--lokelma-color-primary, #003b45) !important;
   padding: 22px 32px;
   text-decoration: none;
-  font-family: var(--lokelma-font-family-heading);
-  font-weight: var(--lokelma-font-weight-bold);
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-bold, 700);
   font-style: italic;
   font-size: 16px;
   line-height: normal;
+  text-align: center;
+  white-space: nowrap;
   transition: opacity 0.3s ease;
 }
 
@@ -104,6 +124,7 @@
   .cards-resources > .cards-resources-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 @media (max-width: 768px) {
@@ -124,3 +145,4 @@
     font-size: 20px;
   }
 }
+

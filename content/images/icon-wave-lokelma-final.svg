@@ -1,23 +1,5 @@
-<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Yellow circle border -->
-  <circle cx="65" cy="65" r="62" fill="white" stroke="#F0AB00" stroke-width="6"/>
-
-  <!-- Teal wave pattern -->
-  <path d="M35 65 Q 42 50, 50 65 T 65 65 Q 72 80, 80 65 T 95 65"
-        stroke="#00927C"
-        stroke-width="4"
-        fill="none"
-        stroke-linecap="round"/>
-
-  <path d="M35 75 Q 42 60, 50 75 T 65 75 Q 72 90, 80 75 T 95 75"
-        stroke="#00927C"
-        stroke-width="4"
-        fill="none"
-        stroke-linecap="round"/>
-
-  <path d="M35 55 Q 42 40, 50 55 T 65 55 Q 72 70, 80 55 T 95 55"
-        stroke="#00927C"
-        stroke-width="4"
-        fill="none"
-        stroke-linecap="round"/>
+<svg width="138" height="138" viewBox="0 0 138 138" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M69 134C104.899 134 134 104.899 134 69C134 33.1015 104.899 4 69 4C33.1015 4 4 33.1015 4 69C4 104.899 33.1015 134 69 134Z" fill="white" stroke="#F0AB00" stroke-width="5.59"/>
+<path d="M126.632 96.034C113.964 96.034 122.246 52.492 110.936 52.304C100.86 52.138 104.186 81.34 92.4261 81.34C78.5801 81.34 85.2301 26.032 71.4301 26.032C56.3001 26.032 62.3741 106.34 46.6641 106.34C31.3601 106.34 39.7361 44.058 27.3381 44.058C15.6281 44.058 23.5441 88.548 8.91406 88.05" stroke="#00927C" stroke-width="3.10617" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M69 134C104.899 134 134 104.899 134 69C134 33.1015 104.899 4 69 4C33.1015 4 4 33.1015 4 69C4 104.899 33.1015 134 69 134Z" stroke="#F0AB00" stroke-width="5.59"/>
 </svg>
