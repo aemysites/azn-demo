@@ -20,7 +20,35 @@ This block creates a grid of cards (3 columns) with:
 - No CTA buttons (pure informational cards)
 - All cards in a row maintain equal heights regardless of content length
 
-## Markdown Syntax
+## ⚠️ CRITICAL: Correct Markdown Pattern for Single-Go Success
+
+**THE WORKING PATTERN (Use this for all content mappings):**
+
+```markdown
+| Cards-Description | |
+|---|---|
+| ![Card 1](image-url-1) | **Card 1 Title**<br>Description text for card 1. |
+| ![Card 2](image-url-2) | **Card 2 Title**<br>Description text for card 2. |
+| ![Card 3](image-url-3) | **Card 3 Title**<br>Description text for card 3. |
+```
+
+**Key Requirements:**
+1. ✅ **2-column table header:** `| Cards-Description | |` with separator `|---|---|`
+2. ✅ **Bold for titles:** Use `**Title**` NOT `##` or `###`
+3. ✅ **Single `<br>` separator:** Between title and description
+4. ✅ **Unique images:** Extract actual image URLs from source (don't use placeholders)
+
+**Why This Pattern:**
+- EDS doesn't parse `##` inside table cells → Use `**bold**` instead
+- JavaScript converts `<strong>` → `<h3>` automatically
+- Separates title and description into proper HTML elements
+- Results in correct CSS styling and layout
+
+---
+
+## Original Markdown Syntax (Reference Only)
+
+**Note:** This syntax is shown in documentation but requires JavaScript workarounds to function correctly.
 
 ```markdown
 | Cards-Description |
@@ -30,14 +58,50 @@ This block creates a grid of cards (3 columns) with:
 | ![Card 3 Image](../images/card-3.jpg) | ## Card 3 Title<br><br>Description text for card 3. This can be one or more paragraphs explaining the content. |
 ```
 
+⚠️ **Problems with this syntax:**
+- Single-column table (missing second column)
+- Uses `##` headings (don't parse in table cells)
+- Double `<br><br>` (unnecessary, single `<br>` works better)
+
 ## Content Guidelines
 
 ### Images
+
+**⚠️ CRITICAL: Always Extract Actual Images from Source**
+
+When mapping content from a website to this block:
+
+**DON'T:**
+```markdown
+❌ Use the same placeholder image for all cards
+❌ Assume all articles share one image
+❌ Map from text-only content without verifying images
+```
+
+**DO:**
+```javascript
+✅ Re-authenticate to source website
+✅ Extract image URLs from actual article cards:
+
+const articles = Array.from(document.querySelectorAll('.article-card')).map(card => ({
+  title: card.querySelector('h3')?.textContent.trim(),
+  imageUrl: card.querySelector('img')?.src || '',
+  imageAlt: card.querySelector('img')?.alt || ''
+}));
+```
+
+**Why This Matters:**
+- Each card typically has a UNIQUE image on the source website
+- Using placeholder images loses visual diversity
+- Missing distinct images = incomplete content mapping
+
+**Image Guidelines:**
 - **First cell** in each row
 - Use markdown image syntax: `![alt text](path/to/image.jpg)`
 - Recommended dimensions: 400x222px (16:9 aspect ratio works well)
 - Images are automatically sized and cropped (object-fit: cover)
 - Supported formats: JPG, PNG, WebP
+- **Always use actual image URLs from source content**
 
 ### Title
 - **Start of second cell**

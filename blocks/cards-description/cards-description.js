@@ -51,40 +51,69 @@ export default function decorate(block) {
         title.textContent = titleElement.textContent.trim();
         body.appendChild(title);
       } else {
-        // WORKAROUND: EDS doesn't parse ### inside table cells
-        // We manually detect ### prefix and parse <br> separators
         const firstPara = cells[1].querySelector('p');
         if (firstPara) {
-          // Split content by <br> elements
-          const parts = [];
-          let currentText = '';
+          // Check if paragraph starts with <strong> (bold markdown **text**)
+          const firstStrong = firstPara.querySelector('strong');
 
-          Array.from(firstPara.childNodes).forEach((node) => {
-            if (node.nodeType === Node.TEXT_NODE) {
-              currentText += node.textContent;
-            } else if (node.nodeName === 'BR') {
-              if (currentText.trim()) {
-                parts.push(currentText.trim());
-                currentText = '';
-              }
-            }
-          });
-
-          if (currentText.trim()) {
-            parts.push(currentText.trim());
-          }
-
-          // Check if first part starts with ###
-          if (parts.length > 0 && parts[0].startsWith('###')) {
+          if (firstStrong && firstPara.childNodes[0] === firstStrong) {
+            // Case 1: Paragraph starts with <strong> - treat as title
             const title = document.createElement('h3');
-            title.textContent = parts[0].replace(/^###\s*/, '').trim();
+            title.textContent = firstStrong.textContent.trim();
             body.appendChild(title);
 
-            // Add remaining parts as description
-            if (parts.length > 1) {
+            // Get remaining text after <strong> (skip <br> if present)
+            let descText = '';
+            let foundStrong = false;
+            Array.from(firstPara.childNodes).forEach((node) => {
+              if (node === firstStrong) {
+                foundStrong = true;
+              } else if (foundStrong && node.nodeName !== 'BR') {
+                if (node.nodeType === Node.TEXT_NODE) {
+                  descText += node.textContent;
+                } else {
+                  descText += node.textContent;
+                }
+              }
+            });
+
+            if (descText.trim()) {
               const description = document.createElement('p');
-              description.textContent = parts.slice(1).join(' ').trim();
+              description.textContent = descText.trim();
               body.appendChild(description);
+            }
+          } else {
+            // Case 2: Check for ### prefix with <br> separators
+            const parts = [];
+            let currentText = '';
+
+            Array.from(firstPara.childNodes).forEach((node) => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                currentText += node.textContent;
+              } else if (node.nodeName === 'BR') {
+                if (currentText.trim()) {
+                  parts.push(currentText.trim());
+                  currentText = '';
+                }
+              }
+            });
+
+            if (currentText.trim()) {
+              parts.push(currentText.trim());
+            }
+
+            // Check if first part starts with ###
+            if (parts.length > 0 && parts[0].startsWith('###')) {
+              const title = document.createElement('h3');
+              title.textContent = parts[0].replace(/^###\s*/, '').trim();
+              body.appendChild(title);
+
+              // Add remaining parts as description
+              if (parts.length > 1) {
+                const description = document.createElement('p');
+                description.textContent = parts.slice(1).join(' ').trim();
+                body.appendChild(description);
+              }
             }
           }
         }
