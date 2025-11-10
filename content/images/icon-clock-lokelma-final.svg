@@ -1,22 +1,24 @@
-<svg width="130" height="130" viewBox="0 0 130 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Yellow circle border -->
-  <circle cx="65" cy="65" r="62" fill="white" stroke="#F0AB00" stroke-width="6"/>
+<svg width="136" height="136" viewBox="0 0 136 136" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Yellow ring background -->
+<circle cx="68" cy="68" r="65" fill="white" stroke="#F0AB00" stroke-width="5.59179"/>
 
-  <!-- Teal clock face -->
-  <circle cx="65" cy="65" r="45" fill="none" stroke="#00927C" stroke-width="3"/>
+<!-- Clock icon centered (translated from 96x96 to fit in 136x136) -->
+<g transform="translate(20, 20)" clip-path="url(#clip0_677_6834)">
+<path d="M47.9994 94.265C73.5509 94.265 94.2645 73.5514 94.2645 47.9999C94.2645 22.4484 73.5509 1.73486 47.9994 1.73486C22.4479 1.73486 1.73438 22.4484 1.73438 47.9999C1.73438 73.5514 22.4479 94.265 47.9994 94.265Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.0015 84.627C68.2298 84.627 84.628 68.2288 84.628 48.0005C84.628 27.7723 68.2298 11.374 48.0015 11.374C27.7732 11.374 11.375 27.7723 11.375 48.0005C11.375 68.2288 27.7732 84.627 48.0015 84.627Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.9992 51.854C50.1281 51.854 51.854 50.1281 51.854 47.9992C51.854 45.8703 50.1281 44.1445 47.9992 44.1445C45.8703 44.1445 44.1445 45.8703 44.1445 47.9992C44.1445 50.1281 45.8703 51.854 47.9992 51.854Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.0229 19.0845H47.9844V22.9392H48.0229V19.0845Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M76.9172 47.981H73.0625V48.0195H76.9172V47.981Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.9407 47.981H19.0859V48.0195H22.9407V47.981Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48.0229 73.0605H47.9844V76.9153H48.0229V73.0605Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.1562 34.1222L34.1289 34.1494L45.2654 45.2859L45.2927 45.2587L34.1562 34.1222Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M65.7089 30.2818L50.7148 45.2759L50.7421 45.3031L65.7362 30.3091L65.7089 30.2818Z" stroke="#00927C" stroke-width="3.46924" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 
-  <!-- Clock tick marks -->
-  <line x1="65" y1="24" x2="65" y2="28" stroke="#00927C" stroke-width="2"/>
-  <line x1="106" y1="65" x2="102" y2="65" stroke="#00927C" stroke-width="2"/>
-  <line x1="65" y1="106" x2="65" y2="102" stroke="#00927C" stroke-width="2"/>
-  <line x1="24" y1="65" x2="28" y2="65" stroke="#00927C" stroke-width="2"/>
-
-  <!-- Hour hand pointing to 10 -->
-  <line x1="65" y1="65" x2="50" y2="45" stroke="#00927C" stroke-width="3" stroke-linecap="round"/>
-
-  <!-- Minute hand pointing to 2 -->
-  <line x1="65" y1="65" x2="85" y2="50" stroke="#00927C" stroke-width="2" stroke-linecap="round"/>
-
-  <!-- Center dot -->
-  <circle cx="65" cy="65" r="3" fill="#00927C"/>
+<defs>
+<clipPath id="clip0_677_6834">
+<rect width="96" height="96" fill="white"/>
+</clipPath>
+</defs>
 </svg>
+

@@ -41,7 +41,6 @@
   position: relative;
   width: 603px;
   height: 587px;
-  background-color: #003b45;
   background-image: url('../../content/images/card-background-teal.png');
   background-size: cover;
   background-position: center;
@@ -50,67 +49,27 @@
   flex-shrink: 0;
 }
 
-/* Light overlay to match Figma's lighter appearance */
-.card-lokelma::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(232, 245, 243, 0.85);
-  pointer-events: none;
-  z-index: 0;
-}
 
-/* Icon wrapper with circle layers - positioned absolutely */
+/* Icon wrapper - positioned absolutely */
 .card-lokelma-icon {
   position: absolute;
+  top: 26px;
   width: 126px;
   height: 126px;
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  background: #fff;
-  border: 5.59px solid var(--lokelma-color-accent, #f7a800);
+  background: transparent;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 10;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Inner teal circle border - only for first card (clock icon) */
-.card-lokelma:first-child .card-lokelma-icon::before {
-  content: '';
-  position: absolute;
-  width: 86px;
-  height: 86px;
-  border-radius: 50%;
-  background: #fff;
-  border: 3px solid var(--lokelma-color-primary, #003b45);
-  z-index: 1;
-}
-
-.card-lokelma:first-child .card-lokelma-icon {
-  top: 26px;
-}
-
-.card-lokelma:last-child .card-lokelma-icon {
-  top: 26px;
-  border: none;
-  background: transparent;
   box-shadow: none;
 }
 
-/* First card clock icon - smaller size with inner circle */
-.card-lokelma:first-child .card-lokelma-icon img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
-}
-
-/* Second card wave icon - fills entire circle */
-.card-lokelma:last-child .card-lokelma-icon img {
+/* Icon image - fills entire circle */
+.card-lokelma-icon img {
   width: 126px;
   height: 126px;
   object-fit: contain;
@@ -121,19 +80,12 @@
 /* Title - positioned absolutely */
 .card-lokelma-title {
   position: absolute;
+  top: 173px;
   left: 50%;
   transform: translateX(-50%);
   width: 583px;
   text-align: center;
   z-index: 10;
-}
-
-.card-lokelma:first-child .card-lokelma-title {
-  top: 173px;
-}
-
-.card-lokelma:last-child .card-lokelma-title {
-  top: 173px;
 }
 
 .card-lokelma-title p {
@@ -146,7 +98,12 @@
 }
 
 .card-lokelma-title sup {
-  font-size: 16.77px;
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-weight: var(--lokelma-font-weight-bold, 700);
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: 0;
+  vertical-align: super;
 }
 
 /* Content area with bullet points - positioned absolutely */
@@ -156,11 +113,6 @@
   left: 29px;
   width: 543px;
   z-index: 10;
-}
-
-.card-lokelma:last-child .card-lokelma-content {
-  top: 238px;
-  left: 30px;
 }
 
 .card-lokelma-content ul,
@@ -196,10 +148,10 @@
 /* Citation box at bottom - positioned absolutely */
 .card-lokelma-citation {
   position: absolute;
-  top: 475px;
+  top: 492px;
   left: 10px;
-  width: 582px;
-  height: 82px;
+  width: 599px;
+  height: 60px;
   border: 1px solid var(--lokelma-color-primary, #003b45);
   background: rgba(255, 255, 255, 0.5);
   display: flex;
@@ -207,10 +159,6 @@
   justify-content: center;
   padding: 10px 0;
   z-index: 10;
-}
-
-.card-lokelma:last-child .card-lokelma-citation {
-  width: 583px;
 }
 
 .card-lokelma-citation p {
@@ -243,11 +191,6 @@
     height: auto;
     min-height: 587px;
   }
-
-  .card-lokelma:first-child .card-lokelma-title,
-  .card-lokelma:last-child .card-lokelma-title {
-    top: 173px;
-  }
 }
 
 @media (max-width: 600px) {
@@ -264,31 +207,16 @@
   .card-lokelma-icon {
     width: 100px;
     height: 100px;
-    border: 4px solid var(--lokelma-color-accent, #f7a800);
-  }
-
-  .card-lokelma-icon::after {
-    width: 70px;
-    height: 70px;
-    border: 2px solid var(--lokelma-color-primary, #003b45);
-  }
-
-  .card-lokelma-icon img {
-    width: 36px;
-    height: 36px;
-  }
-
-  .card-lokelma:first-child .card-lokelma-icon,
-  .card-lokelma:last-child .card-lokelma-icon {
     top: 20px;
   }
 
-  .card-lokelma:first-child .card-lokelma-title,
-  .card-lokelma:last-child .card-lokelma-title {
-    top: 140px;
+  .card-lokelma-icon img {
+    width: 100px;
+    height: 100px;
   }
 
   .card-lokelma-title {
+    top: 140px;
     width: calc(100% - 40px);
   }
 

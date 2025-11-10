@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(excat:excat-content-mapper)",
+      "mcp__plugin_excat_playwright__browser_navigate",
+      "mcp__plugin_excat_playwright__browser_take_screenshot",
+      "mcp__plugin_excat_playwright__browser_snapshot",
+      "mcp__plugin_excat_playwright__browser_click",
+      "mcp__plugin_excat_playwright__browser_fill_form",
+      "mcp__plugin_excat_playwright__browser_wait_for",
+      "mcp__plugin_excat_playwright__browser_evaluate",
+      "Bash(curl:*)",
+      "Bash(convert_markdown_to_html content/systemischer-lupus-erythematodes.md)",
+      "Bash(npm run:*)",
+      "Bash(aem:*)",
+      "Bash(ls:*)",
+      "mcp__plugin_excat_excatops__convert_markdown_to_html",
+      "mcp__plugin_excat_playwright__browser_console_messages",
+      "mcp__plugin_excat_playwright__browser_close"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
