@@ -75,12 +75,15 @@
 
 /* Title */
 .card-resource-body h3 {
-  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
-  font-weight: var(--lokelma-font-weight-regular, 400);
+  color: var(--LOKELMA-Blue, #003B45);
+  font-family: Lexia;
   font-size: 24px;
-  line-height: 34px;
-  color: var(--lokelma-color-primary, #003b45);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px; /* 141.667% */
   margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Button */
@@ -95,15 +98,16 @@
   background: #fdb515 !important;
   background-color: #fdb515 !important;
   border: 1px solid #fdb515 !important;
-  color: var(--lokelma-color-primary, #003b45) !important;
+  border-radius: 0 !important;
+  color: var(--LOKELMA-Blue, #003B45) !important;
   padding: 22px 32px;
   text-decoration: none;
-  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
-  font-weight: var(--lokelma-font-weight-bold, 700);
-  font-style: italic;
-  font-size: 16px;
-  line-height: normal;
-  text-align: center;
+  font-family: Lexia, serif !important;
+  font-size: 16px !important;
+  font-style: italic !important;
+  font-weight: 700 !important;
+  line-height: normal !important;
+  text-align: center !important;
   white-space: nowrap;
   transition: opacity 0.3s ease;
 }
