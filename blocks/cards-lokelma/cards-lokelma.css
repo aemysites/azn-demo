@@ -131,6 +131,7 @@
   color: var(--lokelma-color-text, #000);
   margin-bottom: 10px !important;
   padding-left: 24px !important;
+  padding-right: 10px !important;
   text-indent: -30px !important;
 }
 
