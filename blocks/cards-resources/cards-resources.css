@@ -64,6 +64,30 @@
   object-fit: contain;
 }
 
+/* Specific styling for icon-resources.svg only */
+.card-resource-icon img[src*="icon-resources"],
+.card-resource-icon img[alt*="Folder icon"] {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+}
+
+/* Specific styling for icon-dosing.svg only */
+.card-resource-icon img[src*="icon-dosing"],
+.card-resource-icon img[alt*="Clock icon"] {
+  width: 115px;
+  height: 89px;
+  flex-shrink: 0;
+}
+
+/* Specific styling for icon-efficacy.svg only */
+.card-resource-icon img[src*="icon-efficacy"],
+.card-resource-icon img[alt*="Chart icon"] {
+  width: 89px;
+  height: 62px;
+  flex-shrink: 0;
+}
+
 /* Content area */
 .card-resource-body {
   background: rgba(115, 195, 183, 0.2);
@@ -94,6 +118,12 @@
 
 .card-resource-body a {
   display: inline-flex !important;
+  height: 60px;
+  min-width: 166.32px;
+  justify-content: center;
+  gap: 10px;
+  padding: 22px 32px;
+  justify-content: center;
   align-items: center;
   gap: 10px;
   background: #fdb515 !important;
@@ -118,10 +148,15 @@
 }
 
 .card-resource-body a::after {
-  content: '›';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: bold;
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 19px;
+  /* margin-left: 10px; */
+  background-image: url('/content/images/forward.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Responsive layout */
