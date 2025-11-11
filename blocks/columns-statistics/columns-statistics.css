@@ -41,6 +41,12 @@
   z-index: 0;
 }
 
+/* Push content down in first and last circles */
+.columns-statistics > div > div:first-child,
+.columns-statistics > div > div:last-child {
+  padding-top: 50px;
+}
+
 /* Hide images - not used in Figma design */
 .columns-statistics > div > div picture,
 .columns-statistics > div > div img {
