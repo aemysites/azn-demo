@@ -126,11 +126,11 @@
 .card-lokelma-content li {
   font-family: var(--lokelma-font-family-body, 'Inter', sans-serif);
   font-weight: var(--lokelma-font-weight-regular, 400);
-  font-size: 22px;
+  font-size: 21px;
   line-height: 1.3;
   color: var(--lokelma-color-text, #000);
   margin-bottom: 10px !important;
-  padding-left: 24px !important;
+  padding-left: 40px !important;
   padding-right: 10px !important;
   text-indent: -30px !important;
 }
