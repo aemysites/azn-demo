@@ -12,21 +12,21 @@
   /* Percentage text styling - exact from Figma */
   --columns-statistics-percentage-color: var(--lokelma-blue);
   --columns-statistics-percentage-font-family: var(--lokelma-font-family-heading);
-  --columns-statistics-percentage-font-size: 56px;
-  --columns-statistics-percentage-font-weight: 800; /* XBold */
-  --columns-statistics-percentage-line-height: 1.2;
-  --columns-statistics-percentage-letter-spacing: -1.12px;
+  --columns-statistics-percentage-font-size: 80px;
+  --columns-statistics-percentage-font-weight: 900; /* XBold */
+  --columns-statistics-percentage-line-height: 0.8;
+  --columns-statistics-percentage-letter-spacing: -1.6px;
 
   /* Label text styling - exact from Figma */
   --columns-statistics-label-color: var(--lokelma-blue);
   --columns-statistics-label-font-family: var(--lokelma-font-family-heading);
-  --columns-statistics-label-font-size: 18px;
-  --columns-statistics-label-font-weight: 700; /* Bold */
-  --columns-statistics-label-line-height: 24px;
+  --columns-statistics-label-font-size: 20px;
+  --columns-statistics-label-font-weight: 400; /* Regular for "with" text (Medium not available) */
+  --columns-statistics-label-line-height: 1;
 
   /* "Up to" small text */
-  --columns-statistics-small-font-size: 18px;
-  --columns-statistics-small-line-height: 24px;
+  --columns-statistics-small-font-size: 20px;
+  --columns-statistics-small-line-height: 30px;
 
   /* Column layout */
   --columns-statistics-column-gap: 59px;

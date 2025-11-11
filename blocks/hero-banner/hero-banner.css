@@ -4,6 +4,12 @@
 .hero-banner-container .hero-banner-wrapper {
   max-width: unset;
   padding: 0;
+  overflow: visible;
+}
+
+.hero-banner-container {
+  overflow: visible;
+  background-color: white;
 }
 
 .hero-banner {
@@ -13,16 +19,21 @@
   background-color: var(--hero-banner-bg-color);
   display: flex;
   align-items: center;
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* Background image container */
 .hero-banner > div:first-child {
   position: absolute;
   z-index: 0;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100%;
+  overflow: visible;
 }
 
 .hero-banner > div:first-child > div {
@@ -39,11 +50,16 @@
 
 .hero-banner > div:first-child img {
   object-fit: cover;
-  width: 100%;
+  object-position: right top;
+  width: 100vw;
   height: 100%;
+  min-height: 100%;
   display: block;
-  object-position: right center;
   opacity: var(--hero-banner-image-opacity);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 /* Text content container */
