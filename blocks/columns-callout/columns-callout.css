@@ -1,6 +1,11 @@
 /* Import component-specific tokens */
 @import './columns-callout-tokens.css';
 
+.columns-callout-container {
+  overflow: visible;
+  background-color: white;
+}
+
 .columns-callout {
   max-width: var(--columns-callout-max-width);
   min-height: var(--columns-callout-mobile-height);
@@ -9,7 +14,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  background-color: var(--columns-callout-bg-color);
+  background-color: transparent;
   overflow: visible;
 }
 
@@ -17,36 +22,39 @@
 .columns-callout::after {
   content: '';
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: var(--columns-callout-bg-color);
   clip-path: polygon(
     0 0,
-    calc(100% - 80px) 0,
-    100% 100%,
+    calc(100% - 60px) 0,
+    calc(100% - 15px) 100%,
     0 100%
   );
-  z-index: 0;
+  z-index: 1;
 }
 
-/* Yellow triangular notch at top-right corner */
+/* Yellow triangular notch at top-right corner with white gap */
 .columns-callout::before {
   content: '';
   position: absolute;
-  right: 0;
+  right: -25px;
   top: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 80px 80px 0;
-  border-color: transparent var(--columns-callout-arrow-color) transparent transparent;
-  z-index: 2;
+  width: 71px;
+  height: 62px;
+  background-image: url('./triangle.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 3;
 }
 
 .columns-callout > div {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .columns-callout > div > div {

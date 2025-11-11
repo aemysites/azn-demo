@@ -6,9 +6,9 @@
   --hero-banner-max-width: 1920px;
 
   /* Background */
-  --hero-banner-bg-color: var(--lokelma-green);
+  --hero-banner-bg-color: white;
   --hero-banner-overlay-opacity: 0;
-  --hero-banner-image-opacity: 0.4;
+  --hero-banner-image-opacity: 1;
 
   /* Text styling */
   --hero-banner-text-color: var(--az-white);

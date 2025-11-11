@@ -17,6 +17,22 @@ export default function decorate(block) {
     document.body.classList.add('onkologie-page');
   }
 
+  // Fix image paths that were incorrectly resolved to Figma URLs
+  const images = block.querySelectorAll('img, source');
+  images.forEach((element) => {
+    const srcAttribute = element.tagName === 'SOURCE' ? 'srcset' : 'src';
+    const src = element.getAttribute(srcAttribute);
+
+    if (src && src.includes('figma.com')) {
+      // Extract the path after 'images/' and prepend with '/content/'
+      const match = src.match(/images\/(.*)/);
+      if (match) {
+        const localPath = `/content/images/${match[1]}`;
+        element.setAttribute(srcAttribute, localPath);
+      }
+    }
+  });
+
   // setup image columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {

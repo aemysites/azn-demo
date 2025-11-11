@@ -263,7 +263,7 @@ h6 {
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
-h2 { 
+h2 {
   font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
   font-size: 48px;
   font-style: normal;
@@ -271,10 +271,30 @@ h2 {
   line-height: 58px;
   color: var(--lokelma-color-primary, #003B45);
 }
-h3 { font-size: var(--heading-font-size-l); }
+h3 {
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  color: var(--lokelma-color-primary, #003B45);
+}
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
 h6 { font-size: var(--heading-font-size-xs); }
+
+/* Study incidence paragraph styling - Lexia XBold */
+main > .section:has(.columns-factors) + .section .default-content-wrapper > p {
+  font-family: var(--lokelma-font-family-heading, 'Lexia', serif);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 40px;
+  color: #000000;
+  text-align: center;
+  max-width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 p,
 dl,
@@ -486,6 +506,27 @@ main .section:not(.columns-callout-container) > div > p {
   margin: 12px 0;
 }
 
+/* References label styling - target paragraph containing only "References:" */
+main .section .default-content-wrapper > p:has(strong:only-child),
+main > div .default-content-wrapper > p:has(strong:only-child) {
+  font-family: var(--lokelma-font-family-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  color: #000 !important;
+  text-align: left !important;
+  margin: 20px 0 0 0 !important;
+  padding-left: 0 !important;
+  max-width: 1200px !important;
+}
+
+main .section .default-content-wrapper > p:has(strong:only-child) strong,
+main > div .default-content-wrapper > p:has(strong:only-child) strong {
+  font-family: var(--lokelma-font-family-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-align: left !important;
+}
+
 /* Reference list items - exclude blocks */
 main .section:not(.columns-callout-container) ol,
 main .section:not(.columns-callout-container) ul {
@@ -493,12 +534,19 @@ main .section:not(.columns-callout-container) ul {
   font-size: 14px;
   font-weight: 400;
   color: #000;
-  line-height: 1.6;
-  margin-left: 20px;
+  line-height: 1.4;
+  margin-left: 0;
+  padding-left: 0;
+  list-style-position: inside;
+  text-align: left;
+  max-width: 1200px;
 }
 
 main .section:not(.columns-callout-container) li {
-  margin-bottom: 12px;
+  margin-bottom: 4px;
+  padding-left: 20px;
+  text-indent: -20px;
+  text-align: left;
 }
 
 /* Emphasis (italics) in references */

@@ -15,4 +15,12 @@ export default function decorate(block) {
       }
     });
   });
+
+  // Mark percentage values (those containing %) for special styling
+  const strongTags = block.querySelectorAll('strong');
+  strongTags.forEach((strong) => {
+    if (strong.textContent.includes('%')) {
+      strong.classList.add('percentage-value');
+    }
+  });
 }

@@ -28,6 +28,7 @@
   box-sizing: border-box;
   position: relative;
   background: var(--lokelma-light-green);
+  gap: 0;
 }
 
 /* Inner white circle - thicker outer ring */
@@ -46,21 +47,7 @@
   display: none;
 }
 
-/* Percentage values (bold text) */
-.columns-statistics > div > div strong {
-  font-family: var(--columns-statistics-percentage-font-family);
-  font-size: var(--columns-statistics-percentage-font-size);
-  font-weight: var(--columns-statistics-percentage-font-weight);
-  color: var(--columns-statistics-percentage-color);
-  line-height: var(--columns-statistics-percentage-line-height);
-  letter-spacing: var(--columns-statistics-percentage-letter-spacing);
-  display: block;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-/* Label text (e.g., "with HF", "with chronic HF") */
+/* All paragraph text has base styling */
 .columns-statistics > div > div p {
   font-family: var(--columns-statistics-label-font-family);
   font-size: var(--columns-statistics-label-font-size);
@@ -68,15 +55,42 @@
   color: var(--columns-statistics-label-color);
   line-height: var(--columns-statistics-label-line-height);
   margin: 0;
+  padding: 0;
   position: relative;
   z-index: 1;
 }
 
-/* "Up to" prefix text */
-.columns-statistics > div > div p:first-of-type {
-  margin-bottom: 0;
-  font-size: var(--columns-statistics-small-font-size);
-  line-height: var(--columns-statistics-small-line-height);
+/* Treat br tags as minimal line breaks */
+.columns-statistics > div > div p br {
+  display: block;
+  content: "";
+  margin: 0;
+  line-height: 0;
+}
+
+/* All strong tags (abbreviations and "Up to") - 20px, XBold */
+.columns-statistics > div > div p strong {
+  font-family: var(--columns-statistics-percentage-font-family);
+  font-weight: 900;
+  color: var(--columns-statistics-percentage-color);
+  font-size: var(--columns-statistics-label-font-size);
+  line-height: var(--columns-statistics-label-line-height);
+  display: inline-block;
+  margin: 0;
+}
+
+/* "Up to" text specifically - needs spacing below */
+.columns-statistics > div > div p strong:not(.percentage-value):first-child {
+  margin-bottom: 15px;
+}
+
+/* Percentage values only (those containing %) - 80px, XBold */
+.columns-statistics > div > div p strong.percentage-value {
+  font-size: var(--columns-statistics-percentage-font-size);
+  line-height: var(--columns-statistics-percentage-line-height);
+  letter-spacing: var(--columns-statistics-percentage-letter-spacing);
+  display: block;
+  margin: -5px 0;
 }
 
 @media (width >= 900px) {

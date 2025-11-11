@@ -101,6 +101,24 @@
   paint-order: stroke fill;
 }
 
+/* Fourth circle with longer text - split into 3 lines matching Figma */
+.columns-factors > div > div:nth-child(4) p {
+  font-size: 30px;
+  line-height: 30px;
+  max-width: 222px;
+  display: block;
+  text-align: center;
+}
+
+/* Fourth circle: RAASi text (middle line) is larger - 42px */
+.columns-factors > div > div:nth-child(4) strong {
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
+  font-weight: 900;
+  display: inline;
+}
+
 @media (width >= 900px) {
   .columns-factors > div {
     flex-direction: row;
@@ -147,9 +165,14 @@ body.columns-factors-grid .columns-factors > div > div::before {
   display: none;
 }
 
-/* Hide br tag to prevent spacing issues */
+/* Hide br tag to prevent spacing issues (except in 4th circle) */
 body.columns-factors-grid .columns-factors > div > div br {
   display: none;
+}
+
+/* Show br tags in 4th circle for proper 3-line layout */
+body.columns-factors-grid .columns-factors > div > div:nth-child(4) br {
+  display: block;
 }
 
 /* Icon container - positioned at top and centered */
@@ -186,14 +209,45 @@ body.columns-factors-grid .columns-factors > div > div p {
 body.columns-factors-grid .columns-factors > div > div strong {
   position: relative;
   z-index: 1;
-  font-weight: 700;
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: 900;
   display: block;
   text-align: center;
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
   max-width: 100%;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+/* Fourth circle with longer text - matched to Figma layout with 3 lines (no icon) */
+body.columns-factors-grid .columns-factors > div > div:nth-child(4) {
+  padding: 25px 15px 25px 15px;
+  justify-content: center;
+  gap: 0;
+}
+
+body.columns-factors-grid .columns-factors > div > div:nth-child(4) p {
+  font-size: 30px;
+  line-height: 30px;
+  word-break: keep-all;
+  white-space: normal;
+  padding: 0;
+  max-width: 222px;
+  hyphens: none;
+  text-align: center;
+}
+
+/* Fourth circle: RAASi text (middle line) is larger - 42px matching Figma */
+body.columns-factors-grid .columns-factors > div > div:nth-child(4) strong {
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
+  font-weight: 900;
+  display: inline;
+  word-break: keep-all;
+  white-space: normal;
 }
 
 @media (width >= 900px) {
@@ -271,9 +325,14 @@ body.onkologie-page .columns-factors > div > div::before {
   display: none;
 }
 
-/* Hide br tag to prevent spacing issues */
+/* Hide br tag to prevent spacing issues (except in 4th circle) */
 body.onkologie-page .columns-factors > div > div br {
   display: none;
+}
+
+/* Show br tags in 4th circle for proper 3-line layout */
+body.onkologie-page .columns-factors > div > div:nth-child(4) br {
+  display: block;
 }
 
 /* Icon container - positioned at top and centered */
@@ -310,14 +369,45 @@ body.onkologie-page .columns-factors > div > div p {
 body.onkologie-page .columns-factors > div > div strong {
   position: relative;
   z-index: 1;
-  font-weight: 700;
+  font-family: var(--lokelma-font-family-heading);
+  font-weight: 900;
   display: block;
   text-align: center;
-  font-size: 20px;
-  line-height: 1.25;
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
   max-width: 100%;
   word-wrap: break-word;
   hyphens: auto;
+}
+
+/* Fourth circle with longer text - matched to Figma layout with 3 lines (no icon) */
+body.onkologie-page .columns-factors > div > div:nth-child(4) {
+  padding: 25px 15px 25px 15px;
+  justify-content: center;
+  gap: 0;
+}
+
+body.onkologie-page .columns-factors > div > div:nth-child(4) p {
+  font-size: 30px;
+  line-height: 30px;
+  word-break: keep-all;
+  white-space: normal;
+  padding: 0;
+  max-width: 222px;
+  hyphens: none;
+  text-align: center;
+}
+
+/* Fourth circle: RAASi text (middle line) is larger - 42px matching Figma */
+body.onkologie-page .columns-factors > div > div:nth-child(4) strong {
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.84px;
+  font-weight: 900;
+  display: inline;
+  word-break: keep-all;
+  white-space: normal;
 }
 
 @media (width >= 900px) {
