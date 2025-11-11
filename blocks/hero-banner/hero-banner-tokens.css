@@ -1,6 +1,6 @@
 .hero-banner {
   /* Container layout */
-  --hero-banner-min-height: 285px;
+  --hero-banner-min-height: 228px;
   --hero-banner-padding-y: 50px;
   --hero-banner-padding-x: 100px;
   --hero-banner-max-width: 1920px;

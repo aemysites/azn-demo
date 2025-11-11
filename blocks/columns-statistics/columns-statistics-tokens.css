@@ -1,7 +1,7 @@
 .columns-statistics {
   /* Container layout - exact from Figma */
   --columns-statistics-gap: 59px;
-  --columns-statistics-padding: 50px 0;
+  --columns-statistics-padding: 10px 0;
   --columns-statistics-max-width: 1096px;
 
   /* Circle styling - teal rings with white inner circle */
