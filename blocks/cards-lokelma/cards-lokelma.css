@@ -119,7 +119,7 @@
 .card-lokelma-content ol {
   list-style-position: outside;
   list-style-type: disc;
-  padding-left: 24px;
+  padding-left: 0;
   margin: 0;
 }
 
@@ -129,8 +129,9 @@
   font-size: 22px;
   line-height: 1.3;
   color: var(--lokelma-color-text, #000);
-  margin-bottom: 10px;
-  padding-left: 0;
+  margin-bottom: 10px !important;
+  padding-left: 24px !important;
+  text-indent: -30px !important;
 }
 
 .card-lokelma-content li:last-child {
@@ -231,11 +232,13 @@
   }
 
   .card-lokelma-content ul {
-    padding-left: 20px;
+    padding-left: 0;
   }
 
   .card-lokelma-content li {
     font-size: 18px;
+    padding-left: 20px !important;
+    text-indent: -30px !important;
   }
 
   .card-lokelma-citation {
