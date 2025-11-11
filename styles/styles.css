@@ -567,9 +567,9 @@ main .default-content-wrapper h2:first-of-type {
 
 /* About Hyperkalemia page - h3 heading styling */
 main .default-content-wrapper h3 {
-  font-family: var(--lokelma-font-family-body) !important;
+  font-family: var(--lokelma-font-family-heading) !important;
   font-size: var(--lokelma-font-size-xl) !important;
-  font-weight: var(--lokelma-font-weight-bold) !important;
+  font-weight: 900 !important;
   color: var(--lokelma-blue) !important;
   text-align: center !important;
 }
