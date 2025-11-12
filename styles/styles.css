@@ -220,6 +220,10 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   display: none;
   margin: 0;
@@ -228,6 +232,7 @@ body {
   font-family: var(--body-font-family);
   font-size: var(--body-font-size-m);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 body.appear {

@@ -591,7 +591,7 @@ header .nav-wrapper {
   /* Secondary navigation section - full width with grey background */
   header .nav-bottom-section:not(:first-of-type) {
     background-color: #F5F5F5; /* Light grey background to match top utility bar */
-    width: 108vw;
+    width: 102vw;
     position: relative;
     left: 50%;
     right: 50%;
@@ -610,7 +610,7 @@ header .nav-wrapper {
     margin: 0 auto;
     padding: 0 60px; /* Match Figma: 60px left/right padding */
     box-sizing: border-box;
-    overflow-x: auto; /* Allow horizontal scroll if content overflows */
+    overflow-x: hidden; /* Prevent horizontal scroll */
     overflow-y: visible;
   }
 
