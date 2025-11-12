@@ -1,6 +1,12 @@
+let calloutCounter = 0;
+
 export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
+
+  // Add unique identifier for each callout instance
+  calloutCounter++;
+  block.setAttribute('data-callout-index', calloutCounter);
 
   // setup image columns
   [...block.children].forEach((row) => {

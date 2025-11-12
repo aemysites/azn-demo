@@ -86,4 +86,24 @@
   .columns-callout p {
     font-size: var(--columns-callout-font-size);
   }
+
+  /* First callout block - taller (3 lines) - keep original offset */
+  .columns-callout[data-callout-index="1"]::after {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 86px) 0,
+      100% 100%,
+      0 100%
+    );
+  }
+
+  /* Second callout block - shorter (2 lines) - adjusted offset for consistent angle */
+  .columns-callout[data-callout-index="2"]::after {
+    clip-path: polygon(
+      0 0,
+      calc(100% - 87px) 0,
+      99% 100%,
+      0 100%
+    );
+  }
 }
