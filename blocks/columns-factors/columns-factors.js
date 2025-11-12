@@ -8,12 +8,19 @@ export default function decorate(block) {
     document.body.classList.add('columns-factors-grid');
   }
 
-  // Legacy: Add page-specific class for Onkologie page (backwards compatibility)
+  // Add page-specific classes for Onkologie pages
+  const pathname = window.location.pathname;
+  const isOnkologiePage1 = pathname.includes('onkologie-page-1');
   const isOnkologiePage = document.title.toLowerCase().includes('onkologie')
-    || window.location.pathname.includes('onkologie')
+    || pathname.includes('onkologie')
     || document.querySelector('h1')?.textContent.toLowerCase().includes('onkologie');
 
-  if (isOnkologiePage) {
+  // Add specific class for onkologie-page-1
+  if (isOnkologiePage1) {
+    document.body.classList.add('onkologie-page-1');
+  }
+  // Legacy: Add page-specific class for original Onkologie page (backwards compatibility)
+  else if (isOnkologiePage) {
     document.body.classList.add('onkologie-page');
   }
 

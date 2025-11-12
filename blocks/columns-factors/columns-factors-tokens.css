@@ -15,11 +15,11 @@
   /* Text styling - matched to Figma design */
   --columns-factors-label-color: var(--lokelma-blue);
   --columns-factors-label-font-family: var(--lokelma-font-family-heading);
-  --columns-factors-label-font-size: 42px;
+  --columns-factors-label-font-size: 20px;
   --columns-factors-label-font-weight: 900; /* Black/XBold */
-  --columns-factors-label-line-height: 1.5;
+  --columns-factors-label-line-height: 1.3;
   --columns-factors-label-text-align: center;
-  --columns-factors-label-letter-spacing: -0.84px;
+  --columns-factors-label-letter-spacing: -0.56px;
 
   /* Column layout */
   --columns-factors-column-gap: 59px;
