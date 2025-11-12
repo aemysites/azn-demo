@@ -567,7 +567,7 @@ main .default-content-wrapper h2:first-of-type {
 
 /* Superscript styling for h2 headings (e.g., "Hyperkalemia is an electrolyte disorder1") */
 main .default-content-wrapper h2 sup {
-  font-size: 22px !important;
+  font-size: 20px !important;
   font-weight: bold !important;
 }
 
@@ -587,7 +587,7 @@ main .default-content-wrapper h3 {
 
 /* Superscript styling for h3 headings (e.g., "Predisposing factors:1-5") */
 main .default-content-wrapper h3 sup {
-  font-size: 20px !important;
+  font-size: 16px !important;
 }
 
 /* About Hyperkalemia page - "In studies..." paragraph styling */
