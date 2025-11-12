@@ -1,7 +1,7 @@
 .columns-factors {
   /* Container layout */
   --columns-factors-gap: 59px;
-  --columns-factors-padding: 10px 0;
+  --columns-factors-padding: 5px 0;
   --columns-factors-max-width: 1242px;
 
   /* Icon circle styling - exact from Figma */

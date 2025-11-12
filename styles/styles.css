@@ -255,7 +255,7 @@ h4,
 h5,
 h6 {
   margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.6em;
   font-family: var(--heading-font-family);
   font-weight: 600;
   line-height: 1.25;
@@ -434,7 +434,7 @@ main img {
 
 /* sections */
 main > .section {
-  margin: 40px 0;
+  margin: 43px 0;
 }
 
 main > .section > div {
@@ -567,7 +567,7 @@ main .default-content-wrapper h2:first-of-type {
 
 /* Superscript styling for h2 headings (e.g., "Hyperkalemia is an electrolyte disorder1") */
 main .default-content-wrapper h2 sup {
-  font-size: 20px !important;
+  font-size: 24px !important;
   font-weight: bold !important;
 }
 

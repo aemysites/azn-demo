@@ -1,8 +1,8 @@
 .columns-callout {
   /* Container layout - exact from Figma */
   --columns-callout-max-width: 900px;
-  --columns-callout-height: 110px;
-  --columns-callout-padding-y: 24px;
+  --columns-callout-height: 85px;
+  --columns-callout-padding-y: 20px;
   --columns-callout-padding-x: 48px;
   --columns-callout-margin: 50px auto;
 
