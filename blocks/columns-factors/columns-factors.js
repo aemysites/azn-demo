@@ -9,15 +9,20 @@ export default function decorate(block) {
   }
 
   // Add page-specific classes for Onkologie pages
-  const pathname = window.location.pathname;
-  const isOnkologiePage1 = pathname.includes('onkologie-page-1');
+  const pathname = window.location.pathname.toLowerCase();
+
+  // Check if page needs small text variant (onkologie pages with suffix)
+  // Matches: onkologie-1, onkologie-page-1, onkologie-demo, onkologie-test, etc.
+  // Excludes: onkologie.html (base page without suffix)
+  const needsSmallText = pathname.match(/onkologie-/);
+
   const isOnkologiePage = document.title.toLowerCase().includes('onkologie')
     || pathname.includes('onkologie')
     || document.querySelector('h1')?.textContent.toLowerCase().includes('onkologie');
 
-  // Add specific class for onkologie-page-1
-  if (isOnkologiePage1) {
-    document.body.classList.add('onkologie-page-1');
+  // Add generic class for pages needing smaller text (20px)
+  if (needsSmallText) {
+    document.body.classList.add('columns-factors-small-text');
   }
   // Legacy: Add page-specific class for original Onkologie page (backwards compatibility)
   else if (isOnkologiePage) {
